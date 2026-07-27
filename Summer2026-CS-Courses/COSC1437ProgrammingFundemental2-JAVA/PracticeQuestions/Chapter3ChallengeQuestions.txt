@@ -1,0 +1,437 @@
+Review Questions and Exercises
+
+Multiple Choice and True/False
+
+1. A collection of programming statements that specify the attributes and methods a particular type of object can have is      .
+
+class
+method
+parameter
+instance
+
+2. A class is analogous to a      .
+
+blueprint
+house
+architect
+attribute
+
+3. An object is a(n)      .
+
+blueprint
+attribute
+variable
+instance
+
+4. This is a member of a class that holds data.
+
+method
+instance
+field
+constructor
+
+5. This key word causes an object to be created in memory.
+
+create
+new
+object
+construct
+
+6. This key word causes a value to be sent back from a method to the statement that called it.
+
+send
+return
+value
+public
+
+7. This is a method that gets a value from a class’s field, but does not change it.
+
+accessor
+constructor
+void
+mutator
+
+8. This is a method that stores a value in a field or in some other way changes the value of a field.
+
+accessor
+constructor
+void
+mutator
+
+9 When the value of an item is dependent on other data, and that item is not updated when the other data is changed, what has the value become?
+
+bitter
+stale
+asynchronous
+moldy
+
+10. This is a method that is automatically called when an instance of a class is created.
+
+accessor
+constructor
+void
+mutator
+
+11. When a local variable has the same name as a field, the local variable’s name does what to the field’s name?
+
+shadows
+complements
+deletes
+merges with
+
+12. If you do not write a constructor for a class, this is automatically provided for the class.
+
+accessor method
+default instance
+default constructor
+predefined constructor
+
+13. A class’s responsibilities are      .
+
+the objects created from the class
+things the class knows
+actions the class performs
+Both b and c
+True or False: The occurrence of a string literal in a Java program causes a String object to be created in memory, initialized with the string literal.
+True or False: When passing an argument to a method, the argument’s data type must be compatible with the parameter variable’s data type.
+True or False: When passing multiple arguments to a method, the order in which the arguments are passed is not important.
+True or False: Each instance of a class has its own set of instance fields.
+True or False: When you write a constructor for a class, it still has the default constructor that Java automatically provides.
+True or False: To find the classes needed for an object-oriented application, you identify all of the verbs in a description of the problem domain.
+
+Find the Error
+
+1. Find the error in the following class:
+
+public class MyClass
+{
+  private int x;
+  private double y;
+
+  public void MyClass(int a, double b)
+  {
+   x = a;
+   y = b;
+  }
+}
+
+2. Assume that the following method is a member of a class. Find the error.
+
+public void total(int value1, value2, value3)
+{
+   return value1 + value2 + value3;
+}
+
+3. The following statement attempts to create a Rectangle object. Find the error.
+
+Rectangle box = new Rectangle;
+
+
+Algorithm Workbench
+
+1. Design a class named Pet, which should have the following attributes:
+
+name. The name attribute holds the name of a pet.
+animal. The animal attribute holds the type of animal that a pet is. Example values are “Dog”, “Cat”, and “Bird”.
+age. The age attribute holds the pet’s age.
+
+The Pet class should also have the following methods:
+
+setName. The setName method stores a value in the name attribute.
+setAnimal. The setAnimal method stores a value in the animal attribute.
+setAge. The setAge method stores a value in the age attribute.
+getName. The getName method returns the value of the name attribute.
+getAnimal. The getAnimal method returns the value of the animal attribute.
+getAge. The getAge method returns the value of the age attribute.
+
+Draw a UML diagram of the class. Be sure to include notation showing each attribute’s and method’s access specification and data type. Also include notation showing any method parameters and their data types.
+Write the Java code for the Pet class.
+
+2. Look at the following partial class definition, then respond to the questions that follow it:
+
+public class Book
+{
+  private String title;
+  private String author;
+  private String publisher;
+  private int copiesSold;
+}
+
+
+Write a constructor for this class. The constructor should accept an argument for each of the fields.
+Write accessor and mutator methods for each field.
+Draw a UML diagram for the class, including the methods you have written.
+
+3. Look at the following description of a problem domain:
+The bank offers the following types of accounts to its customers: savings accounts, checking accounts, and money market accounts. Customers are allowed to deposit money into an account (thereby increasing its balance), withdraw money from an account (thereby decreasing its balance), and earn interest on an account. Each account has an interest rate.
+Assume that you are writing an application that will calculate the amount of interest earned for a bank account.
+
+Identify the potential classes in this problem domain.
+Refine the list to include only the necessary class or classes for this problem.
+Identify the responsibilities of the class or classes.
+
+Short Answer
+
+What is the difference between a class and an instance of the class?
+
+A contractor uses a blueprint to build a set of identical houses. Are classes analogous to the blueprint or the houses?
+
+What is an accessor method? What is a mutator method?
+
+Is it a good idea to make fields private? Why or why not?
+
+If a class has a private field, what has access to the field?
+
+What is the purpose of the new key word?
+
+Assume a program named MailList.java is stored in the DataBase folder on your hard drive. 
+The program creates objects of the Customer and Account classes. 
+Describe the steps that the compiler goes through in locating and compiling the Customer and Account classes.
+
+Explain what is meant by the phrase “pass by value.”
+
+Why are constructors useful for performing “start-up” operations?
+
+What is the difference between a field and an attribute?
+
+What is the difference between an argument and a parameter variable?
+
+Under what circumstances does Java automatically provide a default constructor for a class?
+
+What do you call a constructor that accepts no arguments?
+
+
+Programming Challenges
+
+1. Employee Class
+Write a class named Employee that has the following fields:
+
+name. The name field is a String object that holds the employee’s name.
+idNumber. The idNumber is an int variable that holds the employee’s ID number.
+department. The department field is a String object that holds the name of the department where the employee works.
+position. The position field is a String object that holds the employee’s job title.
+
+Write appropriate mutator methods that store values in these fields, and accessor methods that return the values in these fields. Once you have written the class, write a separate program that creates three Employee objects to hold the following data:
+
+
+
+Name
+ID Number
+Department
+Position
+
+
+
+
+Susan Meyers
+47899
+Accounting
+Vice President
+
+
+Mark Jones
+39119
+IT
+Programmer
+
+
+Joy Rogers
+81774
+Manufacturing
+Engineer
+
+
+
+The program should store this data in the three objects, then display the data for each employee on the screen.
+
+2. Car Class
+Write a class named Car that has the following fields:
+
+yearModel. The yearModel field is an int that holds the car’s year model.
+make. The make field is a String object that holds the make of the car, such as “Ford”, “Chevrolet”, “Honda”, etc.
+speed. The speed field is an int that holds the car’s current speed.
+
+In addition, the class should have the following methods.
+
+Constructor. The constructor should accept the car’s year model and make as arguments. These values should be assigned to the object’s yearModel and make fields. The constructor should also assign 0 to the speed field.
+Accessor. The appropriate accessor methods get the values stored in an object’s yearModel, make, and speed fields.
+accelerate. The accelerate method should add 5 to the speed field each time it is called.
+brake. The brake method should subtract 5 from the speed field each time it is called.
+
+Demonstrate the class in a program that creates a Car object, and then calls the accelerate method five times. After each call to the accelerate method, get the current speed of the car and display it. Then, call the brake method five times. After each call to the brake method, get the current speed of the car and display it.
+
+3. Personal Information Class
+Design a class that holds the following personal data: name, address, age, and phone number. Write appropriate accessor and mutator methods. Demonstrate the class by writing a program that creates three instances of it. One instance should hold your information, and the other two should hold your friends’ or family members’ information.
+ The Personal Information Class Problem
+
+4. Temperature Class
+Write a Temperature class that will hold a temperature in Fahrenheit and provide methods to get the temperature in Fahrenheit, Celsius, and Kelvin. The class should have the following field:
+
+ftemp. A double that holds a Fahrenheit temperature.
+
+The class should have the following methods:
+
+Constructor. The constructor accepts a Fahrenheit temperature (as a double) and stores it in the ftemp field.
+setFahrenheit. The setFahrenheit method accepts a Fahrenheit temperature (as a double) and stores it in the ftemp field.
+getFahrenheit. Returns the value of the ftemp field, as a Fahrenheit temperature (no conversion required).
+getCelsius. Returns the value of the ftemp field converted to Celsius.
+getKelvin. Returns the value of the ftemp field converted to Kelvin.
+
+Use the following formula to convert the Fahrenheit temperature to Celsius:
+
+Celsius = (5/9) × (Fahrenheit - 32)
+
+Use the following formula to convert the Fahrenheit temperature to Kelvin:
+
+Kelvin = ((5/9) × (Fahrenheit - 32)) + 273
+
+Demonstrate the Temperature class by writing a separate program that asks the user for a Fahrenheit temperature. The program should create an instance of the Temperature class, with the value entered by the user passed to the constructor. The program should then call the object’s methods to display the temperature in Celsius and Kelvin.
+
+5. RetailItem Class
+Write a class named RetailItem that holds data about an item in a retail store. The class should have the following fields:
+
+description. The description field is a String object that holds a brief description of the item.
+unitsOnHand. The unitsOnHand field is an int variable that holds the number of units currently in inventory.
+price. The price field is a double that holds the item’s retail price.
+
+Write appropriate mutator methods that store values in these fields, and accessor methods that return the values in these fields. Once you have written the class, write a separate program that creates three RetailItem objects and stores the following data in them:
+
+
+
+Description
+
+Units On Hand
+Price
+
+
+
+
+Item #1
+Jacket
+12
+59.95
+
+
+Item #2
+Designer Jeans
+40
+34.95
+
+
+Item #3
+Shirt
+20
+24.95
+
+
+
+
+6. Payroll Class
+Design a Payroll class that has fields for an employee’s name, ID number, 
+hourly pay rate, and number of hours worked. Write the appropriate accessor and mutator methods, and a constructor that accepts the employee’s name and ID number as arguments. The class should also have a method that returns the employee’s gross pay, which is calculated as the number of hours worked multiplied by the hourly pay rate. Write a program that demonstrates the class by creating a Payroll object, then asks the user to enter the data for an employee. The program should display the amount gross pay earned.
+
+7. Widget Factory
+Design a calass for a widget manufacturing plant. 
+The class should have a method whose argument is the number of widgets that must be produced. The class should have another method that calculates how many days it will take to produce the number of widgets. (Assume 10 widgets can be produced each hour. The plant operates two shifts of eight hours each per day.)
+Demonstrate the class by writing a separate program that creates an instance of the class. The program should pass a number of widgets to the object, and call the object’s method that displays the number of days it will take to produce that many widgets.
+
+8. TestScores Class
+Design a TestScores class that has fields to hold three test scores. The class should have accessor and mutator methods for the test score fields, and a method that returns the average of the test scores. Demonstrate the class by writing a separate program that creates an instance of the class. The program should ask the user to enter three test scores, which are stored in the TestScores object. Then, the program should display the average of the scores, as reported by the TestScores object.
+
+9. Circle Class
+Write a Circle class that has the following fields:
+
+radius. a double
+PI. a final double initialized with the value 3.14159
+
+The class should have the following methods:
+
+Constructor. Accepts the radius of the circle as an argument.
+setRadius. A mutator method for the radius field.
+getRadius. An accessor method for the radius field.
+getArea. Returns the area of the circle, which is calculated as
+
+ area = PI * radius * radius
+
+getDiameter. Returns the diameter of the circle, which is calculated as
+
+ diameter = radius * 2
+
+getCircumference. Returns the circumference of the circle, which is calculated as
+
+ circumference = 2 * PI * radius
+
+
+Write a program that demonstrates the Circle class by asking the user for the circle’s radius, creating a Circle object, then reports the circle’s area, diameter, and circumference.
+
+10. Pet Class
+Design a class named Pet, which should have the following fields:
+
+name. The name field holds the name of a pet.
+type. The type field holds the type of animal that a pet is. Example values are “Dog”, “Cat”, and “Bird”.
+age. The age field holds the pet’s age.
+
+The Pet class should also have the following methods:
+
+setName. The setName method stores a value in the name field.
+setType. The setType method stores a value in the type field.
+setAge. The setAge method stores a value in the age field.
+getName. The getName method returns the value of the name field.
+gettype. The getType method returns the value of the type field.
+getAge. The getAge method returns the value of the age field.
+
+Once you have designed the class, design a program that creates an object of the class and prompts the user to enter the name, type, and age of his or her pet. This data should be stored in the object. Use the object’s accessor methods to retrieve the pet’s name, type, and age and display this data on the screen.
+
+11. Patient Charges
+Write a class named Patient that has fields for the following data:
+
+First name, middle name, and last name
+Street address, city, state, and ZIP code
+Phone number
+Name and phone number of emergency contact
+
+The Patient class should have a constructor that accepts an argument for each field. The Patient class should also have accessor and mutator methods for each field.
+Next, write a class named Procedure that represents a medical procedure that has been performed on a patient. The Procedure class should have fields for the following data:
+
+Name of the procedure
+Date of the procedure
+Name of the practitioner who performed the procedure
+Charges for the procedure
+
+The Procedure class should have a constructor that accepts an argument for each field. The Procedure class should also have accessor and mutator methods for each field.
+Next, write a program that creates an instance of the Patient class, initialized with sample data. Then, create three instances of the Procedure class, initialized with the following data:
+
+
+
+Procedure #1:
+Procedure #2:
+Procedure #3:
+
+
+
+
+Procedure name: Physical Exam
+Procedure name: X-ray
+Procedure name: Blood test
+
+
+Date: Today’s date
+Date: Today’s date
+Date: Today’s date
+
+
+Practitioner: Dr. Irvine
+Practitioner: Dr. Jamison
+Practitioner: Dr. Smith
+
+
+Charge: 250.00
+Charge: 500.00
+Charge: 200.00
+
+
+
+The program should display the patient’s information, information about all three of the procedures, and the total charges of the three procedures.
+
+
+

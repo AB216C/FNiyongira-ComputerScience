@@ -1,0 +1,656 @@
+Review Questions and Exercises
+
+Multiple Choice and True/False
+
+The if statement is an example of a    ............      .
+
+sequence structure.
+decision structure.
+pathway structure.
+class structure.
+
+This type of expression has a value of either true or false.
+
+binary expression
+decision expression
+unconditional expression
+boolean expression
+
+>, <, and == are          .
+
+relational operators.
+logical operators.
+conditional operators.
+ternary operators.
+
+&&, ||, and ! are          .
+
+relational operators.
+logical operators.
+conditional operators.
+ternary operators.
+
+This is an empty statement that does nothing.
+
+missing statement
+virtual statement
+null statement
+conditional statement
+
+To create a block of statements, you enclose the statements in          .
+
+parentheses ()
+square brackets []
+angled brackets <>
+braces {}
+
+This is a boolean variable that signals when some condition exists in the program.
+
+flag
+signal
+sentinel
+siren
+
+How does the character “A” compare to the character “B”?
+
+“A” is greater than “B”
+“A” is less than “B”
+“A” is equal to “B”
+You cannot compare characters.
+
+This is an if statement that appears inside another if statement.
+
+nested if statement
+tiered if statement
+dislodged if statement
+structured if statement
+
+An else clause always goes with which of the following?
+
+the closest previous if clause that doesn’t already have its own else clause.
+the closest if clause.
+the if clause that is randomly selected by the compiler.
+none of these
+When determining whether a number is inside a range, it’s best to use this operator.
+
+&&
+!
+||
+? :
+
+This determines whether two different String objects contain the same string.
+
+the == operator
+the = operator
+the equals method
+the stringCompare method
+The conditional operator takes how many operands?
+
+one
+two
+three
+four
+
+This section of a switch statement is branched to if none of the case values match the testExpression.
+
+else
+default
+case
+otherwise
+
+
+True or False: The = operator and the == operator perform the same operation.
+True or False: A conditionally executed statement should be indented one level from the if clause.
+True or False: All lines in a conditionally executed block should be indented one level.
+True or False: When an if statement is nested in the if clause of another statement, the only time the inner if statement is executed is when the boolean expression of the outer if statement is true.
+True or False: When an if statement is nested in the else clause of another statement, the only time the inner if statement is executed is when the boolean expression of the outer if statement is true.
+True or False: The scope of a variable is limited to the block in which it is defined.
+
+Find the Error
+Find the errors in the following code:
+
+
+// Warning! This code contains ERRORS!
+if (x == 1);
+   y = 2;
+else if (x == 2);
+   y = 3;
+else if (x == 3);
+   y = 4;
+
+2.    // Warning! This code contains an ERROR!
+if (average = 100)
+   System.out.println("Perfect Average!");
+
+// Warning! This code contains ERRORS!
+if (num2  == 0)
+   System.out.println("Division by zero is not possible.");
+   System.out.println("Please run the program again ");
+   System.out.println("and enter a number besides zero.");
+else
+   Quotient = num1 / num2;
+   System.out.print("The quotient of " + Num1);
+   System.out.print(" divided by " + Num2  + " is ");
+   System.out.println(Quotient);
+
+// Warning! This code contains ERRORS!
+switch (score)
+{
+   case (score > 90):
+      grade = 'A';
+      break;
+   case(score > 80):
+      grade = 'b';
+      break;
+   case(score > 70):
+      grade = 'C';
+      break;
+   case (score > 60):
+      grade = 'D';
+      break;
+   default:
+      grade = 'F';
+}
+
+
+The following statement should determine whether x is not greater than 20. What is wrong with it?
+
+if (!x > 20)
+
+
+The following statement should determine whether count is within the range of 0 through 100. What is wrong with it?
+
+if (count >= 0 || count <= 100)
+
+
+The following statement should determine whether count is outside the range of 0 through 100. What is wrong with it?
+
+if (count < 0 && count > 100)
+
+
+The following statement should assign 0 to z if a is less than 10; otherwise it should assign 7 to z. What is wrong with it?
+
+z = (a < 10) : 0 ? 7;
+
+
+Assume that partNumber references a String object. The following if statement should perform a case-insensitive comparison. What is wrong with the code?
+if (partNumber.equals("BQ789W4"))
+     available = true;
+
+Algorithm Workbench
+
+Write an if statement that assigns 100 to x when y is equal to 0.
+Write an if-else statement that assigns 0 to x when y is equal to 10. Otherwise, it should assign 1 to x.
+Using the following chart, write an if-else-if statement that assigns .10, .15, or .20 to commission, depending on the value in sales:
+
+
+
+Sales
+Commission Rate
+
+
+
+
+Up to $10,000
+10%
+
+
+$10,000 to $15,000
+15%
+
+
+Over $15,000
+20%
+
+
+
+Write an if statement that sets the variable hours to 10 when the flag variable minimum is equal to true.
+Write nested if statements that perform the following tests: If amount1 is greater than 10, and amount2 is less than 100, display the greater of the two.
+Write an if statement that prints the message “The number is valid” if the variable grade is within the range 0 through 100.
+Write an if statement that prints the message “The number is valid” if the variable temperature is within the range -50 through 150.
+Write an if statement that prints the message “The number is not valid” if the variable hours is outside the range 0 through 80.
+Write an if-else statement that displays the String objects title1 and title2 in alphabetical order.
+
+
+Convert the following if-else-if statement into a switch statement:
+if (choice == 1)
+{
+   System.out.println("You selected 1.");
+}
+else if (choice == 2 || choice == 3)
+{
+   System.out.println("You selected 2 or 3.");
+}
+else if (choice == 4)
+{
+   System.out.println("You selected 4.");
+}
+else
+{
+   System.out.println("Select again please.");
+}
+
+Match the conditional expression with the if-else statement that performs the same operation.
+
+q = x < y ? a + b : x * 2;
+q = x < y ? x * 2 : a + b;
+x < y ? q = 0 : q = 1;
+
+____   if (x < y)
+         q = 0;
+      else
+         q = 1;
+____   if (x < y)
+         q = a + b;
+      else
+         q = x * 2;
+____   if (x < y)
+         q = x * 2;
+      else
+         q = a + b;
+
+
+Short Answer
+
+Explain what is meant by the term “conditionally executed.”
+Explain why a misplaced semicolon can cause an if statement to operate incorrectly.
+Why is it good advice to indent all the statements inside a set of braces?
+What happens when you compare two String objects with the == operator?
+Explain the purpose of a flag variable. Of what data type should a flag variable be?
+What risk does a programmer take when not placing a trailing else at the end of an if-else-if statement?
+Briefly describe how the && operator works.
+Briefly describe how the || operator works.
+Why are the relational operators called “relational”?
+How do you use private methods in a class to decompose an algorithm?
+
+
+Programming Challenges
+
+1. Roman Numerals
+Write a program that prompts the user to enter a number within the range of 1 through 10. The program should display the Roman numeral version of that number. If the number is outside the range of 1–10, the program should display an error message.
+ The Time Calculator Problem
+
+2. Time Calculator
+Write a program that asks the user to enter a number of seconds.
+
+There are 60 seconds in a minute. If the number of seconds entered by the user is greater than or equal to 60, the program should display the number of minutes and leftover seconds in that many seconds.
+There are 3,600 seconds in an hour. If the number of seconds entered by the user is greater than or equal to 3,600, the program should display the number of hours, minutes, and leftover seconds in that many seconds.
+There are 86,400 seconds in a day. If the number of seconds entered by the user is greater than or equal to 86,400, the program should display the number of days, hours, minutes, and leftover seconds in that many seconds.
+
+
+3. TestScores Class
+
+Design a TestScores class that has fields to hold three test scores. (If you have already written the TestScores class for Programming Challenge 8 of Chapter 3, you can modify it.) The class constructor should accept three test scores as arguments and assign these arguments to the test score fields. The class should also have accessor methods for the test score fields, a method that returns the average of the test scores, and a method that returns the letter grade that is assigned for the test score average. Use the grading scheme in the following table:
+
+
+
+Test Score Average
+Letter Grade
+
+
+
+
+90–100
+A
+
+
+80–89
+B
+
+
+70–79
+C
+
+
+60–69
+D
+
+
+Below 60
+F
+
+
+
+
+4. Software Sales
+A software company sells a package that retails for $99. Quantity discounts are given according to the following table:
+
+
+
+Quantity
+Discount
+
+
+
+
+10–19
+20%
+
+
+20–49
+30%
+
+
+50–99
+40%
+
+
+100 or more
+50%
+
+
+
+Design a class that stores the number of units sold, and has a method that returns the total cost of the purchase.
+
+5. BankCharges Class
+A bank charges $10 per month, plus the following check fees for a commercial checking account:
+
+$.10 for each check if less than 20 checks were written
+$.08 for each check if 20 through 39 checks were written
+$.06 for each check if 40 through 59 checks were written
+$.04 for each check if 60 or more checks were written
+
+The bank also charges an extra $15 if the account balance falls below $400 (before any check fees are applied). Design a class that stores the ending balance of an account and the number of checks written. It should also have a method that returns the bank’s service fees for the month.
+
+6. ShippingCharges Class
+The Fast Freight Shipping Company charges the following rates:
+
+
+
+Weight of Package (in kilograms)
+Rate per 500 Miles Shipped
+
+
+
+
+2 kg or less
+$1.10
+
+
+Over 2 kg but not more than 6 kg
+$2.20
+
+
+Over 6 kg but not more than 10 kg
+$3.70
+
+
+Over 10 kg
+$4.80
+
+
+
+The shipping charges per 500 miles are not prorated. For example, if a 2 kg package is shipped 550 miles, the charges would be $2.20.
+Design a class that stores the weight of a package, and has a method that returns the shipping charges.
+
+7. FatGram Class
+Design a class with a method that stores the number of calories and fat grams in a food item. The class should have a method that returns the percentage of the calories that come from fat. One gram of fat has 9 calories, so:
+
+Calories from fat = fat grams * 9
+
+The percentage of calories from fat can be calculated as:
+
+Calories from fat ÷ total calories
+
+Demonstrate the class in a program that asks the user to enter the number of calories and the number of fat grams for a food item. The program should display the percentage of calories that come from fat. If the calories from fat are less than 30 percent of the total calories of the food, it should also display a message indicating the food is low in fat.
+Because the number of calories from fat cannot be greater than the total number of calories, if the user enters a number for the calories from fat that is greater than the total number of calories, the program should display an error message indicating that the numbers are invalid.
+
+8. Running the Race
+Design a class that stores the names of three runners and the time, in minutes, it took each of them to finish a race. The class should have methods that return the name of the runner in 1st, 2nd, or 3rd place.
+
+9. The Speed of Sound
+The following table shows the approximate speed of sound in air, water, and steel:
+
+
+
+Medium
+Speed
+
+
+
+
+Air
+1,100 feet per second
+
+
+Water
+4,900 feet per second
+
+
+Steel
+16,400 feet per second
+
+
+
+Design a class that stores in a distance field the distance, in feet, traveled by a sound wave. The class should have the appropriate accessor and mutator methods for this field. In addition, the class should have the following methods:
+
+getSpeedInAir. This method should return the number of seconds it would take a sound wave to travel, in air, the distance stored in the distance field. The formula to calculate the amount of time it will take the sound wave to travel the specified distance in air is:
+
+Time 5 distance/1100
+
+getSpeedInWater. This method should return the number of seconds it would take a sound wave to travel, in water, the distance stored in the distance field. The formula to calculate the amount of time it will take the sound wave to travel the specified distance in water is:
+
+Time 5 distance/4900
+
+getSpeedInSteel. This method should return the number of seconds it would take a sound wave to travel, in steel, the distance stored in the distance field. The formula to calculate the amount of time it will take the sound wave to travel the specified distance in air is:
+
+Time 5 distance/16400
+
+
+Write a program to demonstrate the class. The program should display a menu allowing the user to select air, water, or steel. Once the user has made a selection, he or she should be asked to enter the distance a sound wave will travel in the selected medium. The program will then display the amount of time it will take. Check that the user has selected one of the available choices from the menu.
+
+10. Freezing and Boiling Points
+The following table lists the freezing and boiling points of several substances in Fahrenheit:
+
+
+
+Substance
+Freezing Point
+Boiling Point
+
+
+
+
+Ethyl alcohol
+-173
+172
+
+
+Oxygen
+-362
+-306
+
+
+Water
+32
+212
+
+
+
+Design a class that stores a temperature in a temperature field and has the appropriate accessor and mutator methods for the field. The class should also have the following methods:
+
+isEthylFreezing. This method should return the boolean value true if the temperature stored in the temperature field is at or below the freezing point of ethyl alcohol. Otherwise, the method should return false.
+isEthylBoiling. This method should return the boolean value true if the temperature stored in the temperature field is at or above the boiling point of ethyl alcohol. Otherwise, the method should return false.
+isOxygenFreezing. This method should return the boolean value true if the temperature stored in the temperature field is at or below the freezing point of oxygen. Otherwise, the method should return false.
+isOxygenBoiling. This method should return the boolean value true if the temperature stored in the temperature field is at or above the boiling point of oxygen. Otherwise, the method should return false.
+isWaterFreezing. This method should return the boolean value true if the temperature stored in the temperature field is at or below the freezing point of water. Otherwise, the method should return false.
+isWaterBoiling. This method should return the boolean value true if the temperature stored in the temperature field is at or above the boiling point of water. Otherwise, the method should return false.
+
+Write a program that demonstrates the class. The program should ask the user to enter a temperature, then display a list of the substances that will freeze at that temperature and those that will boil at that temperature. For example, if the temperature is -20, the class should report that water will freeze and oxygen will boil at that temperature.
+
+11. Mobile Service Provider
+A mobile phone service provider has three different subscription packages for its customers:
+
+
+
+Package A:
+For $39.99 per month, 450 minutes are provided. Additional minutes are $0.45 per minute.
+
+
+Package B:
+For $59.99 per month, 900 minutes are provided. Additional minutes are $0.40 per minute.
+
+
+Package C:
+For $69.99 per month, unlimited minutes are provided.
+
+
+
+Design a class that calculates a customer’s monthly bill. It should store the letter of the package the customer has purchased (A, B, or C) and the number of minutes that were used. It should have a method that returns the total charges. Demonstrate the class in a program that asks the user to select a package and enter the number of minutes used. The program should display the total charges.
+
+Mobile Service Provider, Part 2
+Modify the program you wrote for Programming Challenge 11 so it also calculates and displays the amount of money Package A customers would save if they purchased package B or C, and the amount of money package B customers would save if they purchased package C. If there would be no savings, no message should be printed.
+
+12. Body Mass Index
+Write a program that calculates and displays a person’s body mass index (BMI). The BMI is often used to determine whether a person is overweight or underweight for his or her height. A person’s BMI is calculated with the following formula:
+
+BMI = weight × 703/height2
+
+where weight is measured in pounds, and height is measured in inches. The program should display a message indicating whether the person has optimal weight, is underweight, or is overweight. A person’s weight is considered to be optimal if his or her BMI is between 18.5 and 25. If the BMI is less than 18.5, the person is considered to be underweight. If the BMI value is greater than 25, the person is considered to be overweight.
+
+13. Days in a Month
+Write a class named MonthDays. The class’s constructor should accept two arguments:
+
+An integer for the month (1 = January, 2 = February, etc.)
+An integer for the year
+
+The class should have a method named getNumberOfDays that returns the number of days in the specified month. The method should use the following criteria to identify leap years:
+
+Determine whether the year is evenly divisible by 100. If it is, then it is a leap year if and only if it is evenly divisible by 400. For example, 2000 is a leap year, but 2100 is not.
+If the year is not evenly divisible by 100, then it is a leap year if and only if it is evenly divisible by 4. For example, 2008 is a leap year but 2009 is not.
+Demonstrate the class in a program that asks the user to enter the month (letting the user enter an integer in the range of 1 through 12) and the year. The program should then display the number of days in that month. Here is a sample run of the program:
+
+Enter a month (1-12): 2  
+Enter a year: 2020  
+29 days
+
+
+14. Book Club Points
+Serendipity Booksellers has a book club that awards points to its customers based on the number of books purchased each month. The points are awarded as follows:
+
+If a customer purchases 0 books, he or she earns 0 points.
+If a customer purchases 1 book, he or she earns 5 points.
+If a customer purchases 2 books, he or she earns 15 points.
+If a customer purchases 3 books, he or she earns 30 points.
+If a customer purchases 4 or more books, he or she earns 60 points.
+
+Write a program that asks the user to enter the number of books that he or she has purchased this month, then displays the number of points awarded.
+
+15. Magic Dates
+The date June 10, 1960, is special because when we write it in the following format, the month times the day equals the year.
+6/10/60
+Design a class named MagicDate. The class constructor should accept, as integers, values for a month, a day, and a year. The class should also have a method named isMagic that returns true if the date passed to the constructor is magic, or false otherwise.
+Write a program that asks the user to enter a month, a day, and a two-digit year as integers. The program should create an instance of the MagicDate class to determine whether the date entered by the user is a magic date. If it is, the program should display a message saying the date is magic. Otherwise, it should display a message saying the date is not magic.
+
+17. Hot Dog Cookout Calculator
+Assume that hot dogs come in packages of 10, and hot dog buns come in packages of 8. Write a program that calculates the number of packages of hot dogs and the number of packages of hot dog buns needed for a cookout, with the minimum amount of leftovers. The program should ask the user for the number of people attending the cookout, and the number of hot dogs each person will be given. The program should display:
+
+The minimum number of packages of hot dogs required.
+The minimum number of packages of buns required.
+The number of hot dogs that will be left over.
+The number of buns that will be left over.
+
+
+18. Roulette Wheel Colors
+On a roulette wheel, the pockets are numbered from 0 to 36, with an additional pocket numbered 00. The colors of the pockets are as follows:
+
+Pockets 0 and 00 are green.
+For pockets 1 through 10, the odd numbered pockets are red and the even numbered pockets are black.
+For pockets 11 through 18, the odd numbered pockets are black and the even numbered pockets are red.
+For pockets 19 through 28, the odd numbered pockets are red and the even numbered pockets are black.
+For pockets 29 through 36, the odd numbered pockets are black and the even numbered pockets are red.
+
+Write a class named RoulettePocket. The class’s constructor should accept a pocket number. The class should have a method named getPocketColor that returns the pocket’s color, as a string.
+Demonstrate the class in a program that asks the user to enter a pocket number, and displays whether the pocket is green, red, or black. The program should display an error message if the user enters a number that is outside the range of 0 through 36.
+
+19. Wi-Fi Diagnostic Tree
+Figure 4-17 shows a simplified flowchart for troubleshooting a bad Wi-Fi connection. Use the flowchart to create a program that leads a person through the steps of fixing a bad Wi-Fi connection. Here is an example of the program’s output:
+
+Reboot the computer and try to connect.
+Did that fix the problem? no 
+Reboot the router and try to connect.
+Did that fix the problem? yes 
+
+
+
+Figure 4-17 Troubleshooting a bad Wi-Fi connection
+
+
+
+Figure 4-17 Full Alternative Text
+Notice that the program ends as soon as a solution is found to the problem. Here is another example of the program’s output:
+
+Reboot the computer and try to connect.
+Did that fix the problem? no 
+Reboot the router and try to connect.
+Did that fix the problem? no 
+Make sure the cables between the router & modem are plugged in firmly.
+Did that fix the problem? no 
+Move the router to a new location.
+Did that fix the problem? no 
+Get a new router.
+
+
+20. Restaurant Selector
+You have a group of friends coming to visit for your high school reunion, and you want to take them out to eat at a local restaurant. You aren’t sure if any of them have dietary restrictions, but your restaurant choices are as follows:
+
+
+
+Restaurant
+Vegetarian
+Vegan
+Gluten-Free
+
+
+
+
+Joe’s Gourmet Burgers
+No
+No
+No
+
+
+Main Street Pizza Company
+Yes
+No
+Yes
+
+
+Corner Café
+Yes
+Yes
+Yes
+
+
+Mama’s Fine Italian
+Yes
+No
+No
+
+
+The Chef’s Kitchen
+Yes
+Yes
+Yes
+
+
+
+Write a program that asks whether any members of your party are vegetarian, vegan, or gluten-free, then displays only the restaurants where you may take the group. Here is an example of the program’s output:
+
+Is anyone in your party a vegetarian? yes 
+Is anyone in your party a vegan? no 
+Is anyone in your party gluten-free? yes 
+Here are your restaurant choices:
+ Main Street Pizza Company
+ Corner Cafe 
+ The Chef's Kitchen
+
+Here is another example of the program’s output:
+
+Is anyone in your party a vegetarian? yes 
+Is anyone in your party a vegan? yes 
+Is anyone in your party gluten-free? yes 
+Here are your restaurant choices:
+ Corner Cafe
+ The Chef's Kitchen
+

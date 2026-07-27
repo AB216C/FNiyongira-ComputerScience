@@ -1,0 +1,520 @@
+Multiple Choice and True/False
+
+1. The isDigit, isLetter, and isLetterOrDigit methods are members of this class.
+
+String
+Char
+Character
+StringBuilder
+
+2. This method converts a character to uppercase.
+
+makeUpperCase
+toUpperCase
+isUpperCase
+upperCase
+
+3. The startsWith, endsWith, and regionMatches methods are members of this class.
+
+String
+Char
+Character
+StringTokenizer
+
+4. The indexOf and lastIndexOf methods are members of this class.
+
+String
+Integer
+Character
+StringTokenizer
+
+5. The substring, getChars, and toCharArray methods are members of this class.
+
+String
+Float
+Character
+StringTokenizer
+
+6. This String class method performs the same operation as the + operator when used on strings.
+
+add
+join
+concat
+plus
+
+7. The String class has several overloaded versions of a method that accepts a value of any primitive data type as its argument and returns a string representation of the value. The name of the method is          .
+
+stringValue
+valueOf
+getString
+valToString
+
+8. If you do not pass an argument to the StringBuilder constructor, the object will have enough memory to store this many characters.
+
+16
+1
+256
+Unlimited
+
+9. This is one of the methods that are common to both the String and StringBuilder classes.
+a. 
+append
+insert
+delete
+length
+
+10. To change the value of a specific character in a StringBuilder object, use this method.
+
+changeCharAt
+setCharAt
+setChar
+change
+
+11. To delete a specific character in a StringBuilder object, use this method.
+
+deleteCharAt
+removeCharAt
+removeChar
+expunge
+
+12. The character that separates tokens in a string is known as a          .
+
+separator
+tokenizer
+delimiter
+terminator
+
+13. This StringTokenizer method returns true if there are more tokens to be extracted from a string.
+
+moreTokens
+tokensLeft
+getToken
+hasMoreTokens
+
+14. Each of the numeric wrapper classes has a static method that converts a string to a number. All of these methods begin with this word.
+
+convert
+toString
+parse
+toNumber
+
+15. These static final variables are members of the numeric wrapper classes and hold the minimum and maximum values for a particular data type.
+
+MIN_VALUE and MAX_VALUE
+MIN and MAX
+MINIMUM and MAXIMUM
+LOWEST and HIGHEST
+
+16.
+True or False: Character testing methods, such as isLetter, accept strings as arguments and test each character in the string.
+True or False: If the toUpperCase method’s argument is already uppercase, it is returned as is, with no changes.
+True or False: If the toLowerCase method’s argument is already lowercase, it will be inadvertently converted to uppercase.
+True or False: The startsWith and endsWith methods are case sensitive.
+True or False: There are two versions of the regionMatches method: one that is case sensitive, and one that can be case insensitive.
+True or False: The indexOf and lastIndexOf methods find characters, but cannot find substrings.
+True or False: The String class’s replace method can replace individual characters, but not substrings.
+True or False: The StringBuilder class’s replace method can replace individual characters, but not substrings.
+True or False: You can use the = operator to assign a string to a StringBuilder object.
+True or False: To get the value of a wrapper class object, you must call a method.
+
+Find the Error
+
+Find the error in each of the following code segments.
+
+
+1.int number = 99;
+  String str;
+  // Convert number to a string.
+  str.valueOf(number);
+
+
+  2.// Store a name in a StringBuilder object.
+  StringBuilder name = "Joe Schmoe";
+ 
+ 
+ 3. int number;
+  String str = "99";
+ 
+  // Convert str to an int.
+  number = str.parseInt();
+ 
+ 
+ 4.// Change the very first character of a
+  // StringBuilder object to 'Z'.
+  str.setCharAt(1, 'Z');
+  
+  
+  5.// Tokenize a string that is delimited
+  // with semicolons. The string has three tokens.
+  StringTokenizer strTokenizer =
+       new StringTokenizer("One;Two;Three");
+  // Extract the three tokens from the string.
+  while (strTokenizer.hasMoreTokens())
+  {
+     System.out.println(strTokenizer.nextToken());
+  }
+
+Algorithm Workbench
+
+1. The following if statement determines whether choice is equal to ‘Y’ or ‘y’:
+  if (choice == 'Y' || choice == 'y')
+2. Rewrite this statement so that it makes only one comparison and does not use the  || operator. (Hint: Use either the toUpperCase or toLowerCase methods.)
+3. Write a loop that counts the number of space characters that appear in the String object str.
+4. Write a loop that counts the number of digits that appear in the String object str.
+5. Write a loop that counts the number of lowercase characters that appear in the String object str.
+6. Write a method that accepts a String object as an argument and returns true if the argument ends with the substring “.com”. Otherwise, the method should return false.
+6. Modify the method you wrote for question 5 so it performs a case-insensitive test. The method should return true if the argument ends with “.com” in any possible combination of upper and lowercase letters.
+7. Write a method that accepts a StringBuilder object as an argument and converts all occurrences of the lowercase letter “t” in the object to uppercase.
+8. Look at the following string:
+  "cookies>milk>fudge:cake:ice cream"
+
+	Write code using a StringTokenizer object that extracts the following tokens from the string and displays them: cookies, milk, fudge, cake, and ice cream.
+	Write code using the String class’s split method that extracts the same tokens as the code you wrote for part a.
+
+
+9. Assume that d is a double variable. Write an if statement that assigns d to the int variable i, if the value in d is not larger than the maximum value for an int.
+10. Write code that displays the contents of the int variable i in binary, hexadecimal, and octal.
+11. Look at the following declaration statements:
+  String str = "237.89";
+  double value;
+Write a statement that converts the string referenced by str to a double and stores the result in value.
+
+Short Answer
+
+1. Why should you use StringBuilder objects instead of String objects in a program that makes lots of changes to strings?
+2. A program reads a string as input from the user for the purpose of tokenizing it. Why is it a good idea to trim the string before tokenizing it?
+3. Each of the numeric wrapper classes has a “parse” method. What do these methods do?
+4. Each of the numeric wrapper classes has a static toString method. What do these methods do?
+5. How can you determine the minimum and maximum values that can be stored in a variable of a given data type?
+
+
+Programming Challenges
+
+1. Backward String
+Write a method that accepts a String object as an argument and displays its contents backward. For instance, if the string argument is “gravity”, the method should display “ytivarg”. Demonstrate the method in a program that asks the user to input a string, then passes it to the method.
+
+2. Word Counter
+Write a method that accepts a String object as an argument and returns the number of words it contains. For instance, if the argument is “Four score and seven years ago” the method should return the number 6. Demonstrate the method in a program that asks the user to input a string then passes it to the method. The number of words in the string should be displayed on the screen.
+
+3. Sentence Capitalizer
+Write a method that accepts a String object as an argument and returns a copy of the string with the first character of each sentence capitalized. For instance, if the argument is “hello. my name is Joe. what is your name?” the method should return the string, “Hello. My name is Joe. What is your name?” Demonstrate the method in a program that asks the user to input a string then passes it to the method. The modified string should be displayed on the screen.
+ The Sentence Capitalizer Problem
+
+4. Vowels and Consonants
+Write a class with a constructor that accepts a String object as its argument. The class should have a method that returns the number of vowels in the string, and another method that returns the number of consonants in the string. Demonstrate the class in a program that performs the following steps:
+
+The user is asked to enter a string.
+The program displays the following menu:
+
+Count the number of vowels in the string
+Count the number of consonants in the string
+Count both the vowels and consonants in the string
+Enter another string
+Exit the program
+The program performs the operation selected by the user and repeats until the user selects e to exit the program.
+
+5. Password Verifier
+Imagine you are developing a software package for an online shopping site that requires users to enter their own passwords. Your software requires that users’ passwords meet the following criteria:
+
+The password should be at least six characters long.
+The password should contain at least one uppercase and at least one lowercase letter.
+The password should have at least one digit.
+
+Write a class that verifies that a password meets the stated criteria. Demonstrate the class in a program that allows the user to enter a password, then displays a message indicating whether it is valid or not.
+
+6. Telemarketing Phone Number List
+Write a program that has two parallel arrays of String objects. One of the arrays should hold people’s names, and the other should hold their phone numbers. Here are sample contents of both arrays.
+
+
+name Array Sample Contents
+phone Array Sample Contents
+
+
+
+"Harrison, Rose"
+"555–2234"
+
+
+"James, Jean"
+"555–9098"
+
+
+"Smith, William"
+"555–1785"
+
+
+"Smith, Brad"
+"555–9224"
+
+
+
+The program should ask the user to enter a name or the first few characters of a name to search for in the array. The program should display all of the names that match the user’s input and their corresponding phone numbers. For example, if the user enters “Smith,” the program should display the following names and phone numbers from the list:
+
+Smith, William: 555–1785
+Smith, Brad: 555–9224
+
+
+7. Check Writer
+Write a program that displays a simulated paycheck. The program should ask the user to enter the date, the payee’s name, and the amount of the check. It should then display a simulated check with the dollar amount spelled out, as shown here:
+
+
+
+
+
+Date: 11/24/2018
+
+
+Pay to the Order of: John Phillips
+      $1920.85
+
+
+One thousand nine hundred twenty and 85 cents
+
+
+
+
+
+8. Sum of Numbers in a String
+Write a program that asks the user to enter a series of numbers separated by commas. Here is an example of valid input:
+
+7,9,10,2,18,6
+
+The program should calculate and display the sum of all the numbers.
+
+9. Sum of Digits in a String
+Write a program that asks the user to enter a series of single digit numbers with nothing separating them. The program should display the sum of all the single digit numbers in the string. For example, if the user enters 2514, the method should return 12, which is the sum of 2, 5, 1, and 4. The program should also display the highest and lowest digits in the string. (Hint: Convert the string to an array.)
+
+10. Word Counter
+Write a program that asks the user for the name of a file. The program should display the number of words that the file contains.
+
+11. Sales Analysis
+If you have downloaded the book’s source code from www.pearsonhighered.com/gaddis, you will find the file SalesData.txt in the Chapter 08 folder. This file contains the dollar amount of sales that a retail store made each day for a number of weeks. Each line in the file contains seven numbers, which are the sales numbers for one week. The numbers are separated by a comma. The following line is an example from the file:
+
+1245.67,1490.07,1679.87,2378.46,1783.92,1468.99,2059.77
+
+Write a program that opens the file and processes its contents. The program should display the following:
+
+The total sales for each week
+The average daily sales for each week
+The total sales for all of the weeks
+The average weekly sales
+The week number that had the highest amount of sales
+The week number that had the lowest amount of sales
+
+
+12. Miscellaneous String Operations
+Write a class with the following static methods:
+wordCount. This method should accept a String object as an argument and return the number of words contained in the object.
+arrayToString. This method accepts a char array as an argument and converts it to a String object. The method should return a reference to the String object.
+mostFrequent. This method accepts a String object as an argument and returns the character that occurs most frequently in the object.
+replaceSubstring. This method accepts three String objects as arguments. Let’s call them string1, string2, and string3. It searches string1 for all occurrences of string2. When it finds an occurrence of string2, it replaces it with string3. For example, suppose the three arguments have the following values:
+
+string1: "the dog jumped over the fence"
+string2: "the"
+string3: "that"
+
+With these three arguments, the method would return a String object with the value “that dog jumped over that fence”.
+Demonstrate each of these methods in a complete program.
+
+13. Alphabetic Telephone Number Translator
+Many companies use telephone numbers such as 555-GET-FOOD so that the number is easier for their customers to remember. On a standard telephone, the alphabetic letters are mapped to numbers in the following fashion:
+
+A, B, and C = 2
+D, E, and F = 3
+G, H, and I = 4
+J, K, and L = 5
+M, N, and O = 6
+P, Q, R, and S = 7
+T, U, and V = 8
+W, X, Y, and Z = 9
+
+Write an application that asks the user to enter a 10-character telephone number in the format XXX-XXX-XXXX. The application should display the telephone number with any alphabetic characters that appeared in the original translated to their numeric equivalent. For example, if the user enters 555-GET-FOOD, the application should display 555-438-3663.
+
+14. Word Separator
+Write a program that accepts as input a sentence in which all the words are run together, but the first character of each word is uppercase. Convert the sentence to a string in which the words are separated by spaces, and only the first word starts with an uppercase letter. For example the string “StopAndSmellTheRoses.” would be converted to “Stop and smell the roses.”
+
+15. Pig Latin
+Write a program that reads a sentence as input and converts each word to “Pig Latin”. In one version of Pig Latin, you convert a word by removing the first letter, placing that letter at the end of the word, and then appending “ay” to the word. Here is an example:
+
+
+
+English:
+I SLEPT MOST OF THE NIGHT
+
+
+Pig Latin:
+IAY LEPTSAY OSTMAY FOAY HETAY IGHTNAY
+
+
+
+
+16. Morse Code Converter
+Write a program that asks the user to enter a string, then converts that string to Morse code. Morse code is a code where each letter of the English alphabet, each digit, and various punctuation characters are represented by a series of dots and dashes. Table 8-15 shows part of the code.
+
+Table 8-15 Morse code
+
+
+
+Character
+Code
+Character
+Code
+Character
+Code
+Character
+Code
+
+
+
+
+space
+space
+6
+-....
+G
+--.
+Q
+--.-
+
+
+comma
+--..--
+7
+--...
+H
+....
+R
+.-.
+
+
+period
+.-.-.-
+8
+---..
+I
+..
+S
+...
+
+
+question mark
+..--..
+9
+----.
+J
+.---
+T
+-
+
+
+0
+-----
+A
+.-
+K
+-.-
+U
+..-
+
+
+1
+.----
+B
+-...
+L
+.-..
+V
+...-
+
+
+2
+..---
+C
+-.-.
+M
+--
+W
+.--
+
+
+3
+...--
+D
+-..
+N
+-.
+X
+-..-
+
+
+4
+....-
+E
+.
+O
+---
+Y
+-.--
+
+
+5
+.....
+F
+..-.
+P
+.--.
+Z
+--..
+
+
+
+
+17. Lottery Statistics
+To play the PowerBall lottery, you buy a ticket that has five numbers in the range of 1–69, and a “PowerBall” number in the range of 1-26. (You can pick the numbers yourself, or you can let the ticket machine randomly pick them for you.) Then, on a specified date, a winning set of numbers are randomly selected by a machine. If your first five numbers match the first five winning numbers in any order, and your PowerBall number matches the winning PowerBall number, then you win the jackpot, which is a very large amount of money. If your numbers match only some of the winning numbers, you win a lesser amount, depending on how many of the winning numbers you have matched.
+In the student sample programs for this chapter, you will find a file named pbnumbers.txt, containing the winning lottery numbers that were selected between February 3, 2010 and May 11, 2016 (the file contains 654 sets of winning numbers). Here is an example of the first few lines of the file’s contents:
+
+17 22 36 37 52 24
+14 22 52 54 59 04
+05 08 29 37 38 34
+10 14 30 40 51 01
+07 08 19 26 36 15
+and so on . . .
+
+Each line in the file contains the set of six numbers that were selected on a given date. The numbers are separated by a space, and the last number in each line is the PowerBall number for that day. For example, the first line in the file shows the numbers for February 3, 2010, which are 17, 22, 36, 37, 52, and the PowerBall number 24.
+Write one or more programs that work with this file to perform the following:
+
+Display the 10 most common numbers, ordered by frequency
+Display the 10 least common numbers, ordered by frequency
+Display the 10 most overdue numbers (numbers that haven’t been drawn in a long time), ordered from most overdue to least overdue
+Display the frequency of each number 1-69, and the frequency of each Powerball number 1-26
+
+
+18. Gas Prices
+In the student sample program files for this chapter, you will find a text file named GasPrices.txt. The file contains the weekly average prices for a gallon of gas in the US, beginning on April 5th, 1993, and ending on August 26th, 2013. Here is an example of the first few lines of the file’s contents:
+
+04–05–1993:1.068
+04–12–1993:1.079
+04–19–1993:1.079
+04–26–1993:1.086
+05–03–1993:1.086
+and so on . . .
+
+Each line in the file contains the average price for a gallon of gas on a specific date. Each line is formatted in the following way:
+
+MM-DD-YYYY:Price
+
+MM is the two-digit month, DD is the two-digit day, and YYYY is the four-digit year. Price is the average price per gallon of gas on the specified date.
+For this assignment you are to write one or more programs that read the contents of the file and perform the following calculations:
+
+Average Price Per Year: Calculate the average price of gas per year, for each year in the file. The file’s data starts in April of 1993, and ends in August, 2013. (For the years 1993 and 2013, use only the data that is present for those years.)
+Average Price Per Month: Calculate the average price for each month in the file.
+Highest and Lowest Prices Per Year: For each year in the file, determine the date and amount for the lowest price, and the highest price.
+List of Prices, Lowest to Highest: Generate a text file that lists the dates and prices, sorted from the lowest price to the highest.
+List of Prices, Highest to lowest: Generate a text file that lists the dates and prices, sorted from the highest price to the lowest.
+
+You can write one program to perform all of these calculations, or you can write different programs, one for each calculation.
+
+
+
+
+

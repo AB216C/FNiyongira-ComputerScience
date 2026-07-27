@@ -1,0 +1,6 @@
+30
+The result of 10 plus 20 is:
+30
+200
+25
+ToyLang Step 2 Complete

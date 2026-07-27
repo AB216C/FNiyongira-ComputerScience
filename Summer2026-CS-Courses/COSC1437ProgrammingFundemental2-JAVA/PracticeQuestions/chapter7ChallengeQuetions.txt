@@ -1,0 +1,494 @@
+Review Questions and Exercises
+Multiple Choice and True/False
+
+1. This indicates in an array declaration the number of elements that an array is to have.
+
+subscript
+size declarator
+element sum
+reference variable
+
+2. Each element of an array is accessed by a number known as a(n)          .
+
+subscript
+size declarator
+address
+specifier
+
+3. The first subscript in an array is always          .
+
+1
+0
+-1
+1 less than the number of elements
+
+4. The last subscript in an array is always          .
+
+100
+0
+-1
+1 less than the number of elements
+5. Array bounds checking happens          .
+
+when the program is compiled
+when the program is saved
+when the program runs
+when the program is loaded into memory
+
+6. This array field holds the number of elements that the array has.
+
+size
+elements
+length
+width
+
+7. This search algorithm steps through an array, comparing each item with the search value.
+
+binary search
+sequential search
+selection search
+iterative search
+
+8. This search algorithm repeatedly divides the portion of an array being searched in half.
+
+binary search
+sequential search
+selection search
+iterative search
+
+9. This is the maximum number of comparisons performed by the sequential search on an array of N elements (assuming the search values are consistently found).
+
+2N
+N
+N2
+N/2
+
+10. When initializing a two-dimensional array, you enclose each row’s initialization list in these.
+
+braces
+parentheses
+brackets
+quotation marks
+
+11. To store an item in an ArrayList object, use this method.
+
+store
+insert
+add
+get
+
+12. To insert an item at a specific location in an ArrayList object, use this method.
+
+store
+insert
+add
+get
+
+13. To delete an item from an ArrayList object, use this method.
+
+remove
+delete
+erase
+get
+
+14. To determine the number of items stored in an ArrayList object, use this method.
+
+size
+capacity
+items
+length
+
+
+
+True or False: Java does not allow a statement to use a subscript that is outside the range of valid subscripts for an array.
+True or False: An array’s size declarator can be a negative integer expression.
+
+True or False: Both of the following declarations are legal and equivalent:
+int[] numbers;
+int numbers[];
+
+
+True or False: The subscript of the last element in a one-dimensional array is one less than the total number of elements in the array.
+True or False: The values in an initialization list are stored in the array in the order they appear in the list.
+True or False: The Java compiler does not display an error message when it processes a statement that uses an invalid subscript.
+True or False: When an array is passed to a method, the method has access to the original array.
+True or False: The first size declarator in the declaration of a two-dimensional array represents the number of columns. The second size declarator represents the number of rows.
+True or False: A two-dimensional array has multiple length fields.
+True or False: An ArrayList automatically expands in size to accommodate the items stored in it.
+
+Find the Error
+
+1. int[] collection = new int[-20];
+2. int[] hours = 8, 12, 16;
+
+3. int[] table = new int[10];
+Scanner keyboard = new Scanner(System.in);
+for (int x = 1; x <= 10; x++)
+{
+  System.out.print("Enter the next value: ");
+  table[x] = keyboard.nextInt();
+}
+
+4. String[] names = { "George", "Susan" };
+int totalLength = 0;
+for (int i = 0; i < names.length(); i++)
+  totalLength += names[i].length;
+String[] words = { "Hello", "Goodbye" };
+System.out.println(words.toUpperCase());
+
+Algorithm Workbench
+
+
+1. The variable names references an integer array with 20 elements. Write a for loop that prints each element of the array.
+2. The variables numberArray1 and numberArray2 reference arrays that each have 100 elements. Write code that copies the values in numberArray1 to numberArray2.
+
+3. Write a statement that declares a String array initialized with the following strings: “Einstein”, “Newton”, “Copernicus”, and “Kepler”.
+	   Write a loop that displays the contents of each element in the array you declared in Part a.
+	   Write code that displays the total length of all the strings in the array you declared in Part a.
+
+
+4.In a program, you need to store the populations of 12 countries.
+	
+	Define two arrays that may be used in parallel to store the names of the countries and their populations.
+	Write a loop that uses these arrays to print each country’s name and its population.
+
+5. In a program, you need to store the identification numbers of 10 employees (as integers) and their weekly gross pay (as double values).
+
+		Define two arrays that may be used in parallel to store the 10 employee identification numbers and gross pay amounts.
+		Write a loop that uses these arrays to print each of the employees’ identification number and weekly gross pay.
+
+
+6. Declare and create a two-dimensional int array named grades. It should have 30 rows and 10 columns.
+7. Write code that calculates the average of all the elements in the grades array that you declared in Question 6.
+8. Look at the following array declaration:
+		int[][] numberArray = new int[9][11];
+		
+		Write a statement that assigns 145 to the first column of the first row of this array.
+		Write a statement that assigns 18 to the last column of the last row of this array.
+
+
+9. The values variable references a two-dimensional double array with 10 rows and 20 columns. Write code that sums all the elements in the array and stores the sum in the variable total.
+
+
+10. An application uses a two-dimensional array declared as follows:
+int[][] days = new int[29][5];
+
+		Write code that sums each row in the array and displays the results.
+		Write code that sums each column in the array and displays the results.
+		
+11. Write code that creates an ArrayList object that can hold String objects. Add the names of three cars to the ArrayList, then display the contents of the ArrayList.
+
+Short Answer
+
+1. What is the difference between an array size declarator and a subscript?
+2. Look at the following array definition:
+int[] values = new int[10];
+
+How many elements does the array have?
+What is the subscript of the first element in the array?
+What is the subscript of the last element in the array?
+
+
+3. In the following array definition:
+int[] values = { 4, 7, 6, 8, 2 };
+what does each of the following code segments display?
+
+
+
+System.out.println(values[4]);
+a.                          
+
+
+x = values[2] + values[3];
+System.out.println(x);
+b.                          
+
+
+x = ++values[1];
+System.out.println(x);
+c.                          
+
+
+
+4. How do you define an array without providing a size declarator?
+5. Assuming that array1 and array2 are both array reference variables, why is it not possible to assign the contents of the array referenced by array2 to the array referenced by array1 with the following statement?
+array1 = array2;
+
+6. The following statement creates an InventoryItem array:
+InventoryItem[] items = new InventoryItem[10];
+Is it okay or not okay to execute the following statements?
+items[0].setDescription("Hammer");
+items[0].setUnits(10);
+
+7. If a sequential search method is searching for a value that is stored in the last element of a 10,000-element array, how many elements will the search code have to examine to locate the value?
+
+
+8. Look at the following array definition:
+double[][] sales = new double[8][10];
+
+How many rows does the array have?
+How many columns does the array have?
+How many elements does the array have?
+Write a statement that stores a number in the last column of the last row in the array.
+
+
+
+Programming Challenges
+
+1. Rainfall Class
+Write a RainFall class that stores the total rainfall for each of 12 months into an array of doubles. The program should have methods that return the following:
+
+total rainfall for the year
+the average monthly rainfall
+the month with the most rain
+the month with the least rain
+
+Demonstrate the class in a complete program.
+Input Validation: Do not accept negative numbers for monthly rainfall figures.
+
+2. Payroll Class
+Write a Payroll class that uses the following arrays as fields:
+
+employeeId. An array of seven integers to hold employee identification numbers. The array should be initialized with the following numbers:
+    5658845 4520125 7895122 8777541
+    8451277 1302850 7580489
+hours. An array of seven integers to hold the number of hours worked by each employee
+payRate. An array of seven doubles to hold each employee’s hourly pay rate
+wages. An array of seven doubles to hold each employee’s gross wages
+
+The class should relate the data in each array through the subscripts. For example, the number in element 0 of the hours array should be the number of hours worked by the employee whose identification number is stored in element 0 of the employeeId array. That same employee’s pay rate should be stored in element 0 of the payRate array.
+In addition to the appropriate accessor and mutator methods, the class should have a method that accepts an employee’s identification number as an argument and returns the gross pay for that employee.
+Demonstrate the class in a complete program that displays each employee number and asks the user to enter that employee’s hours and pay rate. It should then display each employee’s identification number and gross wages.
+Input Validation: Do not accept negative values for hours or numbers less than 6.00 for pay rate.
+
+3. Charge Account Validation
+Create a class with a method that accepts a charge account number as its argument. The method should determine whether the number is valid by comparing it to the following list of valid charge account numbers:
+
+5658845    4520125    7895122    8777541    8451277    1302850
+8080152    4562555    5552012    5050552    7825877    1250255
+1005231    6545231    3852085    7576651    7881200    4581002
+
+These numbers should be stored in an array. Use either a sequential search or a binary search to locate the number passed as an argument. If the number is in the array, the method should return true, indicating the number is valid. If the number is not in the array, the method should return false, indicating the number is invalid.
+Write a program that tests the class by asking the user to enter a charge account number. The program should display a message indicating whether the number is valid or invalid.
+ The Charge Account Validation Problem
+
+4. Larger Than n
+In a program, write a method that accepts two arguments: an array and a number n. Assume the array contains integers. The method should display all of the numbers in the array that are greater than the number n.
+
+5. Charge Account Modification
+Modify the charge account validation class you wrote for Programming Challenge 3 so it reads the list of valid charge account numbers from a file. Use Notepad or another text editor to create the file.
+
+6. Driver’s License Exam
+The local driver’s license office has asked you to write a program that grades the written portion of the driver’s license exam. The exam has 20 multiple-choice questions. Here are the correct answers:
+
+
+
+1. B
+6. A
+11. B
+16. C
+
+
+2. D
+7. B
+12. C
+17. C
+
+
+3. A
+8. A
+13. D
+18. B
+
+
+4. A
+9. C
+14. A
+19. D
+
+
+5. C
+10. D
+15. D
+20. A
+
+
+
+A student must correctly answer 15 of the 20 questions to pass the exam.
+Write a class named DriverExam that holds the correct answers to the exam in an array field. The class should also have an array field that holds the student’s answers. The class should have the following methods:
+
+passed. Returns true if the student passed the exam, or false if the student failed
+totalCorrect. Returns the total number of correctly answered questions
+totalIncorrect. Returns the total number of incorrectly answered questions
+questionsMissed: An int array containing the question numbers that the student missed
+
+Demonstrate the class in a complete program that asks the user to enter a student’s answers, then displays the results returned from the DriverExam class’s methods.
+Input Validation: Only accept the letters A, B, C, or D as answers.
+
+7. Magic 8 Ball
+Write a program that simulates a Magic 8 Ball, which is a fortune-telling toy that displays a random response to a yes or no question. In the student sample programs for this book, you will find a text file named 8_ball_responses.txt. The file contains 12 responses, such as “I don’t think so”, “Yes, of course!”, “I’m not sure”, and so forth. The program should read the responses from the file into an array or ArrayList object. It should prompt the user to ask a question, and then display one of the responses, randomly selected from the array or ArrayList object. The program should repeat until the user is ready to quit.
+Contents of 8_ball_responses.txt:
+
+Yes, of course!
+Without a doubt, yes.
+You can count on it.
+For sure!
+Ask me later.
+I'm not sure.
+I can't tell you right now.
+I'll tell you after my nap.
+No way!
+I don't think so.
+Without a doubt, no.
+The answer is clearly NO.
+
+
+8. Grade Book
+A teacher has five students who have taken four tests. The teacher uses the following grading scale to assign a letter grade to a student, based on the average of his or her four test scores:
+
+
+
+Test Score
+Letter Grade
+
+
+
+
+90–100
+A
+
+
+80–89
+B
+
+
+70–79
+C
+
+
+60–69
+D
+
+
+0–59
+F
+
+
+
+Write a class that uses a String array (or an ArrayList object) to hold the five students’ names, an array of five characters to hold the five students’ letter grades, and five arrays of four doubles each to hold each student’s set of test scores. The class should have methods that return a specific student’s name, average test score, and a letter grade based on the average.
+Demonstrate the class in a program that allows the user to enter each student’s name and his or her four test scores. It should then display each student’s average test score and letter grade.
+Input Validation: Do not accept test scores less than zero or greater than 100.
+
+9. Grade Book Modification
+Modify the grade book application in Programming Challenge 7 so it drops each student’s lowest score when determining the test score averages and letter grades.
+
+10. Average Steps Taken
+A Personal Fitness Tracker is a wearable device that tracks your physical activity, calories burned, heart rate, sleeping patterns, and so on. One common physical activity most of these devices track is the number of steps you take each day.
+If you have downloaded this book’s source code from the companion website, you will find a file named steps.txt in the Chapter 7 folder. (The companion website can be found at www.pearsonhighered.com/gaddis.) The steps.txt file contains the number of steps a person has taken each day for a year. There are 365 lines in the file, and each line contains the number of steps taken during a day. (The first line is the number of steps taken on January 1st, the second line is the number of steps taken on January 2nd, and so forth.) Write a program that reads the file, then displays the average number of steps taken for each month. (The data is from a year that was not a leap year, so February has 28 days.)
+
+11. ArrayOperations Class
+Write a class name ArrayOperations with the following static methods:
+
+getTotal. This method should accept a one-dimensional array as its argument and return the total of the values in the array. Write overloaded versions of this method that work with int, float, double, and long arrays.
+getAverage. This method should accept a one-dimensional array as its argument and return the average of the values in the array. Write overloaded versions of this method that work with int, float, double, and long arrays.
+getHighest. This method should accept a one-dimensional array as its argument and return the highest value in the array. Write overloaded versions of this method that work with int, float, double, and long arrays.
+getLowest. This method should accept a one-dimensional array as its argument and return the lowest value in the array. Write overloaded versions of this method that work with int, float, double, and long arrays.
+
+Demonstrate the class in a complete program with test data stored in arrays of various data types.
+
+12. 1994 Gas Prices
+In the student sample programs for this book, you will find a text file named 1994_Weekly_Gas_Averages.txt. The file contains the average gas price for each week in the year 1994. (There are 52 lines in the file. Line 1 contains the average price for week 1, line 2 contains the average price for week 2, and so forth.) Write a program that reads the gas prices from the file into an array or an ArrayList object. The program should do the following:
+
+Display the lowest average price of the year, along with the week number for that price, and the name of the month in which it occurred.
+Display the highest average price of the year, along with the week number for that price, and the name of the month in which it occurred.
+Display the average gas price for each month. (To get the average price for a given month, calculate the average of the average weekly prices for that month.)
+
+
+13. Sorted List of 1994 Gas Prices
+ Note: 
+This assignment can be done either as an enhancement to the program that you wrote for Programming Challenge 12, or as a stand-alone program.
+In the student sample programs for this book, you will find a text file named 1994_Weekly_Gas_Averages.txt. The file contains the average gas price for each week in the year 1994. (There are 52 lines in the file. Line 1 contains the average price for week 1, line 2 contains the average price for week 2, and so forth.) Write a program that reads the gas prices from the file, and calculates the average gas price for each month. (To get the average price for a given month, calculate the average of the average weekly prices for that month.) Then, the program should create another file that lists the names of the months, along with each month’s average gas price, sorted from lowest to highest.
+
+14. Name Search
+If you have downloaded this book’s source code (the companion website is available at www.pearsonhighered.com/gaddis), you will find the following files in the Chapter 7 folder:
+
+GirlNames.txt—This file contains a list of the 200 most popular names given to girls born in the United States from the year 2000 to 2009.
+BoyNames.txt—This file contains a list of the 200 most popular names given to boys born in the United States from the year 2000 to 2009.
+
+Write a program that reads the contents of the two files into two separate arrays, or ArrayLists. The user should be able to enter a boy’s name, a girl’s name, or both, and the application will display messages indicating whether the names were among the most popular.
+
+15. Population Data
+If you have downloaded this book’s source code (the companion website is available at www.pearsonhighered.com/gaddis), you will find a file named USPopulation.txt in the Chapter 7 folder. The file contains the midyear population of the United States, in thousands, during the years 1950 to 1990. The first line in the file contains the population for 1950, the second line contains the population for 1951, and so forth.
+Write a program that reads the file’s contents into an array, or an ArrayList. The program should display the following data:
+
+The average annual change in population during the time period
+The year with the greatest increase in population during the time period
+The year with the smallest increase in population during the time period
+
+
+16. World Series Champions
+If you have downloaded this book’s source code (the companion website is available at www.pearsonhighered.com/gaddis), you will find a file named WorldSeriesWinners.txt. This file contains a chronological list of the World Series winning teams from 1903 to 2009. (The first line in the file is the name of the team that won in 1903, and the last line is the name of the team that won in 2009. Note that the World Series was not played in 1904 and 1994, so the file contains no entries for those years.)
+Write a program that lets the user enter the name of a team, then displays the number of times that team has won the World Series in the time period from 1903 to 2009.
+ Tip: 
+Read the contents of the WorldSeriesWinners.txt file into an array, or an ArrayList. When the user enters the name of a team, the program should step through the array or ArrayList counting the number of times the selected team appears.
+
+17. 2DArrayOperations Class
+Write a class named 2DArrayOperations with the following static methods:
+
+getTotal. This method should accept a two-dimensional array as its argument and return the total of all the values in the array. Write overloaded versions of this method that work with int, float, double, and long arrays.
+getAverage. This method should accept a two-dimensional array as its argument and return the average of all the values in the array. Write overloaded versions of this method that work with int, float, double, and long arrays.
+getRowTotal. This method should accept a two-dimensional array as its first argument and an integer as its second argument. The second argument should be the subscript of a row in the array. The method should return the total of the values in the specified row. Write overloaded versions of this method that work with int, float, double, and long arrays.
+getColumnTotal. This method should accept a two-dimensional array as its first argument and an integer as its second argument. The second argument should be the subscript of a column in the array. The method should return the total of the values in the specified column. Write overloaded versions of this method that work with int, float, double, and long arrays.
+getHighestInRow. This method should accept a two-dimensional array as its first argument and an integer as its second argument. The second argument should be the subscript of a row in the array. The method should return the highest value in the specified row of the array. Write overloaded versions of this method that work with int, float, double, and long arrays.
+getLowestInRow. This method should accept a two-dimensional array as its first argument and an integer as its second argument. The second argument should be the subscript of a row in the array. The method should return the lowest value in the specified row of the array. Write overloaded versions of this method that work with int, float, double, and long arrays.
+
+Demonstrate the class in a complete program with test data stored in two-dimensional arrays of various data types.
+
+18. Search Benchmarks
+Modify the sequentialSearch and binarySearch methods presented in this chapter so they keep a count of and display on the screen the number of comparisons they make before finding the value they are searching for. Then write a program that has an array of at least 20 integers. It should call the sequentialSearch method to locate at least five of the values. Then it should call the binarySearch method to locate the same values. On average, which method makes the fewest comparisons?
+
+Phone Book ArrayList
+Write a class named PhoneBookEntry that has fields for a person’s name and phone number. The class should have a constructor and appropriate accessor and mutator methods. Then write a program that creates at least five PhoneBookEntry objects and stores them in an ArrayList. Use a loop to display the contents of each object in the ArrayList.
+
+20. Trivia Game
+In this programming challenge, you will create a simple trivia game for two players. The program will work like this:
+
+Starting with player 1, each player gets a turn at answering 5 trivia questions. (There are a total of 10 questions, 5 for each player.) When a question is displayed, four possible answers are also displayed. Only one of the answers is correct, and if the player selects the correct answer, he or she earns a point.
+After answers have been selected for all the questions, the program displays the number of points earned by each player, and declares the player with the highest number of points the winner.
+
+You are to design a Question class to hold the data for a trivia question. The Question class should have fields for the following data:
+
+A trivia question
+Possible answer #1
+Possible answer #2
+Possible answer #3
+Possible answer #4
+The number of the correct answer (1, 2, 3, or 4)
+
+The Question class should have appropriate constructor(s), accessor, and mutator methods.
+The program should create an array of 10 Question objects, one for each trivia question. (If you prefer, you can use an ArrayList instead of an array.) Make up your own trivia questions on the subject or subjects of your choice for the objects.
+
+21. Lo Shu Magic Square
+The Lo Shu Magic Square is a grid with 3 rows and 3 columns shown in Figure 7-32. The Lo Shu Magic Square has the following properties:
+
+The grid contains the numbers 1 through 9 exactly.
+The sum of each row, each column, and each diagonal all add up to the same number. This is shown in Figure 7-33.
+
+
+Figure 7-32 Lo Shu Magic Square
+
+
+
+Figure 7-33 Row, column, and diagonal sums in the Lo Shu Magic Square
+
+
+
+Figure 7-33 Full Alternative Text
+In a program, you can simulate a magic square using a two-dimensional array. Write a method that accepts a two-dimensional array as an argument and determines whether the array is a Lo Shu Magic Square. Test the method in a program.
+
+
+
+
+
+
+

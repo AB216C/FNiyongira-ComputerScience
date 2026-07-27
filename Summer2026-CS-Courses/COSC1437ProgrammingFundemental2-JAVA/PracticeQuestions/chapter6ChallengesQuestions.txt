@@ -1,0 +1,397 @@
+Multiple Choice and True/False
+
+1.This type of method cannot access any nonstatic member variables in its own class.
+
+instance
+void
+static
+nonstatic
+
+2.Two or more methods in a class may have the same name, as long as this is different.
+
+their return values
+their access specifier
+their signatures
+their memory address
+
+2.The process of matching a method call with the correct method is known as          .
+
+matching
+binding
+linking
+connecting
+
+3.When an object is passed as an argument to a method, this is actually passed.
+
+a copy of the object
+the name of the object
+a reference to the object
+None of these. You cannot pass an object.
+
+4.If you write this method for a class, Java will automatically call it any time you concatenate an object of the class with a string.
+
+toString
+plusString
+stringConvert
+concatString
+
+5.Making an instance of one class a field in another class is called          .
+
+nesting
+class fielding
+aggregation
+concatenation
+
+6.This is the name of a reference variable that is always available to an instance method, and refers to the object that is calling the method.
+
+callingObject
+this
+me
+instance
+
+7.This enum method returns the position of an enum constant in the declaration.
+
+position
+location
+ordinal
+toString
+Assuming the following declaration exists:
+enum Seasons { SPRING, WINTER, SUMMER, FALL }
+
+8.what is the fully qualified name of the FALL constant?
+
+FALL
+enum.FALL
+FALL.Seasons
+Seasons.FALL
+
+
+9.You cannot use the fully qualified name of an enum constant for this.
+
+a switch expression
+a case expression
+an argument to a method
+all of these
+
+10. A class that is defined inside of another class is called a(n)          .
+
+inner class
+folded class
+hidden class
+unknown class
+
+11. The JVM periodically performs this process, which automatically removes unreferenced objects from memory.
+
+memory cleansing
+memory deallocation
+garbage collection
+object expungement
+
+12. If a class has this method, it is called automatically just before an instance of the class is deleted by the JVM.
+
+finalize
+destroy
+remove
+housekeeper
+
+
+13. CRC stands for which of the following?
+
+Class, Return value, Composition
+Class, Responsibilities, Collaborations
+Class, Responsibilities, Composition
+Compare, Return, Continue
+
+
+14.
+True or False: A static member method may refer to nonstatic member variables of the same class at any time.
+True or False: All static member variables are initialized to –1 by default.
+True or False: A class may not have more than one constructor.
+True or False: When an object is passed as an argument to a method, the method can access the argument.
+True or False: A method cannot return a reference to an object.
+True or False: A private class that is defined inside another class is not visible to code outside the outer class.
+True or False: You can declare an enumerated data type inside a method.
+True or False: Enumerated data types are actually special types of classes.
+True or False: enum constants have a toString method.
+
+Find the Error
+
+Each of the following class definitions has errors. Find as many as you can.
+
+1. public class MyClass
+
+{
+   private int x;
+   private double y;
+
+   public static void setValues(int a, double b)
+   {
+      x = a;
+      y = b;
+   }
+}
+
+
+2. public class TwoValues
+
+{
+   private int x, y;
+
+   public TwoValues()
+   {
+      x = 0;
+   }
+
+   public TwoValues()
+   {
+      x = 0;
+      y = 0;
+   }
+}
+
+3. public class MyMath
+
+{
+   public static int square(int number)
+   {
+      return number * number;
+   }
+
+   public static double square(int number)
+   {
+      return number * number;
+   }
+}
+
+
+4.Assume the following declaration exists:
+
+enum Coffee { MEDIUM, DARK, DECAF }
+Find the error(s) in the following  switch  statement:
+// This code has errors!
+Coffee myCup = DARK;
+switch (myCup)
+{
+   case Coffee.MEDIUM :
+        System.out.println("Mild flavor.");
+        break;
+   case Coffee.DARK :
+        System.out.println("strong flavor.");
+        break;
+   case Coffee.DECAF :
+        System.out.println("Won't keep you awake.");
+        break;
+   default:
+        System.out.println("Never heard of it.");
+}
+
+
+Algorithm Workbench
+
+1. Consider the following class declaration:
+
+public class Circle
+{
+   private double radius;
+
+   private void getArea()
+   {
+      return Math.PI * radius * radius;
+   }
+
+   private double getRadius()
+   {
+      return radius;
+   }
+}
+
+
+Write a no-arg constructor for this class. It should assign the radius field the value 0.
+Write an overloaded constructor for this class. It should accept an argument copied into the radius member variable.
+Write a toString method for this class. The method should return a string containing the radius and area of the circle.
+Write an equals method for this class. The method should accept a Circle object as an argument. It should return true if the argument object contains the same data as the calling object, or false otherwise.
+Write a greaterThan method for this class. The method should accept a Circle object as an argument. It should return true if the argument object has an area greater than the area of the calling object, or false otherwise.
+
+2. A pet store sells dogs, cats, birds, and hamsters. Write a declaration for an enumerated data type that can represent the types of pets the store sells.
+
+
+Programming Challenges
+
+1. Area Class
+Write a class that has three overloaded static methods for calculating the areas of the following geometric shapes.
+
+circles
+rectangles
+cylinders
+
+Here are the formulas for calculating the area of the shapes:
+
+πArea of a circle: Area = πr2
+
+where π is Math.PI and r is the circle’s radius
+
+Area of a rectangle: Area = width×length
+
+
+πArea of a cylinder: Area = πr2h
+
+where π is Math.PI, r is the radius of the cylinder’s base, and h is the cylinder’s height
+Because the three methods are to be overloaded, they should each have the same name, but different parameter lists. Demonstrate the class in a complete program.
+
+2. InventoryItem Class Copy Constructor
+Add a copy constructor to the InventoryItem class. This constructor should accept an InventoryItem object as an argument. The constructor should assign to the description field the value in the argument’s description field, and assign to the units field the value in the argument’s units field. As a result, the new object will be a copy of the argument object.
+ The InventoryItem Class Copy Constructor Problem
+
+3. Carpet Calculator
+The Westfield Carpet Company has asked you to write an application that calculates the price of carpeting for rectangular rooms. To calculate the price, you multiply the area of the floor (width times length) by the price per square foot of carpet. For example, the area of floor that is 12 feet long and 10 feet wide is 120 square feet. To cover that floor with carpet that costs $8 per square foot would cost $960. (12 3 10 3 8 5 960.)
+First, you should create a class named RoomDimension that has two fields: one for the length of the room, and one for the width. The RoomDimension class should have a method that returns the area of the room. (The area of the room is the room’s length multiplied by the room’s width.)
+Next, you should create a RoomCarpet class that has a RoomDimension object as a field. It should also have a field for the cost of the carpet per square foot. The RoomCarpet class should have a method that returns the total cost of the carpet.
+Figure 6-21 is a UML diagram showing possible class designs and depicting the relationships between the classes. Once you have written these classes, use them in an application that asks the user to enter the dimensions of a room and the price per square foot of the desired carpeting. The application should display the total cost of the carpet.
+
+Figure 6-21 UML diagram for Programming Challenge 3
+
+
+
+Figure 6-21 Full Alternative Text
+
+4. LandTract Class
+Make a LandTract class that has two fields: one for the tract’s length, and one for the width. The class should have a method that returns the tract’s area, as well as an equals method and a toString method. Demonstrate the class in a program that asks the user to enter the dimensions for two tracts of land. The program should display the area of each tract of land and indicate whether the tracts are of equal size.
+
+5. Month class
+Write a class named Month. The class should have an int field named monthNumber that holds the number of the month. For example, January would be 1, February would be 2, and so forth. In addition, provide the following methods:
+
+A no-arg constructor that sets the monthNumber field to 1.
+A constructor that accepts the number of the month as an argument. It should set the monthNumber field to the value passed as the argument. If a value less than 1 or greater than 12 is passed, the constructor should set monthNumber to 1.
+A constructor that accepts the name of the month, such as “January” or “February”, as an argument. It should set the monthNumber field to the correct corresponding value.
+A setMonthNumber method that accepts an int argument, which is assigned to the monthNumber field. If a value less than 1 or greater than 12 is passed, the method should set monthNumber to 1.
+A getMonthNumber method that returns the value in the monthNumber field.
+A getMonthName method that returns the name of the month. For example, if the monthNumber field contains 1, then this method should return “January”.
+A toString method that returns the same value as the getMonthName method.
+An equals method that accepts a Month object as an argument. If the argument object holds the same data as the calling object, this method should return true. Otherwise, it should return false.
+A greaterThan method that accepts a Month object as an argument. If the calling object’s monthNumber field is greater than the argument’s monthNumber field, this method should return true. Otherwise, it should return false.
+A lessThan method that accepts a Month object as an argument. If the calling object’s monthNumber field is less than the argument’s monthNumber field, this method should return true. Otherwise, it should return false.
+
+
+6. Employee Class Modification
+In Programming Challenge 1 of Chapter 3, you wrote an Employee class. Add the following to the class:
+
+A constructor that accepts the following values as arguments and assigns them to the appropriate fields: employee’s name, employee’s ID number, department, and position.
+A constructor that accepts the following values as arguments and assigns them to the appropriate fields: employee’s name and ID number. The department and position fields should be assigned an empty string ("").
+A no-arg constructor that assigns empty strings ("") to the name, department, and position fields, and 0 to the idNumber field.
+
+Write a program that tests and demonstrates these constructors.
+
+7. RetailItem Class Modification
+Modify this chapter’s RetailItem class (which uses an inner class named CostData) to include accessor and mutator methods for getting and setting an item’s wholesale and retail cost. Demonstrate the methods in a program.
+
+8. CashRegister Class
+Write a CashRegister class that can be used with the RetailItem class you modified in Programming Challenge 7. The CashRegister class should simulate the sale of a retail item. It should have a constructor that accepts a RetailItem object as an argument. The constructor should also accept an integer that represents the quantity of items being purchased. In addition, the class should have the following methods:
+
+The getSubtotal method should return the subtotal of the sale, which is the quantity multiplied by the retail cost. This method must get the retail cost from the RetailItem object that was passed as an argument to the constructor.
+The getTax method should return the amount of sales tax on the purchase. The sales tax rate is 6 percent of a retail sale.
+The getTotal method should return the total of the sale, which is the subtotal plus the sales tax.
+
+Demonstrate the class in a program that asks the user for the quantity of items being purchased, and then displays the sale’s subtotal, amount of sales tax, and total.
+
+9. Sales Receipt File
+Modify the program you wrote in Programming Challenge 8 to create a file containing a sales receipt. The program should ask the user for the quantity of items being purchased, then generate a file with contents similar to the following:
+
+     SALES RECEIPT
+     Unit Price: $10.00
+     Quantity: 5
+     Subtotal: $50.00
+     Sales Tax: $ 3.00
+     Total: $53.00
+
+
+10. Parking Ticket Simulator
+For this assignment, you will design a set of classes that work together to simulate a police officer issuing a parking ticket. The classes you should design are:
+
+The ParkedCar Class. This class should simulate a parked car. The class’s responsibilities are:
+
+– To know the car’s make, model, color, license number, and the number of minutes that the car has been parked
+
+The ParkingMeter Class. This class should simulate a parking meter. The class’s only responsibility is:
+
+– To know the number of minutes of parking time that has been purchased
+
+The ParkingTicket Class. This class should simulate a parking ticket. The class’s responsibilities are:
+
+– To report the make, model, color, and license number of the illegally parked car
+– To report the amount of the fine, which is $25 for the first hour or part of an hour that the car is illegally parked, plus $10 for every additional hour or part of an hour that the car is illegally parked
+– To report the name and badge number of the police officer issuing the ticket
+
+The PoliceOfficer Class. This class should simulate a police officer inspecting parked cars. The class’s responsibilities are:
+
+– To know the police officer’s name and badge number
+– To examine a ParkedCar object and a ParkingMeter object, and determine whether the car’s time has expired
+– To issue a parking ticket (generate a ParkingTicket object) if the car’s time has expired
+
+
+Write a program that demonstrates how these classes collaborate.
+
+11. Geometry Calculator
+Design a Geometry class with the following methods:
+
+A static method that accepts the radius of a circle and returns the area of the circle. Use the following formula:
+
+πArea = πr2
+
+Use Math.PI for π, and the radius of the circle for r.
+A static method that accepts the length and width of a rectangle and returns the area of the rectangle. Use the following formula:
+
+Area = width × length
+
+A static method that accepts the length of a triangle’s base and the triangle’s height. The method should return the area of the triangle. Use the following formula:
+
+Area = base × height 3×0.5
+
+
+The methods should display an error message if negative values are used for the circle’s radius, the rectangle’s length or width, or the triangle’s base or height.
+Next, write a program to test the class, which displays the following menu and responds to the user’s selection:
+
+Geometry Calculator
+
+
+Calculate the Area of a Circle
+Calculate the Area of a Rectangle
+Calculate the Area of a Triangle
+Quit
+
+Enter your choice (1—4):
+
+Display an error message if the user enters a number outside the range of 1 through 4 when selecting an item from the menu.
+
+12. Car-Instrument Simulator
+
+For this assignment, you will design a set of classes that work together to simulate a car’s fuel gauge and odometer. The classes you will design are as follows:
+
+The FuelGauge Class. This class simulates a fuel gauge. It’s responsibilities are:
+
+– To know the car’s current amount of fuel, in gallons.
+– To report the car’s current amount of fuel, in gallons.
+– To be able to increment the amount of fuel by 1 gallon. This simulates putting fuel in the car. (The car can hold a maximum of 15 gallons.)
+– To be able to decrement the amount of fuel by 1 gallon, if the amount of fuel is greater than 0 gallons. This simulates burning fuel as the car runs.
+
+The Odometer Class. This class simulates the car’s odometer. It’s responsibilities are:
+
+– To know the car’s current mileage.
+– To report the car’s current mileage.
+– To be able to increment the current mileage by 1 mile. The maximum mileage the odometer can store is 999,999 miles. When this amount is exceeded, the odometer resets the current mileage to 0.
+– To be able to work with a FuelGuage object. It should decrease the FuelGauge object’s current amount of fuel by 1 gallon for every 24 miles traveled. (The car’s fuel economy is 24 miles per gallon.)
+
+
+Demonstrate the classes by creating instances of each. Simulate filling the car up with fuel, then run a loop that increments the odometer until the car runs out of fuel. During each loop iteration, print the car’s current mileage and amount of fuel.
+
+13. First to One Game
+This game is meant for two or more players. In the game, each player starts out with 50 points, as each player takes a turn rolling a pair of dice; the amount generated by the dice is subtracted from the player’s points. The first player with exactly one point remaining wins. If a player’s remaining points minus the amount generated by the dice results in a value less than one, then the amount should be added to the player’s points. (As an alternative, the game can be played with a set number turns. In this case, the player with the amount of points closest to one, when all rounds have been played, wins.)
+Write a program that simulates the game being played by two players. Use the Die class that was presented in Chapter 4 to simulate the dice. Write a Player class to simulate the players.
+
+14. Heads or Tails Game
+This game is meant for two or more players. In this game, the players take turns flipping a coin. Before the coin is flipped, players should guess if the coin will land heads up or tails up. If a player guesses correctly, then that player is awarded a point. If a player guesses incorrectly, then that player will lose a point. The first player to score five points is the winner.
+Write a program that simulates the game being played by two players. Use the Coin class that you wrote as an assignment in Chapter 5 (Programming Challenge 20) to simulate the coin. Write a Player class to simulate the players.
+
+
+
+
+

@@ -1,0 +1,488 @@
+Review Questions and Exercises
+Multiple Choice and True/False
+
+1. In an inheritance relationship, this is the general class.
+
+subclass
+superclass
+derived class
+child class
+
+2. In an inheritance relationship, this is the specialized class.
+
+superclass
+base class
+subclass
+parent class
+
+3. This key word indicates that a class inherits from another class.
+
+derived
+specialized
+based
+extends
+3. A subclass does not have access to these superclass members.
+
+public
+private
+protected
+all of these
+
+4. This key word refers to an object’s superclass.
+
+super
+base
+this
+parent
+
+5. In a subclass constructor, a call to the superclass constructor must          .
+
+appear as the very first statement
+appear as the very last statement
+appear between the constructor’s header and the opening brace
+not appear
+
+6. The following is an explicit call to the superclass’s default constructor.
+
+default();
+class();
+super();
+base();
+
+7. A method in a subclass having the same signature as a method in the superclass is an example of          .
+
+overloading
+overriding
+composition
+an error
+
+8. A method in a subclass having the same name as a method in the superclass but a different signature is an example of          .
+
+overloading
+overriding
+composition
+an error
+
+9. These superclass members are accessible to subclasses and classes in the same package.
+
+private
+public
+protected
+all of these
+
+10. All classes directly or indirectly inherit from this class.
+
+Object
+Super
+Root
+Java
+
+11. With this type of binding, the Java Virtual Machine determines at runtime which method to call, depending on the type of the object that a variable references.
+
+static
+early
+flexible
+dynamic
+
+12. When a class implements an interface, it must do which of the following?
+
+Overload all of the methods listed in the interface
+Provide all of the nondefault methods that are listed in the interface, with the exact signatures specified
+Not have a constructor
+Be an abstract class
+
+13. Fields in an interface are          .
+
+final
+static
+both final and static
+not allowed
+
+
+14. Abstract methods must be          .
+
+overridden
+overloaded
+deleted and replaced with real methods
+declared as private
+15. Abstract classes cannot          .
+
+be used as superclasses
+have abstract methods
+be instantiated
+have fields
+
+
+16.You use the            operator to define an anonymous inner class.
+
+class
+inner
+new
+anonymous
+
+17.An anonymous inner class must          .
+
+be a superclass
+implement an interface
+extend a superclass
+either b or c.
+18. A functional interface is an interface with           .
+
+only one abstract method
+no abstract methods
+only private methods
+no name
+
+19. You can use a lambda expression to instantiate an object that           .
+
+has no constructor
+extends any superclass
+implements a functional interface
+does not implement an interface
+
+
+20.
+True or False: Constructors are not inherited.
+True or False: In a subclass, a call to the superclass constructor can be written only in the subclass constructor.
+True or False: If a subclass constructor does not explicitly call a superclass constructor, Java will not call any of the superclass’s constructors.
+True or False: An object of a superclass can access members declared in a subclass.
+True or False: The superclass constructor always executes before the subclass constructor.
+True or False: When a method is declared with the final modifier, it must be overridden in a subclass.
+True or False: A superclass has a member with package access. A class that is outside the superclass’s package, but inherits from the superclass, can access this member.
+True or False: A superclass reference variable can reference an object of a class that inherits from the superclass.
+True or False: A subclass reference variable can reference an object of the superclass.
+True or False: When a class contains an abstract method, the class cannot be instantiated.
+True or False: A class can implement only one interface.
+True or False: By default, all members of an interface are public.
+
+
+Find the Error
+Find the error in each of the following code segments.
+
+
+1. // Superclass
+        public class Vehicle
+        {
+          (Member declarations . . .)
+        }
+        // Subclass
+        public class Car expands Vehicle
+        {
+          (Member declarations . . .) 
+        }
+2. // Superclass
+        public class Vehicle
+        {
+           private double cost;
+          (Other methods . . .)
+        }
+        // Subclass
+        public class Car extends Vehicle
+        {
+          public Car(double c)
+          {
+            cost = c;
+          }
+        }
+3. // Superclass
+        public class Vehicle
+        {
+          private double cost;
+          public Vehicle(double c)
+          {
+            cost = c;
+          }
+          (Other methods . . .)
+        }
+        // Subclass
+        public class Car extends Vehicle
+        {
+          private int passengers;
+          public Car(int p)
+          {
+            passengers = c;
+          }
+          (Other methods . . .)
+        }
+4. // Superclass
+        public class Vehicle
+        {
+         public abstract double getMilesPerGallon();
+         (Other methods . . .)
+        }
+        // Subclass
+        public class Car extends Vehicle
+        {
+         private int mpg;
+
+         public int getMilesPerGallon();
+         {
+           return mpg;
+         }
+         (Other methods . . .) 
+        }
+
+
+Algorithm Workbench
+
+1. Write the first line of the definition for a Poodle class. The class should inherit from the Dog class.
+2. Look at the following code which is the first line of a class definition:
+
+public class Tiger extends Felis
+
+In what order will the class constructors execute?
+
+3. Write the declaration for class B. The class’s members should be:
+
+m, an integer. This variable should not be accessible to code outside the class or to any class that inherits from class B.
+n, an integer. This variable should be accessible only to classes that inherit from class B or in the same package as class B.
+setM, getM, setN, and getN. These are the mutator and accessor methods for the member variables m and n. These methods should be accessible to code outside the class.
+calc. This is a public abstract method.
+
+Next write the declaration for class D, which inherits from class B. The class’s members should be:
+
+q, a double. This variable should not be accessible to code outside the class.
+r, a double. This variable should be accessible to any class that extends class D or in the same package.
+setQ, getQ, setR, and getR. These are the mutator and accessor methods for the member variables q and r. These methods should be accessible to code outside the class.
+calc. a public method that overrides the superclass’s abstract calc method. This method should return the value of q times r.
+
+4. Write the statement that calls a superclass constructor and passes the arguments x, y, and z.
+A superclass has the following method:
+
+public void setValue(int v)
+{
+  value = v;
+}
+
+4. Write a statement that can appear in a subclass that calls this method, passing 10 as an argument.
+5. A superclass has the following abstract method:
+
+public abstract int getValue();
+
+Write an example of a getValue method that can appear in a subclass.
+Write the first line of the definition for a Stereo class. The class should inherit from the SoundSystem class, and it should implement the CDPlayable, TunerPlayable, and MP3Playable interfaces.
+Write an interface named Nameable that specifies the following methods:
+
+public void setName(String n)
+public String getName()
+
+
+
+9. Look at the following interface:
+
+public interface Computable
+{
+  void compute(double x);
+}
+
+Write a statement that uses a lambda expression to create an object that implements the Computable interface. The object’s name should be half. The half object’s compute method should return the value of the x parameter divided by 2.
+
+Short Answer
+
+What is an “is-a” relationship?
+A program uses two classes: Animal and Dog. Which class is the superclass and which is the subclass?
+What is the superclass and what is the subclass in the following line?
+
+public class Pet extends Dog
+
+What is the difference between a protected class member and a private class member?
+
+Can a subclass ever directly access the private members of its superclass?
+
+Which constructor is called first, that of the subclass or the superclass?
+
+What is the difference between overriding a superclass method and overloading a superclass method?
+
+Reference variables can be polymorphic. What does this mean?
+
+When does dynamic binding take place?
+
+What is an abstract method?
+
+What is an abstract class?
+
+What are the differences between an abstract class and an interface?
+
+When you instantiate an anonymous inner class, the class must do one of two things. What are they?
+
+What is a functional interface?
+
+What is a lambda expression?
+
+
+Programming Challenges
+
+
+1. Employee and ProductionWorker Classes
+Design a class named Employee. The class should keep the following information in fields:
+
+Employee name
+Employee number in the format XXX–L, where each X is a digit within the range 0–9, and the L is a letter within the range A–M.
+Hire date
+
+ The Employee and ProductionWorker Classes Problem
+Write one or more constructors and the appropriate accessor and mutator methods for the class.
+Next, write a class named ProductionWorker that inherits from the Employee class. The ProductionWorker class should have fields to hold the following information:
+
+Shift (an integer)
+Hourly pay rate (a double)
+
+The workday is divided into two shifts: day and night. The shift field will be an integer value representing the shift that the employee works. The day shift is shift 1, and the night shift is shift 2. Write one or more constructors and the appropriate accessor and mutator methods for the class. Demonstrate the classes by writing a program that uses a ProductionWorker object.
+
+2. ShiftSupervisor Class
+In a particular factory, a shift supervisor is a salaried employee who supervises a shift. In addition to a salary, the shift supervisor earns a yearly bonus when his or her shift meets production goals. Design a ShiftSupervisor class that inherits from the Employee class you created in Programming Challenge 1. The ShiftSupervisor class should have a field that holds the annual salary, and a field that holds the annual production bonus that a shift supervisor has earned. Write one or more constructors and the appropriate accessor and mutator methods for the class. Demonstrate the class by writing a program that uses a ShiftSupervisor object.
+
+3. TeamLeader Class
+In a particular factory, a team leader is an hourly paid production worker who leads a small team. In addition to hourly pay, team leaders earn a fixed monthly bonus. Team leaders are required to attend a minimum number of hours of training per year. Design a TeamLeader class that inherits from the ProductionWorker class you designed in Programming Challenge 1. The TeamLeader class should have fields for the monthly bonus amount, the required number of training hours, and the number of training hours that the team leader has attended. Write one or more constructors and the appropriate accessor and mutator methods for the class. Demonstrate the class by writing a program that uses a TeamLeader object.
+
+4. Essay Class
+Design an Essay class that inherits from the GradedActivity class presented in this chapter. The Essay class should determine the grade a student receives on an essay. The student’s essay score can be up to 100 and is determined in the following manner:
+
+Grammar: 30 points
+Spelling: 20 points
+Correct length: 20 points
+Content: 30 points
+Demonstrate the class in a simple program.
+
+
+
+5.Course Grades
+
+In a course, a teacher gives the following tests and assignments:
+
+A lab activity that is observed by the teacher and assigned a numeric score.
+A pass/fail exam that has 10 questions. The minimum passing score is 70.
+An essay that is assigned a numeric score.
+A final exam that has 50 questions.
+
+Write a class named CourseGrades. The class should have an array of GradedActivity objects as a field. The array should be named grades. The grades array should have four elements, one for each of the assignments previously described. The class should have the following methods:
+
+
+
+setLab
+This method should accept a GradedActivity object as its argument. This object should already hold the student’s score for the lab activity. Element 0 of the grades field should reference this object.
+
+
+setPassFailExam
+This method should accept a PassFailExam object as its argument. This object should already hold the student’s score for the pass/fail exam. Element 1 of the grades field should reference this object.
+
+
+setEssay
+This method should accept an Essay object as its argument. (See Programming Challenge 4 for the Essay class. If you have not completed Programming Challenge 4, use a GradedActivity object instead.) This object should already hold the student’s score for the essay. Element 2 of the grades field should reference this object.
+
+
+setFinalExam
+This method should accept a FinalExam object as its argument. This object should already hold the student’s score for the final exam. Element 3 of the grades field should reference this object.
+
+
+toString
+This method should return a string that contains the numeric scores and grades for each element in the grades array.
+
+
+
+Demonstrate the class in a program.
+
+
+6. Analyzable Interface
+Modify the CourseGrades class you created in Programming Challenge 5 so that it implements the following interface:
+
+public interface Analyzable
+{
+  double getAverage();
+  GradedActivity getHighest();
+  GradedActivity getLowest();
+}
+
+The getAverage method should return the average of the numeric scores stored in the grades array. The getHighest method should return a reference to the element of the grades array that has the highest numeric score. The getLowest method should return a reference to the element of the grades array that has the lowest numeric score. Demonstrate the new methods in a complete program.
+
+7. Person and Customer Classes
+Design a class named Person with fields for holding a person’s name, address, and telephone number. Write one or more constructors and the appropriate mutator and accessor methods for the class’s fields.
+Next, design a class named Customer, which inherits from the Person class. The Customer class should have a field for a customer number and a boolean field indicating whether the customer wishes to be on a mailing list. Write one or more constructors, and the appropriate mutator and accessor methods, for the class’s fields. Demonstrate an object of the Customer class in a simple program.
+
+
+8. PreferredCustomer Class
+A retail store has a preferred customer plan where customers can earn discounts on all their purchases. The amount of a customer’s discount is determined by the amount of the customer’s cumulative purchases in the store, as follows:
+
+When a preferred customer spends $500, he or she gets a 5 percent discount on all future purchases.
+When a preferred customer spends $1,000, he or she gets a 6 percent discount on all future purchases.
+When a preferred customer spends $1,500, he or she gets a 7 percent discount on all future purchases.
+When a preferred customer spends $2,000 or more, he or she gets a 10 percent discount on all future purchases.
+
+Design a class named PreferredCustomer, which inherits from the Customer class you created in Programming Challenge 7. The PreferredCustomer class should have fields for the amount of the customer’s purchases and the customer’s discount level. Write one or more constructors and the appropriate mutator and accessor methods for the class’s fields. Demonstrate the class in a simple program.
+
+
+9. BankAccount and SavingsAccount Classes
+Design an abstract class named BankAccount to hold the following data for a bank account:
+
+Balance
+Number of deposits this month
+Number of withdrawals
+Annual interest rate
+Monthly service charges
+
+The class should have the following methods:
+
+
+
+Constructor
+The constructor should accept arguments for the balance and annual interest rate.
+
+
+deposit
+A method that accepts an argument for the amount of the deposit. The method should add the argument to the account balance. It should also increment the variable holding the number of deposits.
+
+
+withdraw
+A method that accepts an argument for the amount of the withdrawal. The method should subtract the argument from the balance. It should also increment the variable holding the number of withdrawals.
+
+
+calcInterest
+A method that updates the balance by calculating the monthly interest earned by the account, and adding this interest to the balance. This is performed by the following formulas:
+Monthly Interest Rate = (Annual Interest Rate/12)
+Monthly Interest = Balance * Monthly Interest Rate
+Balance = Balance + Monthly Interest
+
+
+monthlyProcess
+A method that subtracts the monthly service charges from the balance, calls the calcInterest method, then sets the variables that hold the number of withdrawals, number of deposits, and monthly service charges to zero.
+
+
+
+Next, design a SavingsAccount class that extends the BankAccount class. The SavingsAccount class should have a status field to represent an active or inactive account. If the balance of a savings account falls below $25, it becomes inactive. (The status field could be a boolean variable.) No more withdrawals can be made until the balance is raised above $25, at which time the account becomes active again. The savings account class should have the following methods:
+
+
+
+withdraw
+A method that determines whether the account is inactive before a withdrawal is made. (No withdrawal will be allowed if the account is not active.) A withdrawal is then made by calling the superclass version of the method.
+
+
+deposit
+A method that determines whether the account is inactive before a deposit is made. If the account is inactive and the deposit brings the balance above $25, the account becomes active again. The deposit is then made by calling the superclass version of the method.
+
+
+monthlyProcess
+Before the superclass method is called, this method checks the number of withdrawals. If the number of withdrawals for the month is more than 4, a service charge of $1 for each withdrawal above 4 is added to the superclass field that holds the monthly service charges. (Don’t forget to check the account balance after the service charge is taken. If the balance falls below $25, the account becomes inactive.)
+
+
+10. Ship, CruiseShip, and CargoShip Classes
+Design a Ship class with the following members:
+
+A field for the name of the ship (a string)
+A field for the year that the ship was built (a string)
+A constructor and appropriate accessors and mutators
+A toString method that displays the ship’s name and the year it was built
+
+Design a CruiseShip class that extends the Ship class. The CruiseShip class should have the following members:
+
+A field for the maximum number of passengers (an int)
+A constructor and appropriate accessors and mutators
+A toString method that overrides the toString method in the base class. The CruiseShip class’s toString method should display only the ship’s name and the maximum number of passengers.
+
+Design a CargoShip class that extends the Ship class. The CargoShip class should have the following members:
+
+A field for the cargo capacity in tonnage (an int)
+A constructor and appropriate accessors and mutators
+A toString method that overrides the toString method in the base class. The CargoShip class’s toString method should display only the ship’s name and the ship’s cargo capacity.
+
+Demonstrate the classes in a program that has a Ship array. Assign various Ship, CruiseShip, and CargoShip objects to the array elements. The program should then step through the array, calling each object’s toString method. (See Code Listing 9-25 as an example.)
+

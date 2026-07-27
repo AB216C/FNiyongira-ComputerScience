@@ -1,0 +1,52 @@
+package chapter22ImprovedFibonacciAlgorithm;
+
+// The time complexity of recursive fibonacci is O(2^N) while with improved approach it is O(n)
+//With non-recussive method, the run grows linearly with n
+
+import java.util.Scanner;
+
+public class NonRecursiveFibonacci {
+	
+	public static long fib(long n)
+	{
+	    long f0 = 0; // For fib(0)
+	    long f1 = 1; // For fib(1)
+	    long f2 = 1; // For fib(2)
+
+	    if (n == 0)
+	        return f0;
+	    else if (n == 1)
+	        return f1;
+	    else if (n == 2)
+	        return f2;
+
+	    for (int i = 3; i <= n; i++)
+	    {
+	        f0 = f1;
+	        f1 = f2;
+	        f2 = f0 + f1;
+	    }
+
+	    return f2;
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		
+		Scanner input = new Scanner(System.in);
+		
+		
+		System.out.print("Enter an Index of Fibonacci number: ");
+		
+		int index = input.nextInt();
+		
+		
+		System.out.println("Fibonacci number at index " + index + " is " + fib(index));
+		
+		
+		
+	}
+
+}

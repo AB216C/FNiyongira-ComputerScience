@@ -1,0 +1,298 @@
+ Review Questions and Exercises
+Multiple Choice and True/False
+
+1. Every complete statement ends with a      .
+
+period
+parenthesis
+semicolon
+ending brace
+
+2. The following data:
+
+ 72
+ 'A'
+ "Hello World"
+ 2.8712
+
+are all examples of      .
+
+variables
+literals
+strings
+none of these
+3. A group of statements, such as the contents of a class or a method, are enclosed in      .
+
+braces {}
+parentheses ()
+brackets []
+any of these will do
+
+4. Which of the following are not valid assignment statements? (Indicate all that apply.)
+
+total = 9;
+72 = amount;
+profit = 129
+letter = 'W';
+
+5. Which of the following are not valid println statements? (Indicate all that apply.)
+
+System.out.println + "Hello World";
+System.out.println("Have a nice day");
+out.System.println(value);
+println.out(Programming is great fun);
+The negation operator is      .
+
+unary
+binary
+ternary
+none of these
+
+6. Which key word is used to declare a named constant?
+
+constant
+namedConstant
+final
+concrete
+
+8. Which characters mark the beginning of a multiline comment?
+
+//
+/*
+*/
+/**
+
+9. Which characters mark the beginning of a single-line comment?
+
+//
+/*
+*/
+/**
+
+10. Which characters mark the beginning of a documentation comment?
+
+//
+/*
+*/
+/**
+
+11. Which Scanner class method would you use to read a string as input?
+
+nextString
+nextLine
+readString
+getLine
+
+12. Which Scanner class method would you use to read a double as input?
+
+nextDouble
+getDouble
+readDouble
+None of these; you cannot read a double with the Scanner class
+
+
+13. You can use this class to display dialog boxes.
+
+JOptionPane
+BufferedReader
+InputStreamReader
+DialogBox
+
+14. When Java converts a lower-ranked value to a higher-ranked type, it is called a      .
+
+4-bit conversion
+escalating conversion
+widening conversion
+narrowing conversion
+
+
+15. Which type of operator lets you manually convert a value, even if it means that a narrowing conversion will take place?
+
+cast
+binary
+uploading
+dot
+
+
+True or False: A left brace in a Java program is always followed by a right brace later in the program.
+True or False: A variable must be declared before it can be used.
+True or False: Variable names may begin with a number.
+True or False: You cannot change the value of a variable whose declaration uses the final key word.
+True or False: Comments that begin with // can be processed by javadoc.
+True or False: If one of an operator’s operands is a double and the other operand is an int, Java will automatically convert the value of the double to an int.
+
+
+Predict the Output
+
+What will the following code segments print on the screen?
+
+1. 
+int freeze = 32, boil = 212;
+freeze = 0;
+boil = 100;
+System.out.println(freeze + "\n"+ boil + "\n");
+
+2. 
+int x = 0, y = 2;
+x = y * 4;
+System.out.println(x + "\n" + y + "\n");
+
+3. 
+System.out.print("I am the incredible”);
+System.out.print("computing\nmachine");
+System.out.print("\nand I will\namaze\n)";
+System.out.println("you.");
+
+4.
+System.out.print("Be careful\n)";
+System.out.print("This might/n be a trick ");
+System.out.println("question.");
+
+5.
+int a, x = 23;
+a = x % 2;
+System.out.println(x + "\n" + a);
+
+
+Find the Error
+There are a number of syntax errors in the following program. Locate as many as you can.
+
+*/  What's wrong with this program? /*
+public MyProgram
+{
+  public static void main(String[] args);
+  }
+   int a, b, c  \\ Three integers
+   a = 3
+   b = 4
+   c = a + b
+   System.out.println('The value of c is' + C);
+  {
+
+
+Algorithm Workbench
+
+
+1. Show how the double variables temp, weight, and age can be declared in one statement.
+2. Show how the int variables months, days, and years may be declared in one statement, with months initialized to 2 and years initialized to 3.
+3. Write assignment statements that perform the following operations with the variables a, b, and c.
+
+Adds 2 to a and stores the result in b
+Multiplies b times 4 and stores the result in a
+Divides a by 3.14 and stores the result in b
+Subtracts 8 from b and stores the result in a
+Stores the character ‘K’ in c
+Stores the Unicode code for ‘B’ in c
+
+4. Assume the variables result, w, x, y, and z are all integers, and that w = 5, x = 4, y = 8, and z = 2. What value will be stored in result in each of the following statements?
+
+result = x + y;
+result = z * 2;
+result = y / x;
+result = y - z;
+result = w % 2;
+5. How would each of the following numbers be represented in E notation?
+
+3.287 x 106
+-9.7865 x 1012
+7.65491 x 10-3
+4. Modify the following program so it prints two blank lines between each line of text.
+
+public class
+{
+  public static void main(String[] args)
+  {
+   System.out.print("This is line 1.");
+   System.out.print("This is line 2.");
+   System.out.print("This is line 3.");
+   System.out.print("This is line 4.");
+   System.out.println("This is line 5.");
+  }
+}
+
+5. What will the following code output?
+
+int apples = 0, bananas = 2, pears = 10;
+apples += 10;
+bananas *= 10;
+pears /= 10; System.out.println(apples + " " +
+                bananas + " " +
+                pears);
+
+
+6. What will the following code output?
+
+double d = 12.9;
+int i = (int)d;
+System.out.println(i);
+
+7. What will the following code output?
+
+String message = "Have a great day!";
+System.out.println(message.charAt(5));
+
+8. What will the following code output?
+
+String message = "Have a great day!";
+System.out.println(message.toUpperCase());
+System.out.println(message);
+
+9. Convert the following pseudocode to Java code. Be sure to declare the appropriate variables.
+
+
+Store 20 in the speed variable.
+Store 10 in the time variable.
+Multiply speed by time and store the result in the distance variable.
+Display the contents of the distance variable.
+
+10. Convert the following pseudocode to Java code. Be sure to define the appropriate variables.
+
+
+Store 172.5 in the force variable.
+Store 27.5 in the area variable.
+Divide area by force and store the result in the pressure variable.
+Display the contents of the pressure variable.
+
+11. Write the code to set up all the necessary objects for reading keyboard input. Then write code that asks the user to enter his or her desired annual income. Store the input in a double variable.
+12. Write the code to display a dialog box that asks the user to enter his or her desired annual income. Store the input in a double variable.
+13. A program has a float variable named total, and a double variable named number. Write a statement that assigns number to total without causing an error when compiled.
+
+Short Answer
+
+1. Is the following comment a single-line style comment or a multiline style comment?
+
+/* This program was written by M. A. Codewriter */
+
+2. Is the following comment a single-line style comment or a multiline style comment?
+
+// This program was written by M. A. Codewriter
+
+Describe what the term self-documenting program means.
+
+What is meant by “case sensitive”? Why is it important for a programmer to know that Java is a case-sensitive language?
+
+Briefly explain how the print and println methods are related to the System class and the out object.
+
+What does a variable declaration tell the Java compiler about a variable?
+
+Why are variable names like x not recommended?
+
+What things must be considered when deciding on a data type to use for a variable?
+
+Briefly describe the difference between variable assignment and variable initialization.
+
+What is the difference between comments that start with the // characters, and comments that start with the /* characters?
+
+11. Briefly describe what programming style means. Why should your programming style be consistent?
+
+12. Assume that a program uses the named constant pi to represent the value 3.14.
+The program uses the named constant in several statements. What is the advantage of using the named constant instead of the actual value 3.14 in each statement?
+
+13. Assume the file SalesAverage.java is a Java source file that contains documentation comments. 
+Assuming you are in the same folder or directory as the source code file, what command would you enter at the operating system command prompt to generate the HTML documentation files?
+
+14. An expression adds a byte variable and a short variable. Of what data type will the result be?
+
+
+
+

@@ -1,0 +1,568 @@
+Multiple Choice and True/False
+
+What will the println statement in the following program segment display?
+int x = 5;
+System.out.println(x++);
+
+5
+6
+0
+None of these
+
+What will the println statement in the following program segment display?
+int x = 5;
+System.out.println(++x);
+
+5
+6
+0
+None of these
+
+In the expression number++, the ++ operator is in what mode?
+
+prefix
+pretest
+postfix
+posttest
+
+What is each repetition of a loop known as?
+
+cycle
+revolution
+orbit
+iteration
+
+This is a variable that controls the number of iterations performed by a loop.
+
+loop control variable
+accumulator
+iteration register variable
+repetition meter
+
+The while loop is this type of loop.
+
+pretest
+posttest
+prefix
+postfix
+
+The do-while loop is this type of loop.
+
+pretest
+posttest
+prefix
+postfix
+
+The for loop is this type of loop.
+
+pretest
+posttest
+prefix
+postfix
+
+This type of loop has no way of ending and repeats until the program is interrupted.
+
+indeterminate
+interminable
+infinite
+timeless
+
+This type of loop always executes at least one time.
+
+while
+do-while
+for
+Any of these
+
+This expression is executed by the for loop only once, regardless of the number of iterations.
+
+initialization expression
+test expression
+update expression
+preincrement expression
+
+This is a variable that keeps a running total.
+
+sentinel
+sum
+total
+accumulator
+
+This is a special value that signals when there are no more items from a list of items to be processed. This value cannot be mistaken as an item from the list.
+
+sentinel
+flag
+signal
+accumulator
+
+To open a file for writing, you use the following class:
+
+PrintWriter
+FileOpen
+OutputFile
+FileReader
+
+To open a file for reading, you use the following classes:
+
+File and Writer
+File and Output
+File and Input
+File and Scanner
+
+When a program is finished using a file, it should do this.
+
+Erase the file
+Close the file
+Throw an exception
+Reset the read position
+
+This class allows you to use the print and println methods to write data to a file.
+
+File
+FileReader
+OutputFile
+PrintWriter
+
+This class allows you to read a line from a file.
+
+FileWriter
+Scanner
+InputFile
+FileReader
+
+
+True or False: The while loop is a pretest loop.
+True or False: The do-while loop is a pretest loop.
+True or False: The for loop is a posttest loop.
+True or False: It is not necessary to initialize accumulator variables.
+True or False: One limitation of the for loop is that only one variable may be initialized in the initialization expression.
+True or False: A variable may be defined in the initialization expression of the for loop.
+True or False: In a nested loop, the inner loop goes through all of its iterations for every single iteration of the outer loop.
+True or False: To calculate the total number of iterations of a nested loop, add the number of iterations of all the loops.
+
+Find the Error
+
+1. Find the errors in the following code.
+
+// This code contains ERRORS!
+// It adds two numbers entered by the user.
+int num1, num2;
+String input;
+char again;
+Scanner keyboard = new Scanner(System.in);
+while (again == 'y' || again == 'Y')
+   System.out.print("Enter a number: ");
+   num1 = keyboard.nextInt();
+   System.out.print("Enter another number: ";
+   num2 = keyboard.nextInt();
+   System.out.println("Their sum is "+ (num1 + num2));
+   System.out.println("Do you want to do this again? ");
+   keyboard.nextLine(); // Consume remaining newline
+   input = keyboard.nextLine();
+   again = input.charAt(0);
+2. // This code contains ERRORS!
+int count = 1, total;
+while (count <= 100)
+    total += count;
+System.out.print("The sum of the numbers 1 - 100 is ");
+System.out.println(total);
+
+
+4. // This code contains ERRORS!
+Scanner keyboard = new Scanner(System.in);
+int choice, num1, num2;
+do
+{
+    System.out.print("Enter a number: ");
+    num1 = keyboard.nextInt();
+    System.out.print("Enter another number: ");
+    num2 = keyboard.nextInt();
+    System.out.println("Their sum is " + (num1 + num2));
+    System.out.println("Do you want to do this again? ");
+    System.out.print("1 = yes, 0 = no ");
+    choice = keyboard.nextInt();
+} while (Choice = 1)
+
+5. // This code contains ERRORS!
+// Print the numbers 1 through 10.
+for (int count = 1, count <= 10, count++;)
+{
+    System.out.println(count);
+    count++;
+}
+
+Algorithm Workbench
+
+1. Write a while loop that lets the user enter a number. The number should be multiplied by 10 and the result stored in the variable product. 
+The loop should iterate as long as product contains a value less than 100.
+2. Write a do-while loop that asks the user to enter two numbers. The numbers should be added and the sum displayed. 
+The user should be asked if he or she wishes to perform the operation again. If so, the loop should repeat. Otherwise, it should terminate.
+3. Write a for loop that displays the following set of numbers:
+0, 10, 20, 30, 40, 50 . . . 1000
+4. Write a loop that asks the user to enter a number. The loop should iterate 10 times and keep a running total of the numbers entered.
+5. Write a for loop that calculates the total of the following series of numbers:
+
+130+229+328+...301
+
+
+6. Write a nested loop that displays 10 rows of '#' characters. There should be 15 '#' characters in each row.
+7. Write nested loops to draw this pattern:
+
+*******
+******
+*****
+****
+***
+**
+*
+8. Write nested loops to draw this pattern:
+
+##
+# #
+#  #
+#   #
+#    #
+#     #
+9. Complete the following program so that it performs the following actions 10 times:
+
+Generates a random number that is either 0 or 1.
+Displays either the word “Yes” or the word “No” depending on the random number that was generated.
+
+// Write the necessary import statement(s) here.
+public class ReviewQuestion
+  {
+     public static void main(String[] args)
+     {
+      // Write the necessary code here.
+       }
+  }
+10. Convert the while loop in the following code segment to a do-while loop:
+
+Scanner keyboard = new Scanner(System.in);
+int x = 1;
+while (x > 0)
+{
+    System.out.print("Enter a number: ");
+   x = keyboard.nextInt();
+}
+11. Convert the do-while loop in the following code segment to a while loop:
+Scanner keyboard = new Scanner(System.in);
+ String input;
+ char sure;
+ do
+{
+   System.out.print("Are you sure you want to quit? ");
+   input = keyboard.next();
+   sure = input.charAt(0);
+} while (sure ! = 'Y' && sure ! = 'N');
+
+12. Convert the while loop in the following code segment to a for loop:
+int count = 0;
+while (count < 50)
+ {
+   System.out.println("count is " + count);
+   count++;
+}
+13. Convert the following for loop to a while loop:
+for (int x = 50; x > 0; x--)
+{
+    System.out.println(x + " seconds to go.");
+}
+
+14.Write an input validation loop that asks the user to enter a number in the range of 1 through 5.
+15.Write an input validation loop that asks the user to enter the words “yes” or “no”.
+16.Write code that does the following: Opens a file named numberList.txt, uses a loop to write the numbers 1 through 100 to the file, then closes the file.
+17.Write code that does the following: Opens the numberList.txt file created by the code in Question 13, reads all of the numbers from the file and displays them, then closes the file.
+18.Modify the code you wrote in Question 14 so it adds all of the numbers read from the file and displays their total.
+19.Write code that opens a file named numberList.txt for writing, but does not erase the file’s contents if it already exists.
+
+Short Answer
+
+1.Briefly describe the difference between the prefix and postfix modes used by the increment and decrement operators.
+
+Why should you indent the statements in the body of a loop?
+
+Describe the difference between pretest loops and posttest loops.
+
+Why are the statements in the body of a loop called conditionally executed statements?
+
+Describe the difference between the while loop and the do-while loop.
+
+Which loop should you use in situations where you wish the loop to repeat until the Boolean expression is false, and the loop should not execute if the test expression is false to begin with?
+
+Which loop should you use in situations where you wish the loop to repeat until the Boolean expression is false, but the loop should execute at least one time?
+
+Which loop should you use when you know the number of required iterations?
+
+Why is it critical that accumulator variables be properly initialized?
+
+What is an infinite loop? Write the code for an infinite loop.
+
+Describe a programming problem that would require the use of an accumulator.
+
+What does it mean to let the user control a loop?
+
+What is the advantage of using a sentinel?
+
+Why must the value chosen for use as a sentinel be carefully selected?
+
+Describe a programming problem requiring the use of nested loops.
+
+How does a file buffer increase a program’s performance?
+
+Why should a program close a file when finished using it?
+
+What is a file’s read position? Where is the read position when a file is first opened for reading?
+
+When writing data to a file, what is the difference between the print and the println methods?
+
+What does the Scanner class’s hasNext method return when the end of the file has been reached?
+
+What is a potential error that can occur when a file is opened for reading?
+
+What does it mean to append data to a file?
+
+23.How do you open a file so that new data will be written to the end of the file’s existing data?
+
+Programming Challenges
+
+1. Sum of Numbers
+
+Write a program that asks the user for a positive nonzero integer value. The program should use a loop to get the sum of all the integers from 1 up to the number entered. For example, if the user enters 50, the loop will find the sum of 1, 2, 3, 4, . . . , 50.
+
+2. Distance Traveled
+The distance a vehicle travels can be calculated as follows:
+
+Distance = Speed * Time
+
+For example, if a train travels 40 miles per hour (mph) for three hours, the distance traveled is 120 miles.
+Design a class that stores the speed of a vehicle (in miles per hour) and the number of hours it has traveled. It should have a method named getDistance that returns the distance, in miles, that the vehicle has traveled.
+Demonstrate the class in a program that uses a loop to display the distance a vehicle has traveled for each hour of a time period specified by the user. For example, if a vehicle is traveling at 40 mph for a three-hour time period, it should display a report similar to the one shown here.
+
+
+
+Hour
+Distance Traveled
+
+
+
+
+1
+40
+
+
+2
+80
+
+
+3
+120
+
+
+
+Input Validation: Do not accept a negative number for speed, and do not accept any value less than one for time traveled.
+
+3. Distance File
+Modify the program you wrote for Programming Challenge 2 (Distance Traveled) so that it writes the report to a file instead of the screen. Open the file in Notepad or another text editor to confirm the output.
+
+4. Pennies for Pay
+Write a program that calculates how much a person would earn over a period of time if his or her salary is one penny the first day, two pennies the second day, and continues to double each day. The program should display a table showing the salary for each day, then show the total pay at the end of the period. The output should be displayed in a dollar amount, not the number of pennies.
+ The Pennies for Pay Problem
+Input Validation: Do not accept a number less than 1 for the number of days worked.
+
+5. Hotel Occupancy
+A hotel’s occupancy rate is calculated as follows:
+
+Occupancy rate = number of rooms occupied ÷ total number of rooms
+
+Write a program that calculates the occupancy rate for each floor of a hotel. The program should start by asking for the number of floors the hotel has. A loop should then iterate once for each floor. During each iteration, the loop should ask the user for the number of rooms on the floor, and how many of them are occupied. After all the iterations, the program should display the number of rooms the hotel has, the number that are occupied, the number that are vacant, and the occupancy rate for the hotel.
+Input Validation: Do not accept a value less than 1 for the number of floors. Do not accept a number less than 10 for the number of rooms on a floor.
+
+6. Population
+Write a class that will predict the size of a population of organisms. The class should store the starting number of organisms, their average daily population increase (as a percentage), and the number of days they will multiply. The class should have a method that uses a loop to display the size of the population for each day.
+Test the class in a program that asks the user for the starting size of the population, their average daily increase, and the number of days they will multiply. The program should display the daily population.
+Input Validation: Do not accept a number less than 2 for the starting size of the population. Do not accept a negative number for average daily population increase. Do not accept a number less than 1 for the number of days they will multiply.
+
+7. Average Rainfall
+Write a program that uses nested loops to collect data and calculate the average rainfall over a period of years. The program should first ask for the number of years. The outer loop will iterate once for each year. The inner loop will iterate 12 times, once for each month. Each iteration of the inner loop will ask the user for the inches of rainfall for that month.
+After all iterations, the program should display the number of months, the total inches of rainfall, and the average rainfall per month for the entire period.
+Input Validation: Do not accept a number less than 1 for the number of years. Do not accept negative numbers for the monthly rainfall.
+
+8. The Greatest and Least of These
+Write a program with a loop that lets the user enter a series of integers. The user should enter -99 to signal the end of the series. After all the numbers have been entered, the program should display the largest and smallest numbers entered.
+
+9. Payroll Report
+Design a Payroll class that stores an employee’s ID number, gross pay, state tax, federal tax, and FICA withholdings. The class should have a method that calculates the employee’s net pay, as follows:
+
+net pay = gross pay − state tax − federal tax − FICA withholdings
+
+Use the class in a program that displays a weekly payroll report. A loop in the program should ask the user for the employee ID number, gross pay, state tax, federal tax, and FICA withholdings, and should pass these values to an instance of the Payroll class. The net pay should be displayed. The loop should terminate when 0 is entered for the employee number. After the data is entered, the program should display totals for gross pay, state tax, federal tax, FICA withholdings, and net pay.
+Input Validation: Do not accept negative numbers for any of the items entered. Do not accept values for state, federal, or FICA withholdings that are greater than the gross pay. If the state tax + federal tax + FICA withholdings for any employee are greater than gross pay, print an error message, and ask the user to reenter the data for that employee.
+
+10. SavingsAccount Class
+Design a SavingsAccount class that stores a savings account’s annual interest rate and balance. The class constructor should accept the amount of the savings account’s starting balance. The class should also have methods for subtracting the amount of a withdrawal, adding the amount of a deposit, and adding the amount of monthly interest to the balance. The monthly interest rate is the annual interest rate divided by 12. To add the monthly interest to the balance, multiply the monthly interest rate by the balance and add the result to the balance.
+Test the class in a program that calculates the balance of a savings account at the end of a period of time. The program should ask the user for the annual interest rate, the starting balance, and the number of months that have passed since the account was established. A loop should then iterate once for every month, performing the following:
+
+Ask the user for the amount deposited into the account during the month. Use the class method to add this amount to the account balance.
+Ask the user for the amount withdrawn from the account during the month. Use the class method to subtract this amount from the account balance.
+Use the class method to calculate the monthly interest.
+After the last iteration, the program should display the ending balance, the total amount of deposits, the total amount of withdrawals, and the total interest earned.
+
+11. Deposit and Withdrawal Files
+Use Notepad or another text editor to create a text file named Deposits.txt. The file should contain the following numbers, one per line:
+100.00
+125.00
+78.92
+37.55
+Next, create a text file named Withdrawals.txt. The file should contain the following numbers, one per line:
+29.88
+110.00
+27.52
+50.00
+12.90
+The numbers in the Deposits.txt file are the amounts of deposits that were made to a savings account during the month, and the numbers in the Withdrawals.txt file are the amounts of withdrawals that were made during the month. Write a program that creates an instance of the SavingsAccount class that you wrote in Programming Challenge 10. The starting balance for the object is 500.00. The program should read the values from the Deposits.txt file and use the object’s method to add them to the account balance. The program should read the values from the Withdrawals.txt file and use the object’s method to subtract them from the account balance. The program should call the class method to calculate the monthly interest, then display the ending balance and the total interest earned.
+
+12. Bar Chart
+Write a program that asks the user to enter today’s sales for five stores. The program should then display a bar chart comparing each store’s sales. Create each bar in the bar chart by displaying a row of asterisks. Each asterisk should represent $100 of sales. Here is an example of the program’s output.
+Enter today's sales for store 1: 1000 
+Enter today's sales for store 2: 1200 
+Enter today's sales for store 3: 1800 
+Enter today's sales for store 4: 800 
+Enter today's sales for store 5: 1900 
+SALES BAR CHART
+Store 1: **********
+Store 2: ************
+Store 3: ******************
+Store 4: ********
+Store 5: *******************
+
+13. Centigrade to Fahrenheit Table
+Write a program that displays a table of the centigrade temperatures 0 through 20 and their Fahrenheit equivalents. The formula for converting a temperature from centigrade to Fahrenheit is
+
+
+where F is the Fahrenheit temperature and C is the centigrade temperature. Your program must use a loop to display the table.
+
+14. FileDisplay Class
+Write a class named FileDisplay with the following methods:
+
+Constructor. The class’s constructor should take the name of a file as an argument.
+displayHead. This method should display only the first five lines of the file’s contents. If the file contains less than five lines, it should display the file’s entire contents.
+displayContents. This method should display the entire contents of the file, the name of which was passed to the constructor.
+displayWithLineNumbers. This method should display the contents of the file, the name of which was passed to the constructor. Each line should be preceded with a line number followed by a colon. The line numbering should start at 1.
+
+
+15. UpperCaseFile Class
+Write a class named UpperCaseFile. The class’s constructor should accept two file names as arguments. The first file should be opened for reading and the second file should be opened for writing. The class should read the contents of the first file, change all characters to uppercase, and store the results in the second file. The second file will be a copy of the first file, except all the characters will be uppercase. Use Notepad or another text editor to create a simple file that can be used to test the class.
+
+16. Budget Analysis
+Write a program that asks the user to enter the amount that he or she has budgeted for a month, A loop should then prompt the user to enter each of his or her expenses for the month, and keep a running total. When the loop finishes, the program should display the amount that the user is over or under budget.
+
+17. Random Number Guessing Game
+Write a program that generates a random number and asks the user to guess what the number is. If the user’s guess is higher than the random number, the program should display “Too high, try again.” If the user’s guess is lower than the random number, the program should display “Too low, try again.” The program should use a loop that repeats until the user correctly guesses the random number.
+
+18. Random Number Guessing Game Enhancement
+Enhance the program that you wrote for Programming Challenge 17 so that it keeps a count of the number of guesses that the user makes. When the user correctly guesses the random number, the program should display the number of guesses.
+
+19. Square Display
+Write a program that asks the user for a positive integer no greater than 15. The program should then display a square on the screen using the character 'X'. The number entered by the user will be the length of each side of the square. For example, if the user enters 5, the program should display the following:
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+If the user enters 8, the program should display the following:
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+
+20. Coin-Toss Simulator
+Write a class named Coin. The Coin class should have the following field:
+
+A String named sideUp. The sideUp field will hold either “heads” or “tails” indicating the side of the coin that is facing up.
+
+The Coin class should have the following methods:
+
+A no-arg constructor that calls the toss method, described next.
+A void method named toss that simulates the tossing of the coin. When the toss method is called, it generates a random number in the range of 0 through 1. If the random number is 0, then it sets the sideUp field to “heads”. If the random number is 1, then it sets the sideUp field to “tails”.
+A method named getSideUp that returns the value of the sideUp field.
+
+Write a program that demonstrates the Coin class. The program should create an instance of the class and display the side that is initially facing up. Then, use a loop to toss the coin 20 times. Each time the coin is tossed, display the side that is facing up. The program should keep count of the number of times a head is facing up, and the number of times a tail is facing up, then display those values after the loop finishes.
+
+21. Tossing Coins for a Dollar
+For this assignment, you will create a game program using the Coin class from Programming Challenge 20. The program should have three instances of the Coin class: one representing a quarter, one representing a dime, and one representing a nickel.
+When the game begins, your starting balance is $0. During each round of the game, the program will toss the simulated coins. When a coin is tossed, the value of the coin is added to your balance if it lands heads-up. For example, if the quarter lands heads-up, 25 cents is added to your balance. Nothing is added to your balance for coins that land tails-up. The game is over when your balance reaches one dollar or more. If your balance is exactly one dollar, you win the game. You lose if your balance exceeds one dollar.
+
+22. Dice Game
+Write a program that uses the Die class that was presented in Chapter 4 to play a simple dice game between the computer and the user. The program should create two instances of the Die class (each a six-sided die). One Die object is the computer’s die, and the other Die object is the user’s die.
+The program should have a loop that iterates 10 times. Each time the loop iterates, it should roll both dice. The die with the highest value wins. (In case of a tie, there is no winner for that particular roll of the dice.)
+As the loop iterates, the program should keep count of the number of times the computer wins, and the number of times that the user wins. After the loop performs all of its iterations, the program should display who was the grand winner, the computer or the user.
+
+23. Fishing Game Simulation
+Write a program that uses the Die class that was presented in Chapter 4 to simulate a fishing game. In this game, a six-sided die is rolled to determine what the user has caught. Each possible item is worth a certain number of fishing points. The points will remain hidden until the user is finished fishing, then a message is displayed congratulating the user depending on the number of fishing points gained.
+Here are some suggestions for the game’s design:
+
+Each round of the game is performed as an iteration of a loop that repeats as long as the player wants to fish for more items.
+At the beginning of each round, the program will ask the user whether or not they want to continue fishing.
+The program simulates the rolling of a six-sided die. (Use the Die class that was demonstrated in Chapter 4.)
+Each item that can be caught is represented by a number generated from the die. For example, 1 for “a huge fish”, 2 for “an old shoe”, 3 for “a little fish”, and so on.
+Each item the user catches is worth a different amount of points.
+The loop keeps a running total of the user’s fishing points.
+After the loop has finished, the total number of fishing points is displayed, along with a message that varies depending on the number of points earned.
+
+
+24. A Game of 21
+Write a program that uses the Die class that was presented in Chapter 4 to write a program that lets the user play against the computer in a variation of the popular blackjack card game. In this variation of the game, two six-sided dice are used instead of cards. The dice are rolled, and the player tries to beat the computer’s hidden total without going over 21.
+Here are some suggestions for the game’s design:
+
+Each round of the game is performed as an iteration of a loop that repeats as long as the player agrees to roll the dice, and the player’s total does not exceed 21.
+At the beginning of each round, the program will ask the user whether he or she wants to roll the dice to accumulate points.
+During each round, the program simulates the rolling of two six-sided dice. It rolls the dice first for the computer, then it asks the user if he or she wants to roll. (Use the Die class that was demonstrated in Chapter 4 to simulate the dice).
+The loop keeps a running total of both the computer and the user’s points.
+The computer’s total should remain hidden until the loop has finished.
+After the loop has finished, the computer’s total is revealed, and whoever the player with the most points without going over 21 wins.
+
+
+25. ESP Game
+Write a program that tests your ESP (extrasensory perception). The program should randomly select the name of a color from the following list of words:
+
+Red, Green, Blue, Orange, Yellow
+
+To select a word, the program can generate a random number. For example, if the number is 0, the selected word is Red; if the number is 1, the selected word is Green; and so forth.
+Next, the program should ask the user to enter the color that the computer has selected. After the user has entered his or her guess, the program should display the name of the randomly selected color. The program should repeat this 10 times then display the number of times the user correctly guessed the selected color.
+
+26. Slot Machine Simulation
+A slot machine is a gambling device into which the user inserts money, then pulls a lever (or presses a button). The slot machine then displays a set of random images. If two or more of the images match, the user wins an amount of money that the slot machine dispenses back to the user.
+Create a program that simulates a slot machine. When the program runs, it should do the following:
+
+Ask the user to enter the amount of money he or she wants to enter into the slot machine.
+Instead of displaying images, have the program randomly select a word from the following list:
+
+Cherries, Oranges, Plums, Bells, Melons, Bars
+
+To select a word, the program can generate a random number in the range of 0 through 5. If the number is 0, the selected word is Cherries; if the number is 1, the selected word is Oranges; and so forth. The program should randomly select a word from this list three times and display all three of the words.
+If none of the randomly selected words match, the program informs the user that he or she has won $0. If two of the words match, the program informs the user that he or she has won two times the amount entered. If three of the words match, the program informs the user that he or she has won three times the amount entered.
+The program asks if the user wants to play again. If so, these steps are repeated. If not, the program displays the total amount of money entered into the slot machine, and the total amount won.
+
+27. Personal Web Page Generator
+Write a program that asks the user for his or her name, then asks the user to enter a sentence that describes him or herself. Here is an example of the program’s screen:
+Enter your name: Julie Taylor 
+Describe yourself: I am a computer science major, a member of the Jazz club, and I hope to work as a mobile app developer after I graduate. 
+Once the user has entered the requested input, the program should create an HTML file, containing the input, for a simple Web page. Here is an example of the HTML content, using the sample input previously shown:
+<html>
+<head>
+</head>
+<body>
+  <center>
+   <h1>Julie Taylor</h1>
+  </center>
+  <hr />
+  I am a computer science major, a member of the Jazz club,
+  and I hope to work as a mobile app developer after I graduate.
+  <hr />
+</body>
+</html>
