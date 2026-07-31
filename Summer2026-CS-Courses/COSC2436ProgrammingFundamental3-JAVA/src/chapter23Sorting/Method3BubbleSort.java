@@ -15,7 +15,7 @@ public class Method3BubbleSort {
 	    /** Repeat passes until sorted or all passes are complete. */
 	    for (int k = 1; k < list.length && needNextPass; k++)
 	    {
-	        /** Assume the array is sorted. */
+	        /** Assume the array is sorted and next pass not needed */
 	        needNextPass = false;
 
 	        /** Compare adjacent elements. */

@@ -33,7 +33,7 @@ public class Method4MergeSort {
 	                         0,
 	                         secondHalfLength);
 
-	        /** Recursively sort the second half. */
+	        /** Recursively sort the second half.*/
 	        mergeSort(secondHalf);
 
 	        // Merge firstHalf with secondHalf into list

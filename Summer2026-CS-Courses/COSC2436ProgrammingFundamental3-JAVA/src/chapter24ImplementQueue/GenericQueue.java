@@ -29,6 +29,30 @@ public class GenericQueue <E> {
     {
         return "Queue: " + list.toString();
     }
-	
+    
+    
+  //Print results of the queue
+  	public void print() 
+  	{
+  		
+  		System.out.print("QUEUE=");
+  		
+  		//Loop through every element in the queue
+  		for (int i=0; i<list.size(); i++) 
+  		{
+  			//print the current element
+  			
+  			System.out.print(list.get(i)+ "");
+  			
+  			//If not this not the last element, print comma and space
+  			if(i<list.size()-1) 
+  			{
+  				System.out.print(", ");
+  			}
+  		}
+  		//Print the closing bracket
+  		System.out.print("]");
+  	}
+  	
 
 }

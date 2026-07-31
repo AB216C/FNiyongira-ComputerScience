@@ -5,7 +5,7 @@ public class StackDemo {
 	public static void main(String[] args) {
 		
 
-		// Create a stack
+		// Create a stack Object
 		GenericStack<String> stack = new GenericStack<>();
 
 		// Add elements to the stack
