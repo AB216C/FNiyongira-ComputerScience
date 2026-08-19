@@ -4,10 +4,22 @@
 # Eclipse
 .metadata/
 .settings/
+.classpath
+.project
 
 # Java compiled files
 *.class
 bin/
+out/
 
 # NetBeans private files
 **/nbproject/private/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
