@@ -26,3 +26,14 @@ out/
 .vscode/
 venv/
 *.keystore
+
+# VS Code
+.vscode/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+__pycache__/
+*.pyc
+tempCodeRunnerFile.py
