@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positioning</title>
+
+  <link rel="stylesheet" href="CSS_layout&positioning.css">
+</head>
+<body>
+
+  <img style="width:500px" src="pictures/display.png">
+
+    <!-- CSS Display Property -->
+    <!-- block: The element takes up the full width available (e.g., <div>, <p>, <h1>).
+
+      div {
+        display: block;
+      } -->
+
+    <!-- inline: The element takes up only as much width as necessary (e.g., <span>, <a>).
+
+      span {
+        display: inline;
+      } -->
+
+  <!-- inline-block: Similar to inline, but you can set width and height (useful for button elements).
+
+  button {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+  } -->
+
+  <!-- none: Hides the element completely from the webpage.
+
+  .hidden {
+    display: none;
+  } -->
+
+  <!-- CSS positioning -->
+  <!-- 
+  CSS positioning helps you control where elements appear on the page.
+  There are five main values for the position property:
+
+  static (default): The element is positioned according to the normal flow of the document.
+
+  div {
+    position: static;
+  } -->
+
+  <!-- relative: The element is positioned relative to its normal position. You can use properties like top, left, right, or bottom to adjust its position.
+
+  div {
+    position: relative;
+    top: 20px;
+    left: 30px;
+  } -->
+
+  <!-- absolute: The element is positioned relative to the nearest positioned ancestor (not relative to the viewport).
+
+  div {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+  } -->
+
+
+  <!-- fixed: The element is positioned relative to the browser window. It stays in the same place even when scrolling.
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+  } -->
+
+  <!-- sticky: The element is positioned based on the user's scroll position. It behaves like relative until the user scrolls past a certain point, then it becomes fixed.
+
+h1 {
+  position: sticky;
+  top: 0;
+} -->
+  <div class="static_position">
+    static position
+  </div>
+
+  <div class="relative_position">
+    relative position
+  </div>
+
+  <div class="sticky_position">
+    sticky position
+  </div>
+
+  <div class="absolute_container">
+    <div class="absolute_position">
+      absolute position
+    </div>
+  </div>
+
+  <div class="fixed_position">
+    fixed position
+  </div>
+
+  <div class="block-inline">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque libero, ad autem at vel laborum accusantium mollitia sit recusandae, nesciunt enim illum eligendi voluptate, expedita nostrum deserunt magni. Cupiditate, molestias!
+  </div>
+
+  <div class="block-inline">
+    Block/inline display!
+  </div>
+
+  <div class="block-inline">
+    Block/inline display!
+  </div>
+<!-- 
+  z-index is used on relative positions -->
+
+</body>
+</html>

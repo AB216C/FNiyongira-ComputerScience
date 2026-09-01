@@ -1,0 +1,32 @@
+
+
+
+Multiple aInheritance
+
+Interface: Can implement multiple interfaces
+Abstract class: Can only extend one abstract class
+
+Methods
+
+Interface: Abstract, default, and static methods
+Abstract class: Abstract and concrete methods
+
+Variables
+
+Interface: Only public static final (constants)
+Abstract class: Can have instance variables and constants
+
+Access Modifiers
+
+Interface: Methods are public
+            or default by default
+Abstract class: Can have any access modifier
+
+Constructors
+
+Interface: No constructors
+Abstract class: Can Have constructors
+
+Use Case
+Interface: Defines a contract for behavior
+Abstract class: Used for shared code and partial implementations

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>min,max,clamp</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      align-items:center;
+      font-size: 1.125 em;
+      line-height: 1.6;
+      background-color: rgb(195, 190, 184);
+    }
+
+    .content {
+      background-color: white;;
+      padding:3em;
+      box-shadow: 0 0 3em rgba(0,0,0,0.15);
+      /* width:70%;
+      max-width:200px; */
+      /* width:min(200px,70%); */
+      /* width:max(200px,70%); */
+    /* max(code) is the opposite of min(code) */
+      width:max(400px,50%, 50vh);
+      font-size:clamp(2rem,5vh,2rem)
+
+    }
+
+    .title {
+      margin:0 0 .5em;
+      font-weight: 900;
+      color:rgb(171, 124, 68);
+      line-height: .9
+
+    }
+/* 
+    p {
+      /* font-size: 2rem; */
+      /* font-size:2vh;
+    } */ 
+
+/* In CSS, you can specify sizes or lengths of elements using various units of measure.  */
+
+/* Absolute Units
+PX: Pixels (px) are considered absolute units, although they are relative to the DPI and resolution of the viewing device. 
+But on the device itself, the PX unit is fixed and does not change based on any other element. Using PX can be problematic for responsive sites, 
+but they are useful for maintaining consistent sizing for some elements. If you have elements that should not be resized, then using PX is a good choice.
+
+Relative Units
+EM: Relative to the parent element
+
+REM: Relative to the root element (HTML tag)
+
+%: Relative to the parent element
+
+VW: Relative to the viewport’s width
+
+VH: Relative to the viewport’s height */
+
+/* Unlike PX, relative units like %, EM, and REM are better suited to responsive design 
+and also help meet accessibility standards.
+Relative units scale better on different devices because they can scale up and down according to another element’s size. */
+
+  </style>
+</head>
+<body>
+  <section class="content">
+    <h1 class="title">This is a catchy phrase</h1>
+    <p>This is a very important phrase. An example of a phrase is "the big red ball" 
+      - a group of words functioning together within a sentence, 
+      but lacking a subject and verb, meaning it cannot stand alone as a complete sentence. 
+      a small group of words standing together as a conceptual unit,
+       typically forming a component of a clause.
+    </p>
+  </section>
+</body>
+</html>
+
+

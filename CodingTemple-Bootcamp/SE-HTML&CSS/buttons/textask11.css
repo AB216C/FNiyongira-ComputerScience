@@ -1,0 +1,39 @@
+p {
+  font-family:Verdana;
+  font-size:36px
+}
+.tahoma-title {
+  font-weight:bold;
+  font-size:45px;
+  font-style:normal;
+  font-family:Tahoma;
+  margin-bottom:20px;
+}
+
+.x-title {
+  color:black;
+  margin-top:0px;
+  margin-bottom:3px;
+  font-size:43px
+ 
+}
+.x-ntitle {
+  color:gray;
+  margin-top:0px;
+
+}
+
+.description {
+  width:750px;
+  font-style:bold;
+}
+
+.last-p {
+  background:rgb(25, 102, 25);
+  color:white;
+  height:60px;
+  width:230px;
+  border-radius:8px;
+  font-size: 20px;
+  
+}

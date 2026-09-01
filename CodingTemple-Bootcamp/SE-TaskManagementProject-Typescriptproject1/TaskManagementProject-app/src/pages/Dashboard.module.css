@@ -1,0 +1,20 @@
+.container {
+  padding:2.8%;
+  max-width:500px;
+  margin:auto;
+  background-color: rgb(151, 203, 183);
+  border-radius:8px;
+  box-shadow: 0 2px 10px rgba(0.5,0.5,0.5,0.5);
+}
+
+.title {
+  font-size:50px;
+  margin-bottom:15px;
+
+}
+
+.createTask {
+  font-size:30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}

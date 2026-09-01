@@ -1,0 +1,65 @@
+Which Node.js Version Should You Install?
+When downloading Node.js, there are two primary versions available:
+
+LTS (Long-Term Support) Version
+Stable and ideal for projects that need long-term reliability.
+Recommended for most tutorials and production environments where consistency and stability are key.
+Security updates and bug fixes are prioritized.
+
+Current Version
+Includes the latest features and enhancements.
+May introduce breaking changes or experimental updates.
+Use this if your project requires newer technologies or cutting-edge tools (e.g., the latest React, Vite, etc.).
+
+
+Installing Node.js on macOS
+
+Option 1: Using the Prebuilt Installer
+
+Visit: Node.js.
+
+Download LTS or Current version for macOS.
+
+Run the installer and follow the prompts.
+
+Open Terminal and verify the installation:
+
+node -v
+npm -v
+
+
+Option 2: Using Homebrew (Recommended for Mac Users)
+Open Terminal.
+Install Homebrew (if not already installed):
+/bin/bash -c "$(curl -fsSL <https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh>)"
+
+To install Current version:
+brew install node
+
+To install LTS version:
+brew install node@lts
+brew link --overwrite node@lts
+
+Verify the installation:
+node -v
+npm -v
+
+
+
+Installing Node.js on Windows
+
+Visit Node.js.
+Download either LTS or Current version.
+Run the installer and select Add Node.js to PATH.
+Open Command Prompt or PowerShell and verify the installation:
+
+node -v
+npm -v
+
+Step 2: Set Up Visual Studio Code
+
+Open Visual Studio Code.
+Create a new JavaScript file:
+File > New File, then save it as test.js.
+Inside the file, add:
+console.log("JavaScript is installed correctly!");

@@ -1,0 +1,187 @@
+ #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+  /*
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+.container {
+  background-color:#5656b0aa;
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-top: 0.2px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+
+}
+
+.btn-add {
+  font-size: 30px;
+  font-weight: bolder;
+  background-color:#a315d3aa;
+  color:black;
+  text-decoration: none;
+  padding-right:1%;
+  padding-top:1%;
+  padding-left:1%;
+}
+
+tr th {
+  background-color:black;
+  margin-top: 30px;
+
+}
+
+tr td {
+  padding: 15px;
+  border: 2px solid black
+
+}
+
+tr td a {
+  padding: 10px;
+  font-size: 30px;
+  border: 2px solid rgb(142, 135, 135)
+}
+
+
+.btn-info {
+  background-color: rgb(6, 108, 162);
+  margin-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top:5px;
+  padding-bottom:5px;
+
+}
+
+.btn-secondary {
+  background-color: #ebebf2aa;
+  margin-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top:5px;
+  padding-bottom:5px;
+
+}
+
+.btn-tertiary {
+  background-color: tomato;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top:5px;
+  padding-bottom:5px;
+ 
+}
+
+form input {
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-right:45%;
+  padding-left: 40%;
+  margin-bottom: 2%;
+}
+
+form label {
+  margin-right:100%;
+}
+
+div button {
+  background: rgb(79, 88, 53);
+  padding:2%;
+  margin-right:20px;
+  padding-right:10%;
+  padding-left:10%;
+
+}
+
+.btn-back {
+  background-color: tomato;
+  color:black;
+  padding:2%;
+  padding-right:10%;
+  padding-left:10%;
+
+}
+
+.errorMsg {
+  color:red
+}
+
+.errorContainer {
+  margin-bottom: 12px;
+}
+
+/* .buttons {
+  display:block;
+  width:100%;
+  margin:;
+} */
+
+.table-info {
+  background-color: rgb(65, 60, 60);
+}
+.head-section {
+  color:green
+}
+/* td {
+  max-width: 200px;
+  overflow:hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+} */
+
+.details {
+  background-color: #000001aa;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-bottom:20px;
+}
+
+.back-button {
+  background-color: red;
+  margin-right:78%;
+  text-decoration:none;
+  padding-right:25px;
+  padding-left:25px;
+  padding-top:10px;
+  padding-bottom:10px;
+  border-radius:10px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="a.contact.css">
+</head>
+<body>
+  <nav class="navbar">
+
+    <div class="navdiv">
+      <div class="logo"><a href="a.home.html">NConcert</a></div>
+
+      <ul>
+        <li><a href="a.home.html">Home</a> </li>
+        <li><a href="a3.events.html">Events</a> </li>
+        <li><a href="a2.foodmenu.html">Food Menu</a> </li>
+        <li><a  href="a1.location.html">Location</a> </li>
+        <li><a href="a.contact.html">Contact us</a></li>
+      </ul>
+
+      <div>
+        <a href="a3.events.html"> <button>Buy Ticket</button>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <form action="/submit" method="POST">
+    <div>
+      <fieldset class="pers-info">
+
+        <div>
+          <p class="contact_d">FILL UP CONTACT FORM</p>
+
+        </div>
+        <p class="contact_d">
+          Personal Information:
+        </p>
+        <div class="private-info">
+          <div>
+            <label>Full Name:</label>
+            <input style="padding:10px;font-size:large" type="text" placeholder="Enter Full Name"required>
+          </div>
+          <div>
+            <label>Email:</label>
+            <input  style="padding:10px;font-size:large"  type="text" placeholder="Enter Email"required>
+          </div>
+          <div>
+            <label>Phone number:</label>
+            <input  style="padding:10px;font-size:large"  type="text" placeholder="Enter Phone Number">
+          </div>
+          <div>
+            <label for="message">Your Message/inquiry:</label>
+            <textarea rows="8" cols="100"></textarea>
+          </div>
+
+          <div>
+            <button>Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+  </form>
+</body>
+<footer>
+  <fieldset>
+    <p id="rights">&copy; 2025 NConcert. All rights reserved.</p>
+  <nav>
+    <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a>
+  </nav>  
+  </fieldset>
+</footer>
+</html>

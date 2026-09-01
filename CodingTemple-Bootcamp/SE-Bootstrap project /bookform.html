@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+      <div class="container fs-3 bg-dark text-white">
+        <form>
+
+          <div class="my-4">
+            <label for="quantity">How many tickets would like to buy?</label>
+            <input class="form-control" type="number" id="quantity" name="quantity" min="1" max="20" step="1" >
+  
+            <label>First name</label>
+            <input type="text" class="form-control" placeholder="Enter your First name">
+    
+            <label>Last name</label>
+            <input type="text" class="form-control" placeholder="Enter your Last name">
+          </div>
+
+
+          <p>Credit card information</p>
+          
+          <div class="my-4">
+            <label>Card Holder Full name</label>
+            <input class="form-control" type="text" placeholder="Enter card holder full name">
+  
+            <label>Account Number</label>
+            <input class="form-control" type="text" placeholder="Enter account number">
+          </div>
+
+          <div class="d-flex">
+            <div class="w-50">
+              <label for="expiration date">Expiration date</label>
+              <input type="date" id="expiration date" name="expiration data">
+            </div>
+            <div class="w-50">
+              <label for="cvc">cvc</label>
+              <input type="text" placeholder="cvc">
+            </div>
+          </div>
+
+         <input class="form-control fs-3 text-white my-4" type="submit" value="Place order" style="background-color:rgb(7, 7, 123)">
+
+        </form>
+      </div>
+
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

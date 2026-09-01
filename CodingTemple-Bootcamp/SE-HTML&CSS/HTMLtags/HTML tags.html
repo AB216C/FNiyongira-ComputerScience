@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <meta name = "Description" content = "A showcase of a basic HTML element in a 'Hello Word's example"
+    <meta name = "author" content="Web Development Mentor">
+
+      <!--UTF:Unicode Transformation Format
+      To use UTF-8 in HTML, you can include the <meta charset="utf-8"> tag in the <head> section of your HTML document. 
+      This tag allows you to use characters that aren't part of the traditional ASCII character set. 
+      Using UTF-8 ensures that computers can understand and properly display languages that don't use English characters. 
+      HubSpot says UTF-8 is the most common character encoding method used on the internet today. It's also used in common data transfer methods like XML and JSON. 
+
+      -->
+      <!--Viewport content Width=device-width:
+      This gives the browser instructions on how to control the page's dimensions and scaling.
+      The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+      The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+      -->
+      <!--Desciption content: 
+      Helps in search engine optimization regard what a webpage is about-->
+
+      <!--author content:
+      THe creator of HTML document
+      -->
+    <title>Document</title>
+  </head>
+
+  <body style="background-color: green;">
+    <h1>tag1</h1>
+    <h2>tag2</h2>
+    <h3>tag3</h3>
+    <h4>tag4</h4>
+    <h5>tag5</h5>
+    <h6>tag6</h6>
+
+      <!--H1 to H6 is solely based on the size of the text. It is discourage to use this when you trying to change the size of the text-->
+    <p>This is a paragraph</p>
+    <p>This is a second paragraph</p>
+
+    <p>You can also <u>alter</u> the way texts looks by making it <strong>bold </strong>or <em>italicized</em></p>
+
+    <ul>
+      <li>LIST 1, unordered</li>
+      <li>LIST 2, unordered or not numbered</li>
+      <li>LIST 3, unordered or not numbered</li>
+    </ul>
+
+    <ol>
+      <li>LIST 1, ordered or numbered</li>
+      <li>LIST 2, ordered or numbered</li>
+      <li>LIST 3</li>
+      <li>LIST 4</li>
+      <li>LIST 5, ordered or numbered</li>
+    </ol>
+
+      <!-- self closing tags -->
+
+    <br/>
+    <hr/>
+    <input/>
+    <a></a>
+    <br/>
+    <img/>
+      <!--ATTRIBUTES IN TAGS-->
+
+      <!--attributes in a  img tag alt:description of the image even when the image did not load"-->  
+    <img src="image.jpg" alt = "description of the image"/>
+
+
+    <br/>
+
+      <!--attributes in anchor tag <a></a>"-->
+      <!--target="_blank: allows to open in a new tab"-->
+
+    <a href="https://www.walmart.com/" target="_blank">This is a link</a>
+
+      <!--target="_blank: allows to open in a new tab"-->
+
+    <br/>
+      <!--attributes in a  input tag"-->
+
+    <input type="text" name = "username" placeholder="Enter your username">
+
+    <i>italicized</i>
+    <!--You can't open a anchor link in a document preview. It has to be in the browser-->
+
+    <p>This cover more about HTML at <a href="https://www.w3schools.com/html/" target="_blank">Our HTML Theator</a></p>
+    <img style="width:100px" src="pictures/IMAGE4.jpg" alt="Move out photo">
+
+
+    <!--Block_level elements 
+    Block elements take up the full width available (like a “block”).
+    Examples include: <div>, <p>, <h1> - <h6>, <ul>, <ol>.
+
+    and inline_level elements
+    Inline elements take up only as much width as necessary.
+    Examples include: <a>, <img>, <strong>, <em>, <span>.
+    -->
+
+    <!--Block-quotes and Inline Quotes: 
+    BLOCK QUOTES: used for longer quotes from other sources. Typically indented.
+    -->
+
+    <blockquote cite="https://softwarequotes.com/quote/if-you-can-read-this--thank-a-software-developer">
+      If you can read this, thank a Software Developer.
+    </blockquote>
+    <p> - Joseph M. Abou Nader </p>
+
+    <blockquote>
+      Tell me your friends, i will tell you who you are.
+    </blockquote>
+    <p> - John Hopkins</p>
+
+    <!--INLINE QUOTES: for short quotations, use the <q> tag. Browsers normally insert quotation marks around the quotation.-->
+    <p>
+      According to Steve Jobs,
+      <q cite="https://www.mozilla.org/en-US/about/history/details/">
+        Older people sit down and ask, 'What is it?' but the boy asks, 'What can I do with it?'.
+      </q>
+    </p>
+
+
+    <p>
+      According to Ferdinand, <q>Working hard becomes fun once you embrace it. if not, you lose motivation</q>
+    </p>
+
+    <!--Understanding Code and Pre-formatted Text
+    HTML provides elements that allow developers to display code or text exactly as written, preserving spaces, line breaks, and formatting. This is useful for showing code examples or text art.
+    In HTML, the <pre> element is used to display text exactly as it is written. In this example, the <pre> element is combined with the <code> element, used to represent code snippets. 
+
+    < becomes &lt;
+    > becomes &gt;
+    & becomes &amp;
+    -->
+
+    <!--Before format
+    
+    -->
+
+    <pre>
+      <code> &lt;!-- Speed run times -- &gt;
+        &lt head &gt;  &lt /head &gt;
+        &lt nav &gt;  &lt/nav &gt;
+        &lt main &gt;  &lt /main &gt;
+        &lt footer  &gt; /footer &lt &gt;
+
+      </code>
+    </pre>
+
+    <!--After format
+        <!-- Speed run times -- >
+        < head >  < /head >
+        < nav >  </nav >
+        < main >  < /main >
+        < footer  > /footer < >
+
+   Sanitizing Code:
+   This is a process of converting special characters in HTML code into entities that prevent the browser from interpreting and executing the code. This allows you to show the code exactly as written, which is particularly important for tutorials or documentation.
+    -->
+
+  <!--MULTIMEDIA ELEMENTS
+  
+  To add an image to your webpage, use the <img> tag.
+
+<img src="image-url.jpg" alt="description of image" width="300" height="200">
+
+  src: Specifies the URL of the image.
+  alt: Provides alternative text if the image doesn’t load.
+  width and height: set the dimensions of the image in pixels
+
+  EMBEDDING THE Audio
+  For audio, use the <audio> tag.
+
+  <audio controls autoplay muted>
+  <source src="audio-url.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  controls: Adds play, pause, and volume controls to the audio.
+  <source>: Specifies the audio source file and format.
+  autoplay: Automatically plays the audio when the page loads (subject to browser restrictions).
+  muted: Starts the audio with the volume muted.
+    -->
+  <H2>Podcast features</H2>
+  <audio controls>
+    <source src="pictures/2025_02_07_20_09_35.m4a" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!--
+
+  EMBEDING A Videos
+  To embed a video, use the <video> tag.
+  <video controls autoplay muted poster="thumbnail.jpg">
+    <source src="video-url.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  -->
+
+  <br/>
+
+  <video width="300px" height="300px" controls>
+    <source src="pictures/5F68FF24-FEB7-4AC0-8BDF-1136832C72CB.MP4" type="video/MP4">  
+  Your video does not support the video tag
+  </video>
+
+  <!--EMBEDDING Youtube Videos 
+
+  To embed a YouTube video, you use the <iframe> HTML tag. 
+  An <iframe> (inline frame) is an HTML element that allows you to embed another HTML page (in this case, a YouTube video) within your webpage.
+  
+  YouTube Video Section 
+  
+  Let’s break down some attributes of the <iframe> tag:
+
+  width and height: set the width and height of the video player on your webpage. 
+
+  src (source): specifies the URL of the video you want to embed. 
+  You need to replace YOUR_VIDEO_ID with the unique identifier of the YouTube video.
+  You can find the video ID in the YouTube URL. For example, in the URL https://www.youtube.com/watch?v=abcd1234, the video ID is abcd1234.
+  The src attribute format looks like this: https://www.youtube.com/embed/abcd1234.
+
+  frameborder: defines whether the video player has a border. 
+  Setting frameborder="0" removes the border, which is typically preferred for a clean look.
+
+  allow: controls what features the embedded content can use. The most common features allowed include:
+  accelerometer: Allows motion-based controls (e.g., tilting the device).
+  autoplay: Enables the video to play automatically when the page loads (note that browsers may restrict autoplay behavior).
+
+  clipboard-write: Allows copying and pasting from the clipboard.
+  encrypted-media: Enables the use of encrypted media extensions.
+  gyroscope: Enables motion-based controls.
+
+  picture-in-picture: Allows the video to be displayed in picture-in-picture mode (a small video window outside of the browser window).
+
+  allowfullscreen: allows the video to be played in full-screen mode when the user clicks the full-screen icon. 
+    -->
+
+  <P>YOUTUBE VIDEO ABOUT CODING</P>
+  <iframe> width="450" height="560" src="https://youtu.be/NtfbWkxJTHw?si=ZKCeHmFUVUpPA-xE" frameborder = "0" allow = "accelerometer; autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
+    allowfullscreen </iframe>
+
+  <h2>Tutorials & Talks</h2>
+  <iframe width="560" height="315" src="https://youtu.be/NtfbWkxJTHw?si=VqAzzga4kR3B59j4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+  <iframe>
+    src = "https://youtu.be/NtfbWkxJTHw?si=VqAzzga4kR3B59j4"
+  </iframe>
+
+  <!--SEMANTIC LAYOUT: ORGANAIZING YOUR HTML
+  🗄️ Semantic Elements 
+    Semantic HTML elements clearly define the structure and meaning of content on a webpage, making it easier for both developers and browsers to understand. They provide context to the content, improving accessibility, SEO, and code readability. 
+    Accessibility: Semantic elements help assistive technologies, like screen readers, interpret and navigate web content effectively.
+    SEO Benefits: Search engines use semantic tags to understand and rank your content accurately.
+    Code Clarity: Using semantic tags makes your code more readable and easier to maintain, as each element’s purpose is clear.
+
+    SEO: Search Engine Optimazation
+
+    Non-Semantic HTML and Semantic HTML
+
+    Non-Semantic HTML: <span> and <div>
+    Semantic HTML: header, footer, nav, main, article, figure, p, aside
+    -->
+
+    <p>Non-semantic vs Semantic</p>
+
+    <img width="300px" src="pictures/Semantic HTML.png">
+
+
+    <!--Using these elements ensures a well-structured, accessible, and SEO-friendly webpage.
+      <header>: Represents the header of a page or section.
+      <nav>: Defines a block of navigation links.
+      <main>: Represents the main content of the document.
+      <section>: Groups related content together.
+      <article>: Defines self-contained content, such as a blog post.
+      <aside>: Contains content indirectly related to the main content, like sidebars.
+      <footer>: Represents the footer of a page or section.
+      <figure> and <figcaption>: Group media content with captions.
+    -->
+    <!--The <header> element is used to define the introductory content of a page or section, such as a logo, site title, or navigation.
+      The <nav> element is used to define a block of navigation links.-->
+    
+
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#services">services</a></li>
+          <li><a href="#advertisement">ads</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="Awards">Awards</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <!--The <main> element is used to define the main content of a document, excluding headers, footers, and sidebars.
+  The <article> element is used for self-contained content, such as a blog post or news article.-->
+    
+    <main>
+      <article>
+        <h2>Welcome to My Blog</h2>
+        <p>This is the main content of the page where the blog post is displayed.</p>
+      </article>
+    </main>
+
+  <!--The <section> element is used to group related content together within a page. -->
+
+    <section>
+      <h2>Features</h2>
+      <p>Our product offers a range of amazing features.</p>
+    </section>
+
+
+  <!--The <aside> element is used for content that is related but not essential to the main content, such as a sidebar.-->
+    <aside>
+      <h2>Related Articles</h2>
+      <ul>
+        <li><a href="#article1">How to Write Semantic HTML</a></li>
+        <li><a href="#article2">Best Practices for Accessibility</a></li>
+      </ul>
+    </aside>
+
+  <!--The <footer> element is used to define the footer of a page or section, typically containing metadata or links.-->
+    <!--The <figure> element is used to group media content, and <figcaption> is used to provide a caption.-->
+
+      <figure>
+        <img width="200px" src="pictures/landscapes.webp" alt="Beautiful Landscape">
+        <figcaption>A beautiful view of the mountains at sunset.</figcaption>
+      </figure>
+
+    <!--Best Practices
+      Use the Appropriate Tag: Choose the right HTML tags for text elements and structure (e.g., <strong>, <em>, <blockquote>, etc.) to maintain clarity and meaning.
+      Focus on Accessibility: Utilize headings (<h1> through <h6>) and lists (<ul>, <ol>) to create a clear and accessible structure for all users, including those with screen readers.
+      
+        Optimize Media Files: Ensure that images, audio, and video are optimized for the web to improve page load times and overall performance.
+      Provide Alternative Content: Include alt text for images, captions for videos, and transcripts for audio files to make your site accessible to a wider audience.
+      Organize Content with Semantic Elements: Use semantic tags (<header>, <footer>, <article>, <section>, etc.) to logically structure your content, improving readability and accessibility.
+      Utilize Landmark Roles: Apply landmark roles to aid screen reader users in navigating your webpage efficiently.
+      
+      Common Pitfalls
+      Overusing Styling Elements for Layout: Avoid using HTML elements like <br> for spacing or <b> for emphasis instead of CSS and semantic tags, as it can make your content less accessible.
+      Inconsistent Heading Structure: Skipping heading levels (e.g., going from <h1> to <h3> without an <h2>) can disrupt content flow and confuse users and search engines.
+      Autoplaying Media: Avoid setting videos or audio to autoplay, as it can be intrusive and disruptive for users who aren't expecting it.
+      Non-Responsive Media: Ensure that multimedia content (e.g., images, videos) is responsive so it displays correctly across different screen sizes and devices.
+      Ignoring Document Structure: Not using HTML5 structural elements properly can lead to a confusing document outline, making it difficult for users and search engines to interpret the content.
+      Misusing Sections and Articles: Use <section> and <article> correctly by understanding their purposes. <article> is for self-contained content, while <section> is for grouping related content.
+    -->
+
+
+
+
+  <section id="services">
+    <h2>Welcome to our services page</h2>
+    <p>Let's introduce What we do</p>
+  </section>
+ </body>
+
+  <footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+    <nav>
+      <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a>
+    </nav>
+  </footer>
+</html>
+

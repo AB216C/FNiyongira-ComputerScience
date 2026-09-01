@@ -1,0 +1,175 @@
+HTML, or HyperText Markup Language, is the foundation for creating and organizing content on the web. 
+It provides the structure of a webpage by using elements, which guide browsers on how to display things like text, images, and links.
+
+Think of HTML as the skeleton of a webpage – it defines how content is arranged and placed. But just like a skeleton, a webpage needs more to feel complete:
+CSS (Cascading Style Sheets) adds style, like the skin, colors, and clothing of a webpage.
+JavaScript (JS) brings interactivity, making the page respond to actions like clicks or movements.
+HTML gives us the core structure:
+
+Headings (like titles):
+Links (to other pages or resources)
+Text (to provide information)
+
+Common HTML Tags:
+<h1></h1> to <h6></h6>: Headings (from largest to smallest).
+<p></p>: Paragraphs.
+<ul> / </ul>: Unordered lists.
+<ol> / </ol>: Ordered lists.
+<li> / <li>: List Items.
+<strong> / <strong>: Bold text.
+<u> / <u>: Underline text.
+<em> / <em>: Italicize text.
+
+
+Self-Closing Tags & Attributes:
+These are called self-closing tags, and they end with /> instead of requiring a separate closing tag. To convey the necessary information, these tags rely on attributes, which provide additional details such as the source of an image or its size.
+
+
+<img src="cat.jpg" alt = "Cat" width = "500"/ height = "600">
+Attribute name:src
+attribute value:cat.jpg
+
+
+src="cat.jpg" tells the browser where to find the image 
+alt="Cat" provides text if the image fails to load 
+width="500" and height="600" provide dimensions to load the image 
+
+Common Self-Closing Tags
+<a href="url">: Links.
+<img src="url" alt="description">: Images.
+<br />: Line breaks.
+<hr />: Horizontal rules.
+
+
+Incorrect Example:
+
+In this case, the browser might interpret < 20 as part of an HTML tag, leading to rendering errors. To fix this, you need to use the special character entity &lt; for <.
+
+<p>10 < 20 is a true statement.</p>
+
+Correct Example:
+
+This ensures the browser renders the < symbol as text, not as an HTML tag.
+
+<p>10 &lt; 20 is a true statement.</p>
+
+Common Special Characters:
+
+Less-than sign (<): &lt;
+Greater-than sign (>): &gt;
+Ampersand (&): &amp;
+Quotation Marks ("): &quot;
+Apostrophe ('): &apos; or &#39;
+
+
+Additional Special Characters:
+HTML supports many other entities to display characters that are not easily typed on a standard keyboard. Some common examples include:
+
+Non-breaking space: &nbsp; (Prevents an automatic line break between words)
+Copyright symbol: &copy; → ©
+Registered trademark symbol: &reg; → ®
+Euro symbol: &euro; → €
+
+
+The first html document you create for any project is typically called index.html 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>Welcome to my first webpage.</p>
+  </body>
+</html>
+
+
+<!DOCTYPE html>: This declaration tells the browser that the document is written in HTML5.
+<html lang="en">: This is the root element of the HTML document. The lang="en" attribute specifies that the language of the page is English.
+<meta charset="UTF-8">: This tag sets the character encoding to UTF-8, which ensures that all characters (including special symbols) display correctly.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: This tag ensures that the page is responsive, meaning it will look good on mobile devices by adjusting its width to fit the screen.
+<title>: This tag defines the title of the webpage, which will appear on the browser tab.
+
+The Body Section
+The body contains all the visible content of the webpage. This is where we place the main elements that will be shown to the user, such as text, images, buttons, links, and other content. The body section is everything the user sees and interacts with, including images, videos, buttons, and forms.
+
+<body>
+    <h1>Hello, World!</h1>
+    <p>Welcome to my first webpage.</p>
+</body>
+<h1>: This is a heading element. The content inside will be displayed as the main title of the page. In this case, "Hello, World!" will be shown as a large heading.
+<p>: This is a paragraph element, and the text inside it, "Welcome to my first webpage," will appear as a paragraph on the page.
+
+The Role of index.html
+The file index.html is typically the entry point of a website. You can think of it as the homepage. It acts as an instruction manual for loading everything on the page. 
+
+When a browser opens a website, it looks for this file first to know:
+
+How to display the content (HTML elements)
+Where to load the styles from (CSS files)
+Which scripts to run for interactivity (JavaScript files)
+What images or media to display (image or video files)
+
+Boilerplate Code
+When creating an HTML file, you will often start with boilerplate code, which is repetitive code used to set up the structure of the page. The boilerplate includes the DOCTYPE, html, head, and body sections.
+
+
+
+A quick way to generate this boilerplate is by typing ! and pressing Tab in many code editors (such as VSCode). This generates the basic structure for an HTML document automatically:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+#ADVANCED HTML elements
+
+HTML Tables:
+HTML tables are used to display tabular data, such as information in rows and columns. Here’s the basic syntax for creating a table:
+
+<table>
+  <tr>
+    <th>Technology</th>
+    <th>Proficiency</th>
+    <th>Years of Experience</th>
+  </tr>
+  <tr>
+    <td>HTML/CSS</td>
+    <td>Expert</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>JavaScript</td>
+    <td>Intermediate</td>
+    <td>3</td>
+  </tr>
+</table>
+<table>: Defines the table.
+<tr>: Table row.
+<th>: Table header (bold and centered by default).
+<td>: Table data (the actual content inside a table cell).
+
+HTML elements can be categorized as either block-level or inline-level elements.
+
+Block-Level Elements:
+
+Block elements take up the full width available (like a “block”).
+Examples include: <div>, <p>, <h1> - <h6>, <ul>, <ol>.
+
+Inline-Level Elements:
+
+Inline elements take up only as much width as necessary.
+Examples include:
+ <a>, <img>, <strong>, <em>, <span>.
+
+ 

@@ -1,0 +1,8 @@
+Exercise 1: Filtering a List of Numbers
+Given a list of integers, use the Stream API to filter out the even numbers and collect the result into a new list.
+
+Exercise 2: Counting Vowels in Words
+Given a list of strings, use the Stream API to count the total number of vowels (a, e, i, o, u) across all the words in the list.
+
+Exercise 3: Grouping Words by Length
+Given a list of words, use the Stream API to group them by their length. Return a map where the key is the length of the words and the value is a list of words of that length.

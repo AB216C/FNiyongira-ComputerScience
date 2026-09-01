@@ -1,0 +1,1069 @@
+### index.yaml
+swagger: '2.0'
+info:
+  title: "Your API"
+  description: "This is an API"
+  version: "1.0.0"
+  #Before deployment
+# host: "127.0.0.1:5000"
+# schemes:
+#   - "http"
+  #After deoployment-Host URL became a new URL from live webservice from Render while http become https
+host: "https://flask-advancedapi-project-limiter-35e4.onrender.com"
+schemes:
+  - "https"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+### Adding security definition
+securityDefinitions:
+  bearerAuth:
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
+### Exceptional paths to the login routes are defined here
+paths:
+  /customer/login:
+    post:
+      tags:
+        - Customer
+      summary: "Login endpoint, (generates token)"
+      description: "Validates customer credentials, generates and return a customer specific token."
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Login Credentials"
+          required: true
+          schema:
+            $ref: "#/definitions/LoginCredentials"
+      responses:
+        200:
+          description: "Login successful"
+          schema:
+            $ref: "#/definitions/LoginResponse"
+### Creating general paths to customer the routes
+  /customers:
+    post:
+      tags:
+      - Customer
+      summary: "Create a new customer"
+      description: "Create a new customoer with outlined details"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Customer details"
+          required: true
+          schema: 
+            $ref: "#/definitions/CreateCustomerPayload"
+      responses:
+        200:
+          description: "Customer created successfully"
+          schema:
+            $ref: "#/definitions/CreateCustomerResponse"
+          examples:
+            application/json:
+              id: 1
+              name: "Jean Doe"
+              email: "jd@gmail.com"
+              phone: "345433222"
+              password: "four4"
+
+    get:
+      tags:
+      - Customer
+      summary: "Get all customers"
+      description: "Retrieve a list of all created customers"
+      responses:
+        200:
+          description: "Customer retrieved successfully"
+          schema:
+            $ref: "#/definitions/AllCustomers" 
+
+
+
+### Exceptional path to the route of updating or deleting customer
+  /customers/{customer_id}:  
+    put:
+      tags:
+      - Customer
+      summary: "Update an existing customer"
+      description: "Update an existing customer with new details-token required to complete the update"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "customer_id"
+          in: "path"
+          description: "ID of the customer to update"
+          required: true
+          type: "integer"
+        - in: "body"
+          name: "body"
+          description: "Customer need to be logged in to update their account"
+          required: true
+          schema: 
+            $ref: "#/definitions/UpdateCustomerPayload"
+      responses:
+        200:
+          description: "Customer Updated successfully"
+          schema:
+            $ref: "#/definitions/UpdateCustomerResponse"
+          examples:
+            application/json:
+              id: 1
+              name: "Jean P"
+              email: "jP@gmail.com"
+              phone: "3454332224"
+              password: "four44"
+
+    delete:
+      tags:
+      - Customer
+      summary: "Delete a customer"
+      description: "Requires token authentication. Must be logged in"
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: "customer_id"
+          in: "path"
+          description: "ID of the customer to delete"
+          required: true
+          type: "integer"
+      responses:
+        200:
+          description: "Customer deleted successfully"
+          schema:
+            $ref: "#/definitions/DeleteCustomerPayload" 
+          examples:
+            application/json:
+              message: "successfully deleleted customer<customer_id>"
+
+### Creating general paths to inventory routes
+  /inventory:
+    post:
+      tags:
+      - Inventory
+      summary: "Create a new inventory"
+      description: "Create a new inventory with outlined details"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "inventory details"
+          required: true
+          schema: 
+            $ref: "#/definitions/CreateInventoryPayload"
+      responses:
+        200:
+          description: "inventory created successfully"
+          schema:
+            $ref: "#/definitions/CreateInventoryResponse"
+          examples:
+            application/json:
+              id: 1
+              part_name: "front_arm"
+              part_number: 34534
+              price: 34.56
+
+    get:
+      tags:
+      - Inventory
+      summary: "Get all inventory"
+      description: "Retrieve a list of all created inventory"
+      responses:
+        200:
+          description: "inventory retrieved successfully"
+          schema:
+            $ref: "#/definitions/AllInventory" 
+
+
+### Exceptional path to the route of retrieving, updating or deleting specific inventory
+  /inventory/{inventory_id}:  
+    get:
+      tags:
+      - Inventory
+      summary: "Retrieve specific inventory"
+      description: "Retrieve a specific inventory by its ID"
+      parameters:
+        - name: "inventory_id"
+          in: "path"
+          description: "ID of the inventory to display"
+          required: true
+          type: "integer"
+      responses:
+        200:
+          description: "inventory retrieved successfully"
+          schema:
+            $ref: "#/definitions/RetrieveInventoryPayload"
+          examples:
+            application/json:
+              id: 1
+              part_name: "front_arm"
+              part_number: 34534
+              price: 34.56
+    put:
+      tags:
+      - Inventory
+      summary: "Update an existing inventory"
+      description: "Update an existing inventory with new details-token required to complete the update"
+      parameters:
+        - name: "inventory_id"
+          in: "path"
+          description: "ID of the inventory to update"
+          required: true
+          type: "integer"
+        - in: "body"
+          name: "body"
+          description: "Authentication not required to update inventory"
+          required: true
+          schema: 
+            $ref: "#/definitions/UpdateInventoryPayload"
+      responses:
+        200:
+          description: "inventory Updated successfully"
+          schema:
+            $ref: "#/definitions/UpdateInventoryResponse"
+          examples:
+            application/json:
+              id: 1
+              part_name: "front_arm"
+              part_number: 34534
+              price: 34.56
+
+    delete:
+      tags:
+      - Inventory
+      summary: "Delete a inventory"
+      description: "Authentication not required"
+      parameters:
+        - name: "inventory_id"
+          in: "path"
+          description: "ID of the inventory to delete"
+          required: true
+          type: "integer"
+      responses:
+        200:
+          description: "inventory deleted successfully"
+          schema:
+            $ref: "#/definitions/DeleteInventoryPayload" 
+          examples:
+            application/json:
+              message: "successfully deleleted inventory<inventory_id>"
+
+### Mechanic routes
+### Creating general paths to mechanic routes
+  /mechanics:
+    post:
+      tags:
+      - Mechanic
+      summary: "Create a new mechanic"
+      description: "Create a new mechanic with outlined details"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "mechanic details"
+          required: true
+          schema: 
+            $ref: "#/definitions/CreateMechanicPayload"
+      responses:
+        200:
+          description: "mechanic created successfully"
+          schema:
+            $ref: "#/definitions/CreateMechanicResponse"
+          examples:
+            application/json:
+              id: 1
+              name: "Sam Tito"
+              email: "julius@gmail.com"
+              phone: "456444324456"
+              salary: "45,345"
+
+    get:
+      tags:
+      - Mechanic
+      summary: "Get all mechanic"
+      description: "Retrieve a list of all created mechanic"
+      responses:
+        200:
+          description: "mechanic retrieved successfully"
+          schema:
+            $ref: "#/definitions/AllMechanics" 
+
+### Exceptional path to the route of retrieving, updating or deleting specific Mechanics
+  /mechanics/{mechanic_id}:  
+    get:
+      tags:
+      - Mechanic
+      summary: "Retrieve specific mechanic"
+      description: "Retrieve a specific mechanic by its ID"
+      parameters:
+        - name: "mechanic_id"
+          in: "path"
+          description: "ID of the mechanic to display"
+          required: true
+          type: "integer"
+      responses:
+        200:
+          description: "mechanic retrieved successfully"
+          schema:
+            $ref: "#/definitions/RetrieveMechanicPayload"
+          examples:
+            application/json:
+              id: 1
+              name: "Sam Tito"
+              email: "julius@gmail.com"
+              phone: "456444324456"
+              salary: "45,345"
+    put:
+      tags:
+      - Mechanic
+      summary: "Update an existing mechanic"
+      description: "Update an existing mechanic with new details-token required to complete the update"
+      parameters:
+        - name: "mechanic_id"
+          in: "path"
+          description: "ID of the mechanic to update"
+          required: true
+          type: "integer"
+        - in: "body"
+          name: "body"
+          description: "Authentication not required to update mechanic"
+          required: true
+          schema: 
+            $ref: "#/definitions/UpdateMechanicPayload"
+      responses:
+        200:
+          description: "mechanic Updated successfully"
+          schema:
+            $ref: "#/definitions/UpdateMechanicResponse"
+          examples:
+            application/json:
+              id: 1
+              name: "front_arm"
+              email: "julius@gmail.com"
+              phone: "456444324456"
+              salary: "45,345"
+
+    delete:
+      tags:
+      - Mechanic
+      summary: "Delete a mechanic"
+      description: "Authentication not required"
+      parameters:
+        - name: "mechanic_id"
+          in: "path"
+          description: "ID of the mechanic to delete"
+          required: true
+          type: "integer"
+      responses:
+        200:
+          description: "mechanic deleted successfully"
+          schema:
+            $ref: "#/definitions/DeleteMechanicPayload" 
+          examples:
+            application/json:
+              message: "successfully deleleted mechanic<mechanic_id>"
+  ### Retrieving the best mechanics
+  /mechanics/best:
+    get:
+      tags:
+      - Mechanic
+      summary: "Get the best mechanic"
+      description: "Retrieve the best mechanic list by the number of service tickets"
+      responses:
+        200:
+          descriiption: "Best mechanic retrieved successfully"
+          schema:
+            $ref: "#/definitions/BestMechanics"
+
+
+### Service tickets routes
+### Creating general paths to service tickets routes
+  /service_tickets:
+    post:
+      tags:
+      - ServiceTicket
+      summary: "Create a new service ticket"
+      description: "Create a new service ticket with outlined details"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "service ticket details"
+          required: true
+          schema: 
+            $ref: "#/definitions/CreateServiceTicketPayload"
+      responses:
+        200:
+          description: "service ticket created successfully"
+          schema:
+            $ref: "#/definitions/CreateServiceTicketResponse"
+          examples:
+            application/json:
+              id: 1
+              VIN: "45444XYDDJDJD899"
+              service_date: "2023-1-01"
+              customer_id: 2
+
+    get:
+      tags:
+      - ServiceTicket
+      summary: "Get all service tickets"
+      description: "Retrieve a list of all created service ticket"
+      responses:
+        200:
+          description: "service ticket retrieved successfully"
+          schema:
+            $ref: "#/definitions/AllServiceTickets" 
+  ### Exceptional path to the route of retrieving, updating or deleting specific Service Tickets
+  
+### Edit service tickets
+  /service_tickets/{service_ticket_id}:
+    put:
+      tags:
+      - ServiceTicket
+      summary: "Update an existing service ticket"
+      description: "Edit a service ticket. Token not required"
+      parameters:
+        - name: "service_ticket_id"
+          in: "path"
+          description: "id of the service ticket to update"
+          required: true
+          type: "integer"
+        - in: "body"
+          name: "body"
+          description: "Authentication not required to update service ticket"
+          required: true
+          schema:
+            $ref: "#/definitions/EditServiceTicketPayload"
+      responses:
+        200:
+          description: "service ticket updated successfully"
+          schema:
+            $ref: "#/definitions/EditServiceTicketResponse"
+            examples:
+              application/json:
+                id: 1
+                VIN: "45673323455-ZDDD"
+                service_date: "2023-1-01"
+                customer_id: 2
+      
+### Get specific service ticket
+    get:
+      tags:
+      - ServiceTicket
+      summary: "Retrieve specific service ticket"
+      description: " Retrieve a specific service ticket by its ID"
+      parameters:
+        - name: "service_ticket_id"
+          in: "path"
+          description: "ID of the service ticket to display"
+          required: true
+          schema:
+            $ref: "#/definitions/RetrieveServiceTicketPayload"
+      responses:
+        200:
+          description: "service ticket retrieved successfullly"
+          schema:
+            $ref: "#/definitions/RetrieveServiceTicketResponse"
+            examples:
+              application/json:
+                id: 1
+                VIN: "4543333-D-2343"
+                service_date: "2023-1-01"
+                customer_id: 2
+### Delete a service ticket
+    delete:
+      tags:
+      - ServiceTicket
+      summary: "Delete a service_ticket"
+      description: "Authentication not required"
+      parameters:
+        - name: "service_ticket_id"
+          in: "path"
+          description: "ID of the service_ticket to delete"
+          required: true
+          schema:
+            $ref:"#/definition/DeleteServiceTicketPayload"
+      responses:
+        200:
+          description: "service_ticket deleted successfully"
+          schema:
+            $ref: "#/definitions/DeleteServiceTicketResponse" 
+          examples:
+            application/json:
+              message: "successfully deleleted service_ticket<service_ticket_id>"
+
+### Assign mechanic to a service_ticket
+  /service_tickets/{service_ticket_id}/assign_mechanic/{mechanic_id}:
+    put:
+      tags:
+      - ServiceTicket
+      summary: "Assign a mechanic to a service ticket"
+      description: "Assign a mechanic to a service ticket by their IDS"
+      parameters:
+        - name: "service_ticket_id"
+          in: "path"
+          description: "ID of the service ticket to assign a mechanic to"
+          required: true
+          type: "integer"
+        - name: "mechanic_id"
+          in: "path"
+          description: "ID of the mechanic to assign to the service ticket"
+          required: true
+          type: "integer"
+      responses:
+        200:
+          description: "Mechanic assigned to service ticeket successfully"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+                service_ticket_id:
+                  type: "integer"
+                  description: "Service ticket ID"
+                mechanic_id:
+                  type: "integer"
+                  description: "Mechanic ID"
+### Remove mechanic from service_ticket
+  /service_tickets/{service_ticket_id}/remove_mechanic/{mechanic_id}:
+    put:
+      tags:
+      - ServiceTicket
+      summary: "Remove a mechanic from a service ticket"
+      description: "Remove a mechanic froma a service ticket by their IDs"
+      parameters:
+        - name: "service_ticket_id"
+          in: "path"
+          description: "ID of the service ticket to remove from a mechanic"
+          required: true
+          type: "integer"
+        - name: "mechanic_id"
+          in: "path"
+          description: "ID of the service ticket to remove from a mechanic"
+          required: true
+          type: "integer"
+      responses:
+        200:
+          description: "Mechanic removed from service ticket successfully"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+                service_ticket_id:
+                  type: "integer"
+                  description: "Service ticket ID"
+                mechanic_id:
+                  type: "integer"
+                  description: "Mechanic ID"
+### Add Inventory to the Service Ticket
+  /service_tickets/{service_ticket_id}/add_inventory:
+    post:
+      tags:
+      - ServiceTicket
+      summary: "Add inventory to a service ticket"
+      description: "Add inventory to a service ticket by their IDS"
+      parameters:
+        - name: "service_ticket_id"
+          in: "path"
+          description: "ID of the service ticket to add inventory to"
+          required: true
+          type: "integer"
+        - in: "body"
+          name: "body"
+          description: "Inventory details to add to the service ticket"
+          required: true
+          schema:
+            $ref: "#/definitions/AddInventoryToServiceTicketPayload"
+      responses:
+        200:
+          description: "Part added to service ticket succcessfully"
+          schema:
+            $ref: "#/definitions/AddInventoryToServiceTicketResponse"
+
+                  
+### This is where routes are dfined
+### Customer Definitions
+definitions: 
+### Authenticated customer login credentials and response
+  LoginCredentials:
+    type: "object"
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"
+      
+    required:
+      - email
+      - password
+    
+  LoginResponse:
+    type: "object"
+    properties:
+      token:
+        type: "string"
+      message:
+        type: "string"
+      status:
+        type: "string"
+  ## General defininitions for customer routes
+  CreateCustomerPayload:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      password:
+        type: "string"
+    required:
+      - name
+      - email
+      - phone
+      - password
+  CreateCustomerResponse:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      password:
+        type: "string"
+
+  AllCustomers:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        id: 
+          type: "integer"
+        name:
+          type: "string"
+        email:
+          type: "string"
+        phone:
+          type: "string"
+        password:
+          type: "string"
+  ### Exceptional defintions for updating and deleting customer    
+  UpdateCustomerPayload:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      password:
+        type: "string"
+    required:
+      - name
+      - email
+      - phone
+      - password
+  UpdateCustomerResponse:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      password:
+        type: "string"
+  DeleteCustomerPayload:
+    type: "object"
+    properties:
+        message:
+          type: "string"
+### Inventory Definitions
+  ## General defininitions for Inventory routes
+  CreateInventoryPayload:
+    type: "object"
+    properties:
+      part_name:
+        type: "string"
+      part_number:
+        type: "string"
+      price:
+        type: "float"
+    required:
+      - part_name
+      - part_number
+      - price
+  CreateInventoryResponse:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      part_name:
+        type: "string"
+      part_number:
+        type: "string"
+      price:
+        type: "float"
+
+  AllInventory:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        id: 
+          type: "integer"
+        part_name:
+          type: "string"
+        part_number:
+          type: "string"
+        price:
+          type: "float"
+  ### Exceptional defintions for retrieving, updating and deleting inventory
+  RetrieveInventoryPayload:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      part_name:
+        type: "string"
+      part_number:
+        type: "string"
+      price:
+        type: "float"
+    required:
+      - part_name
+      - part_number
+      - price 
+
+  UpdateInventoryPayload:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      part_name:
+        type: "string"
+      part_number:
+        type: "string"
+      price:
+        type: "float"
+    required:
+      - part_name
+      - part_number
+      - price
+  UpdateInventoryResponse:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      part_name:
+        type: "string"
+      part_number:
+        type: "string"
+      price:
+        type: "float"
+  DeleteInventoryPayload:
+    type: "object"
+    properties:
+        message:
+          type: "string"
+### Mechanic Definitions
+  ## General defininitions for Inventory routes
+  CreateMechanicPayload:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      salary: 
+        type: "string"
+    required:
+      - name
+      - email
+      - phone
+      - salary
+  CreateMechanicResponse:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      salary: 
+        type: "string"
+
+  AllMechanics:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        id: 
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      salary: 
+        type: "string"
+  BestMechanics:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        id:
+          type: "integer"
+        name:
+          type: "string"
+        email:
+          type: "string"
+        phone:
+          type: "string"
+        salary:
+          type: "string"
+        service_ticket_count:
+          type: "integer"
+  ### Exceptional defintions for retrieving, updating and deleting mechanic
+  RetrieveMechanicPayload:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      salary: 
+        type: "string"
+    required:
+      - name
+      - email
+      - phone
+      - salary
+
+  UpdateMechanicPayload:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      salary: 
+        type: "string"
+    required:
+      - name
+      - email
+      - phone   
+      - salary
+  UpdateMechanicResponse:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      phone:
+        type: "string"
+      salary: 
+        type: "string"
+  DeleteMechanicPayload:
+    type: "object"
+    properties:
+        message:
+          type: "string"
+### Service Tickets Definitions
+  ## General defininitions for Service Tickets routes
+  CreateServiceTicketPayload:
+    type: "object"
+    properties:
+      VIN:
+        type: "string"
+      service_date:
+        type: "string"
+        format: "date"
+      customer_id: 
+        type: "integer"
+    required:
+      - VIN
+      - service_date
+      - customer_id
+  CreateServiceTicketResponse:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      VIN:
+        type: "string"
+      service_date:
+        type: "string"
+        format: "date"
+      customer_id: 
+        type: "integer"
+
+  AllServiceTickets:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        id: 
+          type: "integer"
+        VIN:
+          type: "string"
+        service_date:
+          type: "string"
+          format: "date"
+        customer_id: 
+          type: "integer"
+        customer:
+          type: "object"
+          properties:
+            id:
+              type: "integer"
+            name:
+              type: "string"
+            email:
+              type: "string"
+            phone:
+              type: "string"
+            password:
+              type: "string"
+        mechanics:
+          type: "array"
+          items:
+            type: "object"
+            properties:
+              id:
+                type: "integer"
+              name:
+                type: "string"
+              email:
+                type: "string"
+              phone:
+                type: "string"
+              salary:
+                type: "string"
+              
+  ### Exceptional definitions for retrieving, updating and deleting service ticket
+  EditServiceTicketPayload:
+    type: "object"
+    properties:
+      add_mechanic_ids:
+        type: "array"
+        items:
+          type: "integer"
+      remove_mechanic_ids:
+        type: "array"
+        items:
+          type: "integer"   
+    required:
+      - add_mechanic_ids
+      - remove_mechanic_ids
+  EditServiceTicketResponse:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        VIN:
+          type: "string"
+        service_date:
+          type: "string"
+          format: "date"
+        customer_id:
+          type: "integer"
+        mechanics:
+          type: "array"
+          items:
+            type: "object"
+            properties:
+              id:
+                type: "integer"
+              name:
+                type: "string"
+              email:
+                type: "string"
+              phone:
+                type: "string"
+              salary:
+                type: "string"
+  AddInventoryToServiceTicketPayload:
+    type: "object"
+    properties:
+      part_id:
+        type: "integer"
+      quantity:
+        type: "integer"
+    required:
+      - part_id
+      - quantity
+  AddInventoryToServiceTicketResponse:
+    type: "object"
+    properties:
+      message:
+        type: "string"
+      service_ticket_id:
+        type: "integer"
+      part_id:
+        type: "integer"
+  RemoveInventoryFromServiceTicketPayload:
+    type: "object"
+    properties:
+      part_id:
+        type: "integer"
+      quantity:
+        type: "integer"
+    required:
+      - part_id
+      - quantity
+  RemoveInventoryFromServiceTicketResponse:
+    type: "object"
+    properties:
+      message:
+        "type": "string"
+      service_ticket_id:
+        type: "integer"
+      part_id:
+        type: "integer"
+  RetrieveServiceTicketPayload:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      VIN:
+        type: "string"
+      service_date:
+        type: "string"
+        format: "date"
+      customer_id:
+        type: "integer"
+  DeleteServiceTicketPayload:
+    type: "object"
+    properties:
+        message:
+          type: "string"
+    

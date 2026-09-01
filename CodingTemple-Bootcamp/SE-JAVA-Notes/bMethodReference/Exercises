@@ -1,0 +1,11 @@
+Exercise 1: Generic Triplet Class
+Create a generic Triplet class that can hold three objects of different types (e.g., Triplet<String, Integer, String>). Add getter methods to retrieve the values. Then create 2 different types of Triplet objects and print out what is inside both.
+
+Exercise 2: Create a Simple Map of Students
+Create a HashMap<String, Integer> to store student names (as keys) and grades (as values).  Add at least three students with their grades. Print each student's name along with their grade using the forEach method.
+
+Exercise 3: Create a Comparable class of Video Game
+Create a VideoGame class that implements Comparable<VideoGame>. Each video game has a title (String), releaseYear (int), and rating (double). The games should be sorted in ascending order by their releaseYear. Write a program that creates a list of video games, sorts them, and prints the sorted list.
+
+Exercise 4: Create Comparators to sort by multiple properties of Video Games
+Using the previous VideoGame class (without Comparable) and then write a custom Comparator<VideoGame> that compares video games by their rating (double) in descending order as well as releaseYear in ascending order. Write a program that sorts a list of video games using these comparators.

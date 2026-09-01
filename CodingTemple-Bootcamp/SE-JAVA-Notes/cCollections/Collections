@@ -1,0 +1,24 @@
+
+cCollections:
+
+cCollections in Java are a set of classes and interfaces used to store and manage groups of objects.
+ The four main interfaces in the Java cCollections Framework are Lists, Sets, Queues, and Maps, each serving different purposes for organizing data.
+ These interfaces provide flexible ways to work with data structures like arrays, linked lists, and hash maps, making it easier to manipulate groups of objects efficiently.
+
+ ArrayList: A resizable array implementation of the List interface, providing fast random access to elements but slower insertion and deletion in the middle of the list due to shifting elements.
+ LinkedList: A doubly-linked list implementation of the List and Deque interfaces, allowing efficient insertions and deletions from both ends but slower access to elements compared to ArrayList.
+ Vector (not used): A synchronized, thread-safe version of ArrayList, typically slower due to synchronization overhead and rarely used in modern code.
+ Stack (not used): A subclass of Vector that implements a last-in, first-out (LIFO) stack, allowing elements to be pushed and popped from the top. Generally replaced by Deque for stack operations.
+
+
+Comparable
+Comparable is an interface used to define the natural ordering of objects in a class. Objects of a class that implement Comparable can be sorted using methods like cCollections.sort() or by data structures that rely on ordering (like TreeSet or TreeMap).
+
+You define the comparison logic inside the class itself by overriding the compareTo() method.
+
+compareTo returns:
+
+Negative Integer: If the current object is less than the specified object.
+Zero: If the current object is equal to the specified object.
+Positive Integer: If the current object is greater than the specified object.
+Use Comparable when you want a single, natural order for objects.

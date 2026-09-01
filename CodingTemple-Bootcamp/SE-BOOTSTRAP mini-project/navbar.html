@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+
+    <style>
+      body {
+        background-color:rgb(224, 219, 219);
+        background-blend-mode:multiply;
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        height:100%;
+        overflow:hidden;
+      }
+
+       @media(max-width:1000px) {
+        .sidebar {
+          background-color:rgb(128, 119, 119);
+          backdrop-filter:blur(10px) 
+        } 
+      } 
+
+    </style>
+
+    <nav class="navbar navbar-expand-lg bg-primary py-4">
+      <div class="container">
+        <!-- This is website logo -->
+        <a class="navbar-brand" href="#">XWebsite</a>
+
+        <!-- This is toggle button -->
+        <button
+        class="navbar-toggler shadow-none border-0"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <!-- This is sidebar -->
+        <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" arialabelledby="offcanvasNavbarLabel">
+              <!-- This is sidebar header -->
+          <div class="offcanvas-header border-bottom text-white">
+            <h4 class="offcanvas-title" id="offcanvasNavbarLabel">XWebsite</h4>
+            <button 
+            type="button"
+            class="btn-close btn-close-white shadow-none"
+            data-bs-dismiss="offcanvas"
+            aria-label="close"
+            ></button>
+          </div>
+          <!-- This is side-bar-body -->
+          <div class="offcanvas-body d-flex flex-lg-row flex-column p-lg-0 p-4 p-lg-0">
+            <ul class="navbar-nav justify-content-center align-items-center fs-4 flex-grow pe-4">
+              <li class="nav-item mx-3">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

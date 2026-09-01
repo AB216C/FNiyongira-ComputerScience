@@ -1,0 +1,81 @@
+<!-- Goal: Design a simple survey form with at least 3 sections:
+
+Personal information (name, email, birthdate)
+Preferences (radio buttons and checkboxes)
+Feedback (a text area for comments)
+Example: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SURVEY</title>
+</head>
+<body>
+  <h2>Weekly Survey-DUE FEB 20,2025</h2>
+  <form action="/submit" method="POST">
+    <fieldset>
+      <legend>Personal Information Section</legend>
+      <p>Participants:</p>
+      <p>Email:</p>
+      <input type="text" placeholder="Enter your Full name">
+      <p>Email:</p>
+      <input type="email" placeholder="Enter your email">
+      <p>Birthdate</p>
+      <label for="Birthdate">Birthdate:</label>
+      <input type="date">
+      <br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferences Section</legend>
+          
+      <h3>What did you like about the food?</h3>
+    <div>
+      <input type="radio" id="cheese" name="food" value="cheese">
+      <label for="cheese" style="margin-right: 20px;">Cheese</label>
+  
+      <input type="radio" id="banana" name="food" value="banana">
+      <label for="banana">Banana</label>
+    </div>
+    
+      <div>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male" style="margin-right: 20px;">Male</label>
+    
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+    
+    <h3>How many days it took to make candies?</h3>
+      <div>
+        <input type="checkbox">
+        <label>2</label>
+        <input type="checkbox">
+        <label>3</label>
+       <label>1</label>
+        <input type="checkbox">
+        <label>7</label>
+      </div>
+      <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Feedback Section</legend>
+      <br><br>
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback"></textarea>
+      <p>Submit</p>
+      <input type="submit" value="submit">
+
+      <br><br>
+
+    </fieldset>
+
+  </form>
+
+</body>
+</html>  <input type="checkbox">
+       

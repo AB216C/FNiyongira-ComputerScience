@@ -1,0 +1,40 @@
+cStreams consist of both Intermediate and Terminal operations
+
+Intermediate Operations: Operations like map(), filter(), which return a stream.
+Terminal Operation: Ends the stream pipeline and produces a result, like collect() or forEach().
+Intermediate operations only execute when a terminal operation is invoked. Without a terminal operation, the stream is created but remains unprocessed.
+
+Examples of return types:
+Symbol: T
+Meaning: Input type(Element type) of the stream before mapping
+
+Symbol: R
+Meaning: Result type(Type of stream after mapping)
+
+Conventionally: You can use, T(Type), R(Result), K(Key), and V(Value).
+
+Examples of Intermediate Operations
+
+filter(Predicate): Filters elements based on a given condition.  return type: Stream<T>
+map(function): Transforms elements by applying a function to each element. Return type: Stream<R>
+flatMap(Function): Flattens and transforms elements by applying a function that returns a stream.  Stream<R>
+distinct(): Returns a stream with only unique elements (removes duplicates).  Stream<T>
+sorted()  : Sorts the elements in natural order or with a comparator. Stream<T>
+limit(long n): Truncates the stream to the first n elements.  Stream<T>
+skip(long n) : Skips the first  n elements of the stream.  Stream<T>
+peek(Consumer): Applies a Consumer to each element, useful for debugging.  Stream<T>
+
+Examples of Terminal Operations
+
+collect(Collectors): Collects the stream elements into a collection or other data structures. Return type: Depends on collector
+forEach(Consumer): Applies a Consumer to each element of the stream.Return type: void
+reduce(BinaryOperator): Reduces the elements into a single value using an accumulator function. Optional<T> or T
+count(): Counts the number of elements in the stream. return type: long
+findFirst(): Returns the first element, if present. Optional<T>
+findAny(): Returns any element, which is useful in parallel streams. Optional<T>
+allMatch(Predicate): Checks if all elements match the given predicate. return type: boolean
+anyMatch(Predicate): Checks if any element matches the given predicate. boolean
+noneMatch (Predicate): Checks if no elements match the given predicate. boolean
+
+
+

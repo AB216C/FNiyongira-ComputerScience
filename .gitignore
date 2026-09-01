@@ -22,4 +22,7 @@ out/
 *.ipr
 
 # VS Code
+.vscode/node_modules/
 .vscode/
+venv/
+*.keystore

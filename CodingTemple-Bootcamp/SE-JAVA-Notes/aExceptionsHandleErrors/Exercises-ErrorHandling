@@ -1,0 +1,12 @@
+1. Validating User Input
+Write a program that asks the user to enter a positive integer. If the user enters a negative number, throw an IllegalArgumentException and display an error message.
+
+Requirements:
+
+Use the throw keyword to manually throw an exception for invalid input.
+2. Number Guessing Game with Exception Handling
+Create a simple number guessing game where the user has to guess a number between 1 and 10. If the user inputs something that isn’t a valid number, catch the NumberFormatException and display an error. If the guess is correct, congratulate the user.
+
+Requirements:
+
+Handle invalid input with try-catch.

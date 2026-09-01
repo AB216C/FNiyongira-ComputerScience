@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Position practice</title></head>
+  <style>
+    .main-box {
+      border:2px solid black;
+      width:280px;
+      position:relative;
+    }
+    .off-sign {
+      background-color:black;
+      color:white;
+      position:absolute;
+      top:10px;
+      right:10px;
+      padding-right:15px;
+      padding-top:9px;
+      padding-left:15px;
+      padding-bottom:9px;
+    }
+    .image {
+      width:280px;
+      padding-top:50px;
+      z-index:1;
+    }
+
+    .cart {
+      border:1px solid black;
+      position:absolute;
+      right:100px;
+      bottom:10px;
+      background-color:white;
+      padding-top:7px;
+      padding-bottom:7px;
+      padding-left:10px;
+      padding-right:10px;
+    }
+
+    .inbox {
+      background-color:white;
+      color:black;
+      margin-left:100px;
+      border:2px solid black;
+      width:80px;
+    }
+
+  </style>
+  <body>
+    <div class="main-box">
+      <div class="off-sign">20% OFF</div>
+      <img class="image" src="Images/shirt2.jpg">
+    </div>
+    <div style="background-color:rgb(232, 230, 230);position:absolute;top:200px; left:10px; width:280px;z-index:0;"><p class="inbox">Add to Cart</p></div>
+  </body>
+</html>

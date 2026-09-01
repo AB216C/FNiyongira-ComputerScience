@@ -1,0 +1,30 @@
+.survey-request {
+  font-size:40px;
+  padding-right:16x;
+  padding-left:16px;
+  padding-top:6px;
+  padding-bottom:6px;
+  width:600px;
+  vertical-align:middle;
+  display:inline-block;
+}
+
+.yes-button {
+  padding-right:16px;
+  padding-left:16px;
+  padding-top:6px;
+  padding-bottom:6px;
+  font-size:30px;
+  margin-left:10px;
+  margin-right:25px;
+  vertical-align:middle;
+}
+
+.no-button {
+  padding-right:16px;
+  padding-left:16px;
+  padding-top:6px;
+  padding-bottom:6px;
+  font-size:30px;
+  vertical-align:middle;
+}

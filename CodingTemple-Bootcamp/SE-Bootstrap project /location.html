@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="index.css">
+
+    
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container-fluid bg-success py-5">
+
+          <!-- Logo -->
+          <a class="navbar-brand fs-4" href="index.html">NConcert</a>
+          <!-- Toggle Button -->
+
+          <button 
+          class="navbar-toggler shadow-none border-0" 
+          type="button" 
+          data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasNavbar" 
+          aria-controls="offcanvasNavbar" 
+          aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+           </button>
+          <!-- Sidebar -->
+           <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <!-- Sidebar header -->
+            <div class="offcanvas-header text-dark border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">NConcert</h5>
+              <button 
+              type="button"
+              class="btn-close btn-close-white shadow-none" 
+              data-bs-dismiss="offcanvas" 
+              aria-label="Close"></button>
+            </div>
+          <!-- Sidebar body -->
+          <div class="offcanvas-body d-flex flex-lg-row flex-column p-4 p-lg-0">
+            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3 text-dark">
+              <li class="nav-item mx-2">
+                <a class="nav-link text-dark fw-bolder" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-2 fw-bolder">
+                <a class="nav-link text-dark" href="events.html">Events</a>
+              </li>
+
+              <li class="nav-item mx-2 fw-bolder">
+                <a class="nav-link text-dark" href="foodmenu.html">Food Menu</a>
+              </li>
+
+              <li class="nav-item mx-2 fw-bolder">
+                <a class="nav-link text-dark" href="location.html">Location</a>
+              </li>
+
+              <li class="nav-item mx-2 fw-bolder">
+                <a class="nav-link text-dark" href="contact.html">Contact us</a>
+              </li>
+
+            </ul>
+            <!-- Login/sin up links -->
+            <div class="d-flex justify-content-center flex-lg-row flex-column align-items-center gap-3">
+              <a href="sign_in.html" class="text-white text-decoration-none px-3 py-2 rounded-2 bg-dark">Sign In</a>
+              <a href="sign-up.html" class="text-white text-decoration-none px-3 py-2 rounded-2 bg-dark">Sign Up</a>
+              <a href="buytickets_price.html" class="text-white text-decoration-none px-3 py-2 rounded-4 bg-warning fw-bolder">Buy Ticket</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="pt-3 container-fluid">
+        <div class=" container-fluid fs-4">
+          <p>Address: 1 AT&T Way, Arlington, TX 76011</p>
+          <p>Phone: +1 469 354 4543</p>
+          <P>Hours-We are open:</P>
+        </div>
+
+        <div class="container-fluid">
+          <ul class="fw-bold lh-lg">
+            <li>Monday: 8:00 AM - 5:00 PM</li>
+            <li>Tuesday: 8:00 AM - 5:00 PM</li>
+            <li>Wednesday: 8:00 AM - 5:00 PM</li>
+            <li>Thursday: 8:00 AM - 5:00 PM</li>
+            <li>Friday: 8:00 AM - 5:00 PM </li>
+            <li>Saturday: Closed</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+
+        <div>
+          <P><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6711.33666217892!2d-97.09599142313773!3d32.7479965736757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7d86c8884727%3A0x6d1e60e88c6a9df8!2sAT%26T%20Stadium!5e0!3m2!1sen!2sus!4v1739649335327!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></P>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-info py-3">
+      <div class="container-fluid d-block ">
+        <div class="py-2">
+          <a class="text-light" style="padding-left:31%" href="#privacy">Privacy Policy</a> | <a class="text-light" href="#terms">Terms of Service</a>
+        </div>
+
+        <div class="py-2">
+          <p class="text-light" style="padding-left:30%" id="rights">&copy; 2025 NConcert - Built by Ferdinand Niyongira</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

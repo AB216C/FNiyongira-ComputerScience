@@ -1,0 +1,15 @@
+#myBox {
+  background-color:lightgreen;
+  width:8.2rem;
+  height:6.2rem;
+  display:flex;
+  align-items:center;
+  padding:20px;
+  text-align:center;
+  font-size:2.0rem;
+}
+
+#myButton {
+  width:170px;
+  font-size:1.5rem;
+}

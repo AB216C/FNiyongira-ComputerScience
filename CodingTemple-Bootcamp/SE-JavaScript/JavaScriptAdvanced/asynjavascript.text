@@ -1,0 +1,45 @@
+//ASYNC JAVASSCRIPT
+
+Asynchronous JavaScript is a powerful feature that allows developers to handle tasks 
+like data fetching from external sources (APIs) without blocking the main thread, which keeps the web page responsive and efficient. 
+The cornerstone of asynchronous operations in JavaScript includes callbacks, promises, and async/await.
+
+
+Why Asynchronous Programming?
+JavaScript is a single-threaded language, meaning it executes one task at a time. 
+Long-running tasks like fetching data from an API, reading files, or making HTTP requests can block the main thread and make the UI unresponsive.
+
+Asynchronous programming solves this by allowing JavaScript to continue executing other code while waiting for a task (like fetching data from an API) to complete in the background.
+
+Callbacks
+A callback function is passed into another function as an argument and is invoked after some operation completes. While callbacks are a fundamental asynchronous pattern, 
+they can lead to issues like callback hell (nested callbacks), making the code difficult to read and maintain.
+
+function fetchData(callback) {
+    setTimeout(() => {
+        callback("Data received");
+    }, 2000);
+}
+
+fetchData((message) => {
+    console.log(message);  // "Data received" after 2 seconds
+});
+
+
+
+Timeouts and intervals
+Timeouts and intervals are two more tools for handling asynchronous behavior in JavaScript.
+
+Timeouts allow you to execute a function after a certain amount of time.
+Intervals allow you to repeatedly execute a function after a set interval of time.
+
+
+Async/Await
+Async/Await is a more elegant way to handle promises. It makes asynchronous code look and behave more like synchronous code, improving readability and maintainability.
+
+async: Declares a function to be asynchronous and automatically returns a promise.
+await: Pauses the execution of an async function until the promise is resolved or rejected.
+
+
+
+

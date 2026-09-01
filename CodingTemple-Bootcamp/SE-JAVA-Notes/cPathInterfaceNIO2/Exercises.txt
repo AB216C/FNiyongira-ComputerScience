@@ -1,0 +1,14 @@
+Exercise 1: Reverse Text File
+Write a program that reads the contents of a text file and writes the reversed content to a new file.
+
+Exercise 2: Counting Words and Characters in a File
+ Write a program that reads a text file and counts the total number of words and characters in the file.
+
+Exercise 3: Filter and Copy Large File Using cStreams and NIO.2
+Task:
+You are given a large text file (data.txt) with about 100 lines. Each line represents a string of text.
+ Write a Java program that uses the cStreams API and NIO.2 to:
+
+Read the file line by line.
+Filter out lines that contain a specific keyword (e.g., "ERROR").
+Write the filtered lines to a new file (filtered_data.txt).

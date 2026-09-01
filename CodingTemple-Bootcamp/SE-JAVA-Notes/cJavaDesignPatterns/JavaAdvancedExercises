@@ -1,0 +1,144 @@
+1. Which Will Print?
+For the following makeSound() and move() methods being called in the main method, what statements will print?
+
+class Animal {
+    void makeSound() {
+        System.out.println("Some generic animal sound");
+    }
+
+    static void move() {
+        System.out.println("Animals move in various ways");
+    }
+}
+
+class Bird extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Bird is chirping");
+    }
+
+    static void move() {
+        System.out.println("Birds fly");
+    }
+}
+
+class Penguin extends Bird {
+    @Override
+    void makeSound() {
+        System.out.println("Penguin is honking");
+    }
+
+    static void move() {
+        System.out.println("Penguins waddle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Penguin();
+        Bird bird1 = new Penguin();
+        Animal animal2 = new Bird();
+
+        animal1.makeSound();  // 1
+        bird1.makeSound();    // 2
+        animal2.makeSound();  // 3
+
+        animal1.move();       // 4
+        bird1.move();         // 5
+        animal2.move();       // 6
+    }
+}
+2. Overriding the toString() Method
+Objective: Design a class representing a Movie and override the toString() method to provide a meaningful string representation of a movie object.
+
+Instructions:
+Create a class Movie with the following attributes:
+String title
+String director
+int releaseYear
+double rating (on a scale of 1 to 10)
+Override the toString() method to return a formatted string that includes the movie’s title, director, release year, and rating in a readable format.
+In the main method, create two Movie objects and print them to verify that the toString() method works correctly.
+3. Using Enums for Traffic Light States
+ Create an Enum to represent the states of a traffic light and implement a method to determine the time duration for each state.
+
+Instructions:
+Create an enum called TrafficLight with the following constants:
+RED
+YELLOW
+GREEN
+Implement a method in the TrafficLight enum called getDuration() that returns the duration (in seconds) for each light:
+RED should return 30 seconds
+YELLOW should return 5 seconds
+GREEN should return 25 seconds
+In the main method, demonstrate the usage of the TrafficLight enum by iterating through all the traffic light states and printing the duration for each state.
+4. Inner Classes for a Library System
+Objective: Create a simple library system that uses different types of inner classes to demonstrate their purposes.
+
+Instructions:
+Outer Class: Create an outer class called Library that contains the following:
+A private member variable name (String) representing the library's name.
+A method printLibraryName() that prints the library name.
+Static Nested Class: Inside the Library class, create a static nested class called Book with:
+Private member variables title (String) and author (String).
+A constructor that initializes the title and author.
+A method getBookDetails() that returns a string containing the book's title and author.
+Inner Class: Inside the Library class, create a non-static inner class called Member with:
+Private member variables memberId (int) and memberName (String).
+A constructor that initializes the memberId and memberName.
+A method getMemberDetails() that returns a string containing the member's ID and name.
+Local Inner Class: Inside the Library class, implement a method called createBookInfo() that creates a local inner class called BookInfo. This class should:
+Have a private member variable book of type Book.
+A constructor that takes a Book object as a parameter and assigns it to the book variable.
+A method displayBookInfo() that prints the details of the book.
+Demonstration: In the main method of your program:
+Create a Library object and print the library name.
+Create a Book object and print its details.
+Create a Member object and print its details.
+Call the createBookInfo() method to display the information of the book.
+5. Design Pattern PracticeExamples
+1: Singleton Pattern
+Implement the Singleton design pattern to ensure only one instance of a class exists.
+
+Create a Logger class that logs messages to the console. Ensure that this class can only be instantiated once. Provide a static method getInstance() to access the single instance. Demonstrate that any attempt to create another instance returns the same object.
+
+Instructions:
+
+Create a class named Logger.
+Implement a private static instance of the class.
+Create a private constructor to prevent instantiation from outside.
+Implement the getInstance() method that returns the single instance.
+Add a method log(String message) that prints the message to the console.
+Demonstrate that the same instance is returned when getInstance() is called multiple times.
+2: Builder Pattern
+Use the Builder design pattern to construct complex objects step by step.
+
+Design a Pizza class that includes properties like size, crustType, and toppings. Implement a PizzaBuilder class to build a Pizza object using method chaining. Allow the user to customize the pizza by selecting various options before building the final object. Provide a build() method to create the Pizza instance.
+
+Instructions:
+
+Create a class named Pizza with fields size, crustType, and toppings.
+Implement a PizzaBuilder class with methods to set each property and a build() method that creates a Pizza instance.
+Use method chaining to allow the builder to be used fluently.
+3: Factory Pattern
+Use the Factory design pattern to create objects without specifying the exact class of the object that will be created.
+
+Create a SnackFactory class that produces different types of snacks, such as Chips, Candy, and Chocolate. Each snack should have a method getDescription() that returns a string describing the snack. Use the factory to create snacks based on user input (like snack type) without exposing the instantiation logic.
+
+Instructions:
+
+Create an interface named Snack with a method getDescription().
+Implement classes Chips, Candy, and Chocolate that implement the Snack interface.
+Create a SnackFactory class with a static method createSnack(String type) to return the appropriate snack object based on the input type.
+Demonstrate the factory pattern by creating snacks using the factory.
+4: Immutable Object
+Design an immutable object to ensure that its state cannot be modified after creation.
+
+Create a Color class representing a color with properties red, green, and blue. Make the class immutable by providing a constructor to initialize the properties and only getter methods to access the values. Implement a method adjustBrightness(double factor) that returns a new Color object with adjusted brightness without changing the original object.
+
+Instructions:
+
+Create a class named Color with fields red, green, and blue.
+Implement a constructor to initialize the properties.
+Provide getter methods for red, green, and blue.
+Implement a method adjustBrightness(double factor) that returns a new Color with adjusted brightness without modifying the original object.

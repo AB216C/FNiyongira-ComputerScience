@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    div button {
+      font-size: 60px;
+      margin-top: 30%;
+      margin-left: 25%;
+      padding: 10px;
+      background-color: bisque;
+      border-radius:20px;
+      transition: 2s;
+    }
+
+    div button:hover {
+      background-color: green;
+    }
+
+    body {
+      background-color: blue;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button onClick="handleHead()">Head</button>
+    <button onClick="handleTail()">Tail</button>
+  </div>
+
+
+  <script>
+
+    function handleHead() {
+      const number = Math.random(0,1)
+
+      let result = ""
+
+      if (number > 0.5 ) {
+        result = "Head"
+      } else {
+        result = "Tail"
+      }
+
+      if(result === "Head") {
+        alert("Win")
+   
+    }else(
+      alert("Lost")
+
+    )
+  }
+
+  function handleTail() {
+    const number = Math.random(0,1)
+
+    let result = ""
+
+
+    if (number > 0.5 ) {
+      result = "Head"
+    } else {
+      result = "Tail"
+    }
+
+    if(result === "Tail") {
+      alert("Win")
+    }else(
+    alert("Lost")
+    )
+    }
+
+  </script>
+  
+</body>
+</html>

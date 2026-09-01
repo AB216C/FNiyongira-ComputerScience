@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey_example</title>
+  <style>
+
+    @media (max-width:600px) {
+
+      body {
+        background-color:blue;
+        color:white;
+      }
+    }
+
+    @media (orientation:landscape) {
+
+      legend {
+        background-color:pink;
+        color:black;
+      }
+
+    }
+
+    @media screen and (max-width:9500px) {
+      fieldset {
+        background-color:rgb(35, 30, 30);
+        color:white;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <form action="#" method="POST">
+    <!-- Personal Information Section -->
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
+      <br><br>
+  
+      <label for="user-email">Email:</label>
+      <input type="email" id="user-email" name="user-email" required placeholder="Enter your email">
+      <br><br>
+  
+      <label for="birthdate">Birthdate:</label>
+      <input type="date" id="birthdate" name="birthdate">
+      <br><br>
+    </fieldset>
+  
+    <!-- Preferences Section -->
+    <fieldset>
+      <legend>Preferences</legend>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" step="1">
+      <br><br>
+  
+      <label for="news">Would you like to receive our newsletter?</label>
+      <input type="radio" id="yes" name="news" value="yes"> Yes
+      <input type="radio" id="no" name="news" value="no"> No
+      <br><br>
+  
+      <p>Select your hobbies:</p>
+      <input type="checkbox" id="reading" name="hobbies" value="reading">
+      <label for="reading">Reading</label>
+      <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+      <label for="gaming">Gaming</label>
+      <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+      <label for="traveling">Traveling</label>
+      <br><br>
+    </fieldset>
+  
+    <!-- Feedback Section -->
+    <fieldset>
+      <legend>Feedback</legend>
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="Enter your comments here..."></textarea>
+      <br><br>
+    </fieldset>
+    <input type="submit" value="Submit">
+  </form>
+  
+</body>
+</html>

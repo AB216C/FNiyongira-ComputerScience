@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+<!--
+  STEP 1: SET UP A TABLE
+  Step 2: Add bootstrap styling
+Let's enhance this table by adding some Bootstrap 5 classes to improve its appearance and usability. Each addition is explained below to help you understand why it’s useful.
+a. Add "table-striped" for alternating row colors:
+This improves the readability of your table by adding subtle background colors to alternate rows.
+b. Use "table-hover" to highlight rows on hover:
+This small interaction helps guide the user’s focus when navigating through the table.
+c. Add "table-bordered" for visible borders between rows and columns:
+Borders help visually separate different sections of the table.
+d. Apply "align-middle" to align cell content vertically in the middle:
+This ensures that text and badges are properly aligned, even if there are varying content heights.
+e. Make the header stand out with "table-dark":
+This adds a "dark background with light text" to the <thead> section, providing a visual distinction from the rest of the table.
+f. Wrap the table with "table-responsive":
+This ensures that the table remains scrollable on smaller screens, avoiding layout breakage.
+j. Introduce status badges with "badge and bg"-*:
+Badges are small labels indicating the status of a row. We use bg-success for "Active" and bg-danger for "Inactive."
+
+-->
+
+
+<!-- YOU CAN ADD STICKER TO THE HEADER: TO help users to track column names while scrolling -->
+
+  <body>
+
+    <div class="table-responsive">
+        <table class="table table striped table-hover table-bordered align-middle">
+          <thead class="table-dark sticky-top">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">name</th>
+              <th>email</th>
+              <th>status</th>
+            </tr>
+  
+          </thead>
+          <tbody>
+          <tr>
+            <td scope="row">1</td>
+            <td>Ferdinand Niyongira</td>
+            <td>ferdniyo@gmail.com</td>
+            <td><span class="badge bg-success">active</span></td>
+          </tr>
+          <tr>
+            <td scope="row">2</td>
+            <td>John Patrick</td>
+            <td>johnp@gmail.com</td>
+            <td><span class="badge bg-danger">inactive</span></td>
+          </tr>
+          </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

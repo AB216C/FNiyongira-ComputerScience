@@ -1,0 +1,77 @@
+<!-- <PSEUDO-CLASSES>
+
+Pseudo-classes are special keywords added to CSS selectors that allow you to apply styles based on the state of an element. 
+They let you change the appearance of elements when certain actions occur, such as when a user hovers over a link or focuses on a form field. 
+Pseudo-classes help create more interactive and dynamic websites without needing JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    img {
+      width:600px
+    }
+  </style>
+</head>
+<body>
+
+  <img src="pictures/Pseudo-classes.png">
+
+  <p>COMMON PSEUDO CLASSES</p>
+
+  <P>
+    :hover - Applies styles when the user hovers over an element.
+    // This makes links turn red and underlined when a user hovers over them. 
+    
+
+    css a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+  </P>
+
+  <P>
+    :active - Applies styles when an element is in an "active" state, such as when a button is clicked.
+
+    // This changes the button color when it is being clicked.
+    css button:active {
+      background-color: darkblue;
+    }
+
+  </P>
+
+  <P>
+    :focus - Applies styles when an element, like an input field, is focused (usually when clicked or navigated to using the keyboard).
+
+  // This styles an input field’s border when it is in focus.
+  css input:focus {
+    border-color: blue;
+    outline: none;
+  }
+  </P>
+
+  <P>
+
+  :first-child - Applies styles to the first child element within a parent element.
+
+  // This makes the first paragraph within any container bold.
+  css p:first-child {
+    font-weight: bold;
+    }
+  </P>
+
+  <P>
+    :last-child - Targets the last child of a parent element.
+
+  // This removes the bottom margin of the last paragraph in a container.
+  css p:last-child {
+    margin-bottom: 0;
+  }
+  </P>
+
+</body>
+</html>

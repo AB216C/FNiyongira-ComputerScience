@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Hamburger Menu</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <style>
+    /* Basic styling for the navigation bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    nav .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Hamburger menu icon */
+    .menu-icon {
+      display: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Hide the checkbox input */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Media query for smaller screens */
+    @media screen and (max-width: 768px) {
+      /* Hide the navigation links by default */
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+      }
+
+      /* Display the hamburger icon */
+      .menu-icon {
+        display: block;
+      }
+
+      /* When the checkbox is checked, show the menu */
+      #menu-toggle:checked + label + ul {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">My Website</div>
+    <!-- Checkbox for the menu toggle -->
+    <input type="checkbox" id="menu-toggle">
+    <!-- Label for the checkbox, this will be the hamburger icon -->
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

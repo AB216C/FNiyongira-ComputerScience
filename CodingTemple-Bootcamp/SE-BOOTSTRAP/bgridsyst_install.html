@@ -1,0 +1,203 @@
+<!-- #Boot strap can be installed using VSCode Extension: Bootstrap 5 Quick Snippet.
+#After installing, type bs5-$ to get started 
+#Bootstrap grid system=Combination of CSS grid and flex box with a library of a pre-designed components.
+
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <style>
+
+      .col {
+        background-color:red;
+        width:200px;
+      }
+
+      .col-6 {
+        background-color: Blue;
+      }
+
+      .col-5 {
+        background-color: black;
+      }
+
+      .col-1 {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+      <!-- In bootstrap, grid system relies on three main components: containers, row, and column
+       container:outer most wrapper of the content. Ensure responsiveness to all screen size through padding and margin
+       row: clear any floating elements and act as a wrapper for columns,
+       col: Hold actual content &  allow to divide space into row
+
+       col-6 vs col-1: Col-6 takes space for 6 columns while col-1 takes space for only 1 column.
+       -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>CONTENT</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <div class="col-6">
+          column6
+        </div>
+        <div class="col-5">
+          column5
+        </div>
+        <div class="col-1">
+          column1
+        </div>
+      </div>
+    </div>
+<!-- col-6 takes a half of the width 
+col-3: Spans 3 out of 12 columns (or one-quarter of the row width).
+col-4: Spans 4 out of 12 columns (or one-third of the row width).
+col-6: Spans 6 out of 12 columns (half the row width). 
+-->
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          column6
+        </div>
+        <div class="col-6">
+          column6
+        </div>
+      </div>
+    </div>
+<br/><br/>
+
+
+
+
+<!-- Containters: There are three types of containers. 
+1. container: Responsive with fixed width container. Means, width will change only based on the screen size such as phone, tablet, and mac screen.
+2. Container-fluid: takes up 100% of the available width no matter the screen size.
+3. container-breakpoint: Responsive container with fixed untill specific screen size is reached.
+Bootstrap container's breakpoints include sm(small), md(medium), lg(large), xl(extra-large)
+Expecialy md, Below the md breakpoint (768px), it behaves like a fixed-width container.
+Above the md breakpoint, it behaves like a full-width container.
+-->
+
+      <div class="container">
+        <h1>Fixed Width Container</h1>
+        <p>This container is responsive and will adjust based on screen size, but it won’t be full width.</p>
+      </div>
+
+      <div class="container-fluid">
+        <h1>Full Width Container</h1>
+        <p>This container stretches the entire width of the viewport, no matter the screen size.</p>
+      </div>
+
+      <div class="container-md">
+        <h1>
+          responsive container
+        </h1>
+        <p>
+          This container will be full width with size greater than 678px("md breakpoint")
+        </p>
+      </div>
+<!-- 
+MAKING A RESPONSIVE LAYOUTS 
+col-sm-6: This means that on small screens (like phones), this section will take up 6 columns (half the screen).
+col-md-4: On medium-sized screens (like tablets), this section will take up 4 columns (one-third of the screen).
+col-lg-12: On large screens (like desktops), this section will take up the full width.
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5 col-md-4 col-lg-12">
+      Changing of the size depending on the screen. if computer, phone, or tablet, it will change in a certain ways
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <div class="p-3 border bg-success">Column 1</div>
+    </div>
+    <div class="col-md">
+      <div class="p-3 border bg-light">Column 2</div>
+    </div>
+    <div class="col-md">
+      <div class="p-3 border bg-warning">Column 3</div>
+    </div>
+    <div class="col-md">
+      <div class="p-3 border bg-light">Column 4</div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-6">
+      <div class="p-3 border bg-danger">Column 5</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div cass="col"> 9-column 1</div>
+  <div class="col">7-column 1</div>
+  <div class="col">2-column 1</div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div cass="col-9"> 9-column 1</div>
+    <div class="col-7">7-column 1</div>
+    <div class="col-3">2-column 1</div>
+  </div>
+  <div class="row">
+    <div cass="col-12-col-md-6"> column 1</div>  <!--Half Width on Medium/Large Screens</div>-->
+    <div class="col-12-col-md-6">column 2</div>
+  </div>
+</div>
+
+
+
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+

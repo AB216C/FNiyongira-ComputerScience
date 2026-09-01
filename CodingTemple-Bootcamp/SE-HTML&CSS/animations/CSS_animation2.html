@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+      .temple {
+      background-color:green;
+      font-size: 2rem;
+      width:300px;
+      height:300px;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      margin-left:25%;
+      margin-top:25%;
+      animation-duration:1s;
+      animation-name:spin;
+      animation-timing-function:ease;
+    }
+/* 
+    This example fades the element in over 3 seconds. */
+
+  @keyframes spin{
+    0% {
+
+    }
+
+    50% {
+      scale:2;
+      transform:rotate(0);
+      border-radius:0;
+    }
+
+    100%{
+
+      transform:rotate(360deg);
+      border-radius:50%;
+      scale:2;
+
+    }
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="temple">
+    <p>Coding Temple</p>
+  </div>
+  
+</body>
+</html>

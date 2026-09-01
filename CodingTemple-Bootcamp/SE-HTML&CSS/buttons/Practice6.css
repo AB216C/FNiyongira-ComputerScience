@@ -1,0 +1,34 @@
+.cat {
+  width:70px;
+  height:70px;
+  border-radius:35px;
+  margin-top:30px;
+  vertical-align:middle;
+  padding-top:0px;
+  margin-top:5px;
+  margin-left:5px;
+  object-fit:cover;
+}
+
+.happening {
+  color:gray;
+  font-size:20px;
+  border:none;
+  padding-left:20px;
+  padding-right:200px;
+  vertical-align:middle;
+}
+
+.tweet {
+  background-color:rgb(27, 105, 178);
+  font-size:40px;
+  border:none;
+  vertical-align:middle;
+  border-radius:25px;
+  padding-right:20px;
+  padding-left:20px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation bars</title>
+</head>
+<body>
+
+  <!--A basic navigation bar is structured using HTML's <nav>, <ul>, and <li> tags:-->
+  <!--When you want to link to a specific section within the same page, you use the href attribute with a hash symbol (#) followed by the ID of the element you want to jump to.
+
+  The hash symbol (#) tells the browser to look for an element with the matching ID within the same page.
+  The ID attribute uniquely identifies an element on the page, and the href="#id-name" creates the link to it
+  -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Sections with corresponding IDs -->
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to our homepage!</p>
+  </section>
+  
+  <section id="about">
+    <h2>About</h2>
+    <p>About us section goes here.</p>
+  </section>
+  
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Contact information here.</p>
+  </section>
+
+  <!--Linking to Different HTML Pages
+  The href="index.html" links to the Home page, which is a separate file.
+  The href="about.html" links to the About page
+  The href="contact.html" links to the Contact page
+  -->
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  Use the following example for inspiration and adapt it for your project.
+
+<!-- Sample Navigation for about.html -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="exercises.html">About</a></li>
+    <li><a href="advancedhtml.html">Services</a></li>
+    <li><a href="navigationbars.html">Contact</a></li>
+    <li><a href="#team">Our Team</a></li>
+    <li><a href="#mission">Our Mission</a></li>
+  </ul>
+</nav>
+  
+  
+</body>
+</html>

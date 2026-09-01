@@ -1,0 +1,128 @@
+#nav-id {
+  display:inline-block;
+  justify-content:space-between;
+  align-items: center;
+}
+  * {
+    text-decoration:none;
+  }
+ .navbar {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  } 
+
+  .navdiv {
+    display:flex;
+    background-color: green;
+    align-items:center;
+    justify-content: space-between;
+    padding:20px;
+    margin-bottom:0px;
+
+  }
+
+  .logo {
+    font-size:40px;
+    font-weight:400px;
+  }
+
+  .logo a {
+    color:black;
+  }
+
+  li {
+      list-style: none;
+      display:inline-block;
+      padding:1em;
+      
+    }
+
+    button {
+      background-color:blue;
+      color:black;
+      padding:15px;
+      border-radius:5px;
+      font-size:1em;
+      margin-right:15px;
+      font-weight:bolder
+    }
+
+  img {
+    width:100%;
+  }
+  p {
+    font-weight:bolder;
+    font-size:3em;
+    margin-bottom:2px;
+    margin-top:2px;
+  }
+
+  a {
+    text-decoration:none;
+  }
+
+  #date {
+    background-color:blue;
+    color:white;
+    padding: 14px;
+    font-size:1em;
+
+  }
+
+  #ticket {
+    text-decoration: none;
+    color:white;
+  }
+
+  .button-a {
+    background-color: blue;
+    padding: 14px;
+  }
+
+  .performers {
+    background-color: green;
+    display:grid;
+    grid-template-columns: auto auto;
+    gap:10px;
+    margin-top:0px;
+    
+  }
+
+  .music {
+    background-color: yellow;
+  }
+
+  .timing {
+    display:flex;
+    justify-content: space-between;
+  }
+
+  #burna-img {
+    height:558.44px;
+  }
+
+  #don-img {
+    height:558.44px;
+  }
+
+  #kendrick-img {
+    height:558.44px;
+  }
+
+  #juan-img {
+    height:558.44px;
+  }
+  footer {
+      background-color:rgb(51, 206, 206);
+      display:block;
+      width:100%;
+      padding-bottom:15px;
+      padding-top:15px;
+      font-size:13px;
+      margin-bottom:0px;
+    }
+
+    ul li a {
+      color:black;
+      font-size:20px;
+    }

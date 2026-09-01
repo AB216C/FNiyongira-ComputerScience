@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+
+      <!-- MANUAL CSS VS BOOTSTRAP CSS: if you wanted to style a button, you’d need to write CSS rules specifying the color, padding, borders, etc. 
+      With Bootstrap, this process is simplified by assigning predefined classes that automatically apply those styles. See examples-->
+
+      
+      <!-- THIS IS MANUAL STYLE -->
+      <style>
+        button {
+          background-color: blue;
+          color: white;
+          padding: 10px 15px;
+          border-radius: 5px;
+        }
+
+        .m-5 {
+          background-color: green;
+        }
+
+        .p-5 {
+          background-color: green;
+        }
+      </style>
+
+      <button type="button">SUBMIT</button>
+
+      <!-- THIS IS BOOTSTRAP STYLE -->
+
+      <button type="button" class="btn btn-primary">SUBMIT</button>
+
+<!-- APPLYING MULTIPLE classes ON BOOTSTRAP ELEMENT 
+btn-lg: increase the size of a button 
+-->
+
+      <button type="button" class="btn btn-primary btn-lg">SUBMIT</button>
+
+      <br>
+
+      <button type="button" class="btn btn-warning btn-lg">SUBMIT</button>
+
+<!-- 
+UTILITY CLASSES 
+They are very helpful in adjusting margin and padding using this formula: {property}(sides)-(size)
+
+property: m for marginn and p for padding.
+sides: specify which side to apply margin
+size: control how much margin/padding is applied
+
+
+Where sides are:
+
+   t: apply margin top or padding-top;
+   b:apply margin-bottom or padding-bottom;
+   s: apply margin-left or padding-left in LTR and margin-right or padding light in RTL (LTR:left to right language while RTL is right to left language)
+   e - Applies margin-right or padding-right in LTR, and margin-left or padding-left in RTL.
+x - Applies margin/padding to both left and right sides.
+y - Applies margin/padding to both top and bottom.
+
+Where sizes are:
+0 - Eliminates margin or padding (sets it to 0).
+1 - Sets the margin or padding to $spacer * 0.25.
+2 - Sets the margin or padding to $spacer * 0.5.
+3 - Sets the margin or padding to $spacer.
+4 - Sets the margin or padding to $spacer * 1.5.
+5 - Sets the margin or padding to $spacer * 3.
+auto - Automatically sets the margin to auto, useful for centering elements.
+
+FONT-SIZE:
+
+<p class="fs-1">.fs-1 text</p>
+<p class="fs-2">.fs-2 text</p>
+<p class="fs-3">.fs-3 text</p>
+<p class="fs-4">.fs-4 text</p>
+<p class="fs-5">.fs-5 text</p>
+<p class="fs-6">.fs-6 text</p>
+
+FONT-WEIGHT:
+
+<p class="fw-bold">Bold text.</p>
+<p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+<p class="fw-normal">Normal weight text.</p>
+<p class="fw-light">Light weight text.</p>
+<p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+<p class="fst-italic">Italic text.</p>
+<p class="fst-normal">Text with normal font style</p>
+
+<p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+-->
+
+<br/>
+
+<div class="mt-4 mb-4">Top Margin Example</div>
+
+<div class="px-3 mx-3 bg-secondary text-uppercase">Horizontal padding example</div>
+
+<div class="p-5">Full Margin-example</div>
+
+<div class="m-5 bg-dark text-light">Full Margin-example</div>
+
+<div class="ms-auto pe-4 ps-5 py-5 bg-primary">Left Margin auto</div>
+
+<!-- SIZING CLASSES 
+
+Width:W-25, W-50, W-100 : SET width to 25%, 50%, 100% of the parent container;
+height: h-25, h-50, h-100: Set height to  25%, 50%, 100% of the container.
+
+-->
+<!-- 
+DISPLAY CLASSES
+
+d-block: Forces the element to act as a block element.
+d-inline: Displays the element inline.
+d-none: Hides the element.
+-->
+<!-- 
+FLEX UTILITIES 
+d-flex: Applies flexbox display to an element.
+justify-content-center: Horizontally centers items in the flex container.
+align-items-center: Vertically centers items in the flex container.
+
+-->
+<!-- 
+Typography: These classes adjust text styling.
+
+text-uppercase: Transforms text to uppercase.
+font-weight-bold: Makes text bold.
+font-italic: Italicizes text. -->
+
+
+<!-- COMBINING UTILITIES -->
+
+<div class="w-50 mt-3px -4 bg-light text-center">
+
+  <p class="text-uppercase mt-5 bg-dark text-light">Bootstrap is amazing</p>
+
+</div>
+
+<div class="bg-warning">
+  <p class="text-primary fs-2 fw-bold lh-lg"> J'aime mon pays</p>
+  <p class="text-light fs-2 fw-bold"> J'aime mes enfants</p>
+</div>
+
+<div>
+<p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+
+</div>
+
+<div>
+<p class="text-decoration-underline">This text has a line underneath it.</p>
+<p class="text-decoration-line-through">This text has a line going through it.</p>
+<a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+</div>
+
+
+
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+
+

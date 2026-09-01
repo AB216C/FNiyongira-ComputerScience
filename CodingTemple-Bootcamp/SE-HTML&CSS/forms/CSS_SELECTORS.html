@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="CSS_hints.css"> -->
+
+  <style>
+
+    p {
+      font-size:20px !important;
+    }
+
+    .special {
+      color:darkcyan;
+      font-weight:bold;
+    }
+
+    #main-heading {
+      color:darkmagenta;
+      font-size: 24px;
+    }
+
+    .urgent-text {
+      color:red !important;
+    }
+
+    /* Example of group selector */
+
+    h1,h2,h3 {
+      color:black;
+      font-style:italic;
+      font-size:x-large
+    }
+
+    /* Example of universal selector: Target all elements on the page */
+    /* it a start(*) followed by css instructions */
+
+    * {
+      margin:2.5px;
+      padding:5px;
+    }
+
+    /*Descendant Selector (ancestor descendant)
+    The descendant selector targets all elements that are inside another element, no matter how deeply nested they are.
+    Think of it as selecting everything inside a box, even if there are other boxes within it.
+    Example: div p selects all <p> elements that are inside a <div>, 
+    whether they are direct children or nested further inside other elements within the <div>.
+    */
+
+    div p{
+      color:brown;
+      background-color: yellow;
+    }
+
+
+    /* 🧑‍🧒 Child Selector (parent > child)
+    The child selector targets only the direct children of a specified element.
+    It will not select elements that are deeper in the hierarchy (grandchildren or further descendants).
+    Think of it as selecting only the items directly inside the first layer of the box.
+    Example: div > p will style only <p> tags that are directly inside a <div>. */
+
+
+    div > h4{
+      color:blue;
+      background-color:pink;
+    }
+
+    article p{
+      color:green;
+      background-color: bisque;
+    }
+
+    article > p {
+      color:rgb(38, 10, 122)
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- css priorities of selectors AND ranking INCLUDE the following: 
+1. !important
+2. inline elements
+3. id;
+4. class;
+5. Element; -->
+
+  <h1 id="main-heading" style="color:royalblue" >Hello Word</h1>
+  <p>Welcome to our digital theater.Enjoy the show</p>
+  <h2>The Stage of HTML</h2>
+  <P>Our digital stage is set with various HTML elements that bring life to web pages</P>
+  <p>This is <strong>important</strong> and <em> emphasized</em> text</p>
+
+  <h3>Props List</h3>
+
+  <ul>
+    <li>Scenes(divs)</li>
+    <li>Costumes(css)</li>
+    <li>Scripts(Javascripts)</li>
+  </ul>
+
+  <p class="special">Discover more about HTML at <a href="https://www.w3schools.com/html/">Our HTML Theator</a></p>
+
+  <p class="urgent-text" style="color:blue;font-size:30px">Extra Information real quick</p>
+
+
+  <h2>Weekly Survey-DUE FEB 20,2025</h2>
+  <form action="/submit" method="POST">
+    <fieldset>
+      <legend>Personal Information Section</legend>
+      <p>Participants:</p>
+      <p>Email:</p>
+      <input type="text" placeholder="Enter your Full name">
+      <p>Email:</p>
+      <input type="email" placeholder="Enter your email">
+      <p>Birthdate</p>
+      <label for="Birthdate">Birthdate:</label>
+      <input type="date">
+      <br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferences Section</legend>
+          
+      <h3>What did you like about the food?</h3>
+    <div>
+      <input type="radio" id="cheese" name="food" value="cheese">
+      <label for="cheese" style="margin-right: 20px;">Cheese</label>
+  
+      <input type="radio" id="banana" name="food" value="banana">
+      <label for="banana">Banana</label>
+    </div>
+    
+      <div>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male" style="margin-right: 20px;">Male</label>
+    
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+    
+    <h3>How many days it took to make candies?</h3>
+      <div>
+        <input type="checkbox">
+        <label>2</label>
+        <input type="checkbox">
+        <label>3</label>
+        <input type="checkbox">
+        <label>1</label>
+        <input type="checkbox">
+        <label>7</label>
+      </div>
+      <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Feedback Section</legend>
+      <br><br>
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback"></textarea>
+      <p>Submit</p>
+      <input type="submit" value="submit">
+      <br><br>
+    </fieldset>
+
+    <div>
+      <p>This paragraph is inside a div (direct child).</p>
+      <section>
+        <p>This paragraph is also inside a div (nested in a section).</p>
+      </section>
+    </div>
+
+    <div>
+      <h4>This paragraph is a direct child of the div.</h4>
+      <section>
+          <h4>This paragraph is nested inside a section and is not a direct child of the div.</h4>
+      </section>
+    </div>
+
+    <article>
+      <h2>Work Experience</h2>
+      <div>
+        <p><strong>Job Title</strong>, Company name, <em>(Year)</em> </p>
+        <p>Better tomorrow</p>
+      </div>
+    </article>
+
+
+  </form>
+
+</body>
+</html>

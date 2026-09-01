@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="Test.js"></script>
+</head>
+<body>
+
+  <style>
+
+    #pokemonName {
+      padding: 20px;
+      font-size:20px;
+    }
+
+    #searchButton {
+      padding:20px;
+      background-color:brown;
+      font-weight:bolder;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration:none;
+    }
+
+  </style>
+
+<div>
+
+  <div>
+    <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
+    
+    <button onClick="fetchPokemonData()" id="searchButton"><a href="#">Search</a></button>
+  </div>
+  
+  <img src="" alt="pokemon Image" id="pokemonImage">
+
+  <div id="pokemonExtraInfo"></div>
+
+</div>
+
+
+
+
+  
+</body>
+</html>

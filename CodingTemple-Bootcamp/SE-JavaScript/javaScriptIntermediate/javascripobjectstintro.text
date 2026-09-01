@@ -1,0 +1,169 @@
+What are JavaScript Objects?
+JavaScript objects are containers for storing related data and behavior. They group key-value pairs, where:
+
+Keys represent property names.
+Values can be strings, numbers, arrays, other objects, or functions (called methods) that define behavior.
+
+Python dictionary vs JavaScript objects
+
+car = {
+	'make': 'Toyota', 
+	'model': 'Camry', 
+	'year': 2021
+}
+print(car['make'])  # Output: Toyota
+
+let car = { 
+	make: 'Toyota',
+	model: 'Camry', 
+	year: 2021,
+	start: function() {
+		console.log("Car starting"); 
+	} 
+};
+console.log(car.make);  // Output: Toyota
+
+The key difference is that, javaScript objects include methods. Methods are functions stored as values. This allow javaScript functions to encapsulate both data and behavior which make them more versatile
+
+🚗 Object Types vs. Object Instances
+When you create an object, you’re defining an object type (template). Each time you use that template, you create a new instance of the object.
+
+
+
+Each instance of an object can have the same structure but hold different values for its properties. Let’s create two instances of a car:
+
+let lightning = {
+  name: 'Lightning McQueen',
+  model: 'Race Car',
+  year: 2006,
+  start: function() {
+    console.log(`${this.name} is starting!`);
+  }
+};
+
+let mater = {
+  name: 'Mater',
+  model: 'Tow Truck',
+  year: 1951,
+  start: function() {
+    console.log(`${this.name} is starting!`);
+  }
+};
+
+lightning.start();  // Output: Lightning McQueen is starting!
+mater.start();      // Output: Mater is starting!
+
+Each instance (lightning and mater) shares the same structure (a car with a name, model, year, and start method) but has unique property values. This demonstrates how reusing structures makes your code efficient and organized.
+
+
+🛠 Diving into the this Keyword
+When a method is called on an object, the this keyword refers to the object instance that invoked the method. This allows the method to dynamically access the properties of the calling object.
+
+Why Use this?
+The this keyword ensures the correct object instance is referenced when calling a method. This is especially useful when the same method exists across multiple objects.
+
+Example with this in a Method
+Let’s revisit the car object example:
+
+let car = {
+  name: 'Lightning McQueen',
+  model: 'Race Car',
+  year: 2006,
+  start: function() {
+    console.log(`Ka-chow! The ${this.year} ${this.name} is ready to roll!`);
+  }
+};
+
+car.start();
+// Output: Ka-chow! The 2006 Lightning McQueen is ready to roll!
+
+
+ Clarifying How this Works
+In Methods: When a function is called as a method on an object, this refers to the object calling the method.
+In the Global Context: If a function is not called as a method but simply invoked, this refers to the global object (in browsers, this is the window object). Example:
+function greet() {
+  console.log(this);  // In browsers, this will log the `window` object
+}
+greet();
+
+
+Arrow Functions: Arrow functions don’t bind their own this. Instead, they inherit this from the surrounding scope. This means they are not ideal for object methods if you want to reference the object itself:
+let car = {
+  name: 'Lightning McQueen',
+  start: () => {
+    console.log(`${this.name} is starting!`);  // Output: undefined is starting!
+  }
+};
+car.start();
+In this example, this is not bound to the car object because the start method is defined as an arrow function.
+
+
+Looping through Object Properties
+JavaScript allows you to iterate over an object’s properties using a for...in loop. This is especially useful when you don’t know all the property names in advance or when working with dynamic objects.
+
+let student = {
+  name: 'Alice',
+  age: 21,
+  major: 'Computer Science',
+  enrolled: true
+};
+
+for (let key in student) {
+  console.log(`${key}: ${student[key]}`);
+}
+
+
+
+🌐 What is the DOM?
+The Document Object Model (DOM) is a tree-like structure that represents the elements in an HTML document as JavaScript objects. Think of it as a live version of your webpage that JavaScript can access and manipulate in real-time.
+
+Every part of an HTML page - like <div>, <h1>, or attributes such as class or id- becomes a node in the DOM tree. The web browser constructs the DOM by parsing the HTML when the page loads.
+
+Understanding the DOM as a Tree Structure
+When the browser loads a page, it constructs a DOM Tree, which mirrors the structure of the HTML document. Parent and child nodes represent elements, and attributes become properties of those elements. This tree structure allows JavaScript to easily navigate, modify, add, or remove elements.
+
+You can view a similar DOM tree structure in your IDE (like VS Code), which presents the elements in a hierarchical outline. 
+
+
+
+Open any HTML file in VS Code and try to predict how it will be structured as a DOM tree. Look for elements that will become parent or child nodes.
+
+
+
+Once you’ve identified some elements:
+
+Think about how JavaScript can target each element (e.g., by ID, class, or tag name).
+Predict which nodes can be modified or removed dynamically.
+
+
+✨ Accessing and Modifying DOM Elements
+Now that we understand the DOM tree structure, the next step is identifying and selecting the specific element we want to modify. Think of it like pointing to a node in the tree before making any changes.
+
+JavaScript provides several ways to select elements from the DOM. Once selected, we can change their content, attributes, or styles.
+
+
+
+🔨 How it works 
+Step 1: Select the Element You Want to Change
+
+To modify an element, we first need to select it from the DOM. Depending on how the element is structured, you can select it by:
+
+ID: If the element has a unique id attribute.
+Class Name: If the element has a class name (not unique).
+Tag Name: If the element is a specific type, like <h1>, <div>, etc.
+CSS Selector: For more precise selection using CSS rules.
+
+
+🎯 Handling User Interactions with Events
+
+Events are actions or occurrences that happen in the browser, such as clicks, key presses, or page loads. JavaScript uses event listeners to respond to these actions dynamically.
+
+
+
+In the previous example, the button used the onclick attribute directly in the HTML to trigger the changeContent() function:
+
+<button onclick="changeContent()">Change Content</button>
+
+
+While this method works, it mixes JavaScript directly into the HTML. Another, more flexible approach is to use addEventListener() in your JavaScript. This way, you can keep your JavaScript logic separated from your HTML and even attach multiple listeners to the same element.
+

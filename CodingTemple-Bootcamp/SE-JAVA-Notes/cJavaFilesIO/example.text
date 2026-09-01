@@ -1,0 +1,14 @@
+JAVA I/0= JAVA INPUT/OUTPUT
+
+In Java, the java.io.File class provides methods to work with files and directories.
+It does not deal with actual file content but rather metadata like file names, paths, sizes, permissions, etc.
+The File class is used to create, delete, and inspect the properties of files and directories.
+
+Java I/O (Input/Output) uses streams to read and write data. There are two primary types of streams:
+
+Byte cStreams (InputStream, OutputStream): Handle raw binary data.
+Character cStreams (Reader, Writer): Handle text data (characters) and support Unicode.
+FileReader is used to read the contents of a text file character by character.
+It reads data as a stream of characters and is useful for reading text files.
+FileWriter is used to write characters to a file.
+ It is helpful for writing text data into files, either by creating a new file or appending to an existing file.
